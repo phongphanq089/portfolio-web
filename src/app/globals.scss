@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../styles/breakpoints";
+
+@import "../styles/components/navMobileSiderbar";
+
+@import "../styles/components/bannerScroll";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .container-xxl {
+    @apply max-w-screen-2xl mx-auto;
+  }
+  .btn-primary {
+    @apply bg-bg-primary py-10 h-14 text-text-color-1 text-lg;
+  }
+  .block-center {
+    @apply top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #1c1c1c;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+//  =============== || OVERIDE STYLE BUTTON || =====================
+.buttonStyle {
+  --😀: #4dffaf;
+  --😀😀: #22c55e;
+  --😀😀😀: #16a34a;
+  cursor: pointer;
+  width: 184px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.125em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+  background: var(--😀);
+  border: 2px solid var(--😀😀);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 0 var(--😀😀);
+  transform: skew(-10deg);
+  transition: all 0.1s ease;
+  filter: drop-shadow(0 15px 20px var(--😀😀😀));
+
+  @include downSm {
+    font-size: 18px;
+    width: auto;
+  }
+
+  &:active {
+    letter-spacing: 0px;
+    transform: skew(-10deg) translateY(8px);
+    box-shadow: 0 0 0 var(--😀😀😀);
+  }
+}
+
+//==========================|| HEADER STYLE || =====================//
+.navbar-header {
+  header {
+    max-width: 1536px;
+    margin: 0px auto;
+
+    .navbar-item {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -22px;
+        height: 5px;
+        border-radius: 50%;
+        background: #4dffaf;
+      }
+    }
+  }
+}
+.navbar-mobile {
+  .nav-item {
+    @include downSm {
+      font-size: 14px;
+    }
+  }
+}
+//==========================|| BANNER HERO STYLE || =====================//
+.banner-herro {
+  .designations {
+    white-space: nowrap;
+    bottom: 0;
+    color: #fff;
+    line-height: 1;
+    padding: 15px 35px;
+    border-radius: 60px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    font-size: 40px;
+    background: linear-gradient(
+      94deg,
+      rgba(49, 50, 52, 0.61) 46.62%,
+      rgba(88, 77, 77, 0.61) 115.88%
+    );
+
+    @include down2Xl {
+      font-size: 25px;
+    }
+    @include downSm {
+      font-size: 18px;
+    }
+  }
+}
+
+.bg-filter {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    94deg,
+    rgba(49, 50, 52, 0.61) 46.62%,
+    rgba(88, 77, 77, 0.61) 115.88%
+  );
+}
+
+.bg-rgba {
+  background-color: rgba($color: #4dffaf, $alpha: 0.2);
+}
+
+.bg-rotate-360 {
+  animation: bg-rotate-360 15s infinite;
+}
+
+@keyframes bg-rotate-360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
