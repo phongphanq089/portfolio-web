@@ -14,10 +14,10 @@ const BannerHero = () => {
           className="max-w-[350px] sm:max-w-[400px] lg:max-w-[900px] h-auto absolute top-0 left-0"
         />
         <div className="p-4 lg:mt-[60px]">
-          <span className="text-lg font-semibold">
+          <span className="text-lg font-semibold text-white">
             {"Hello, ✌️ I'm NexGenDev"}
           </span>
-          <h2 className="text-[45px] leading-[60px] lg:text-[60px] lg:leading-[80px]  2xl:text-[90px] 2xl:leading-[120px]">
+          <h2 className="text-[45px] text-white leading-[60px] lg:text-[60px] lg:leading-[80px]  2xl:text-[90px] 2xl:leading-[120px]">
             Independent User Experience
           </h2>
           <h2 className="text-[45px] leading-[60px] lg:text-[60px] lg:leading-[80px] 2xl:text-[90px] 2xl:leading-[120px] text-bg-primary">
@@ -31,7 +31,7 @@ const BannerHero = () => {
               className="w-[300px] lg:w-full h-auto"
             />
           </div>
-          <p className="my-5 text-lg">
+          <p className="my-5 text-lg text-white">
             Work with brands and businesses from all around the world to create
             high quality design and engaging experiences.
           </p>
