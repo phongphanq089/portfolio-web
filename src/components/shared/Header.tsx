@@ -1,101 +1,107 @@
-"use client";
-import {
-  Button,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from "@nextui-org/react";
-import Link from "next/link";
-import React, { useState } from "react";
-import { usePathname } from "next/navigation";
-import { Logo } from "../../../assets";
-import Image from "next/image";
-import { navbarItems } from "./setting";
-import NavMobileSidebar from "./header/NavMobileSidebar";
+'use client'
+import React, { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { navbarItems } from '../contants/menu-navbar'
+import DarkMode from './Dark-mode-setting'
+import LogoDev from './LogoDev'
+import ButtonSend from '../design-system/ButtonSend'
+import CloseMenuNav from '../design-system/CloseMenuNav'
+import { AnimatePresence, motion } from 'framer-motion'
+import { menuSlide, scale, slide } from '@/settings/motion'
+import { ScrollArea } from '../ui/scroll-area'
+import { ImageResize } from './ImageResize'
+import { Curve } from '../ui/Curve'
+import Link from 'next/link'
+import ListSocialcon from './SocialProfile'
 
 const Header = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false)
 
-  const activeLink = (path: string) => path === pathname;
-
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  const [selectedIndicator, setSelectedIndicator] = useState(pathname)
 
   return (
     <>
-      <Navbar
-        className="navbar-header bg-transparent sm:bg-bg-color-dark-1 py-6"
-        position="static"
-      >
-        <NavbarBrand>
-          <Link href={"/"} className="w-[56px] h-auto flex items-center gap-3">
-            <Image
-              src={Logo}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-              alt="Logo-dev"
-            />
-            <span className="text-xl font-bold text-bg-primary">
-              {" "}
-              NexGenDev{" "}
-            </span>
-          </Link>
-        </NavbarBrand>
-        <NavbarContent className="hidden lg:flex gap-4" justify="center">
-          {navbarItems?.map((item, index) => {
-            return (
-              <NavbarItem key={`${index}-${item.title}`} className="mr-5">
-                <Link
-                  href={item.link}
-                  className={`${
-                    activeLink(item.link) ? "text-bg-primary" : ""
-                  } text-sm xl:text-md navbar-item hover:text-bg-primary`}
-                >
-                  {item.title}
-                </Link>
-              </NavbarItem>
-            );
-          })}
-        </NavbarContent>
-        <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:block">
-            <Button
-              as={Link}
-              className="buttonStyle"
-              color="primary"
-              href="#"
-              variant="flat"
-            >
-              {"Lest's Talk"}
-            </Button>
-          </NavbarItem>
-          <div
-            onClick={() => {
-              setIsActive(!isActive);
-            }}
-            className="button bg-bg-primary lg:hidden"
+      <div className='container-xxl flex items-center justify-between py-2 overflow-hidden'>
+        <LogoDev />
+        <div className='flex items-center gap-3'>
+          <DarkMode />
+          <ButtonSend className='!hidden md:!flex'>{`Let's Talk`}</ButtonSend>
+          <CloseMenuNav setIsActive={setIsActive} isActive={isActive} />
+        </div>
+      </div>
+      <AnimatePresence mode='wait'>
+        {isActive && (
+          <motion.div
+            variants={menuSlide}
+            initial='initial'
+            animate='enter'
+            exit='exit'
+            className='menu z-50 bg-color-3'
           >
-            <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
-          </div>
-        </NavbarContent>
-      </Navbar>
+            <ScrollArea className='h-screen srcoll-menu w-full rounded-md border-none!'>
+              <div className='absolute w-[50%] top-0 right-0 opacity-[0.5]'>
+                <ImageResize
+                  src={'/menusvg.svg'}
+                  alt='menusvg'
+                  heightSize='pt-[130%]'
+                  className='z-[-1]'
+                />
+              </div>
+              <div className='flex justify-between'>
+                <CloseMenuNav setIsActive={setIsActive} isActive={isActive} />
+                <ButtonSend className='!flex md:!hidden !bg-transparent z-50'>{`Let's Talk`}</ButtonSend>
+              </div>
 
-      {/* ============ MENU SIDERBAR ============= */}
-      <NavMobileSidebar
-        isActive={isActive}
-        setIsActive={setIsActive}
-        pathname={pathname}
-        selectedIndicator={selectedIndicator}
-        setSelectedIndicator={setSelectedIndicator}
-        navbarItems={navbarItems}
-      />
+              <div className='body'>
+                <div
+                  onMouseLeave={() => {
+                    setSelectedIndicator(pathname)
+                  }}
+                  className='nav'
+                >
+                  {navbarItems.map((data, index) => {
+                    return (
+                      <motion.div
+                        key={index}
+                        className='link'
+                        onMouseEnter={() => {
+                          setSelectedIndicator(data.link)
+                        }}
+                        custom={index}
+                        variants={slide}
+                        initial='initial'
+                        animate='enter'
+                        exit='exit'
+                        whileHover={{ translateX: 20 }}
+                      >
+                        <motion.div
+                          variants={scale}
+                          animate={
+                            selectedIndicator === data.link ? 'open' : 'closed'
+                          }
+                          className='indicator'
+                        ></motion.div>
+
+                        <Link href={data.link}>{data.title}</Link>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+
+                <div className='footer mt-5'>
+                  <ListSocialcon />
+                </div>
+              </div>
+            </ScrollArea>
+
+            <Curve />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

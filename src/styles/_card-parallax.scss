@@ -1,0 +1,55 @@
+.cardContainer-parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 63px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    width: 100%;
+    padding: 50px;
+    transform-origin: top;
+
+    @include downLg {
+      padding: 50px 30px;
+    }
+    @include downMd {
+      padding: 50px 15px;
+    }
+    h2 {
+      text-align: center;
+      margin: 0px;
+      font-size: 28px;
+      color: #fff;
+    }
+    .body {
+      height: 100%;
+
+      .description {
+        width: 40%;
+        position: relative;
+        top: 10%;
+        p {
+          font-size: 16px;
+          &::first-letter {
+            font-size: 28px;
+            font-family: 'Title';
+          }
+        }
+        span {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          a {
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

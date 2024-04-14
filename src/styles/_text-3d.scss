@@ -1,0 +1,43 @@
+.text-3d-animation {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.text-3d-animation p {
+  font-weight: 700;
+  margin: 0px;
+  transition: all 0.4s;
+  color: var(--color-3);
+  line-height: 8vw;
+  white-space: nowrap;
+  text-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000,
+    5px 5px 0px rgba(0, 0, 0, 0.2);
+
+  @include downMd {
+    line-height: 1;
+  }
+}
+
+.text-3d-animation .secondary {
+  transform: rotateX(-90deg) translateY(3.5vw);
+  transform-origin: bottom center;
+  position: absolute;
+  top: 0;
+  color: var(--color-1);
+  opacity: 0;
+}
+
+.text-3d-animation:hover {
+  transform: rotateX(90deg);
+}
+
+.text-3d-animation:hover .secondary {
+  opacity: 1;
+}
+
+.text-3d-animation:hover .primary {
+  transform: translateY(-100%);
+  opacity: 0;
+}
