@@ -4,8 +4,7 @@ import { usePathname } from 'next/navigation'
 import { navbarItems } from '../contants/menu-navbar'
 import DarkMode from './Dark-mode-setting'
 import LogoDev from './LogoDev'
-import ButtonSend from '../design-system/ButtonSend'
-import CloseMenuNav from '../design-system/CloseMenuNav'
+import CloseMenuNav from '../ui/CloseMenuNav'
 import { AnimatePresence, motion } from 'framer-motion'
 import { menuSlide, scale, slide } from '@/settings/motion'
 import { ScrollArea } from '../ui/scroll-area'
@@ -13,6 +12,7 @@ import { ImageResize } from './ImageResize'
 import { Curve } from '../ui/Curve'
 import Link from 'next/link'
 import ListSocialcon from './SocialProfile'
+import ButtonSend from '../ui/ButtonSend'
 
 const Header = () => {
   const pathname = usePathname()
@@ -23,7 +23,10 @@ const Header = () => {
 
   return (
     <>
-      <div className='container-xxl flex items-center justify-between py-2 overflow-hidden'>
+      <div
+        className='container-xxl flex items-center justify-between py-2 overflow-hidden'
+        id='scroll-top'
+      >
         <LogoDev />
         <div className='flex items-center gap-3'>
           <DarkMode />

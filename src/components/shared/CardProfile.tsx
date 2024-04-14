@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useRef } from 'react'
-import ButtonStyle from '../design-system/ButtonStyle'
+import ButtonStyle from '../ui/ButtonStyle'
 
 interface propsType {
   projects: {
@@ -89,43 +89,6 @@ export default function CardProfile({ projects, reversed }: propsType) {
                 {projects[0].name}
               </h3>
               <ButtonStyle className='!text-[10px] md:!text-[16px]  !py-0 md:!py-4'>
-                View More
-              </ButtonStyle>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={'double double-mobile gap-3 md:gap-5 xl:gap-10'}>
-        <div ref={firstImage} className={'imageContainer'}>
-          <div className={'stretchyWrapper'}>
-            <Image
-              src={`/image/${projects[0].src}`}
-              fill={true}
-              alt={'image'}
-            />
-          </div>
-          <div className={'body'}>
-            <div className='flex lg:items-center flex-col lg:flex-row gap-2 justify-between w-full py-1 sm:py-3'>
-              <h3 className='text-sm  font-bold'>{projects[0].name}</h3>
-              <ButtonStyle className='!text-[14px] !py-2'>
-                View More
-              </ButtonStyle>
-            </div>
-          </div>
-        </div>
-
-        <div ref={secondImage} className={'imageContainer'}>
-          <div className={'stretchyWrapper'}>
-            <Image
-              src={`/image/${projects[1].src}`}
-              fill={true}
-              alt={'image'}
-            />
-          </div>
-          <div className={'body'}>
-            <div className='flex lg:items-center gap-2 flex-col lg:flex-row  justify-between w-full py-1 sm:py-3'>
-              <h3 className='text-sm font-bold'>{projects[0].name}</h3>
-              <ButtonStyle className='!text-[14px]  !py-2'>
                 View More
               </ButtonStyle>
             </div>

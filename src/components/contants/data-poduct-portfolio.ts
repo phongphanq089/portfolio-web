@@ -1,4 +1,6 @@
-export const projects = [
+import { projectType } from '@/types'
+
+export const projects: projectType[] = [
   {
     name: 'Google Pixel Creator Labs',
     client: 'Grow',

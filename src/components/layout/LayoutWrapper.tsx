@@ -1,9 +1,13 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../shared/Header'
-import Footer from '../shared/Footer'
+import Footer from '../shared/Footer_v2'
+import AOS from 'aos'
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Header />

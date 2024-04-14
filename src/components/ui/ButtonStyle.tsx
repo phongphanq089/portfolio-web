@@ -1,7 +1,7 @@
 'use client'
 import { cn } from '@/utils/cn'
 import React, { ReactNode } from 'react'
-import { Button } from '../ui/button'
+import { Button } from './button'
 
 interface buttonProps {
   className?: string
@@ -13,7 +13,7 @@ const ButtonStyle = ({ className, children, icon }: buttonProps) => {
   return (
     <Button
       className={cn(
-        'w-fit flex items-center gap-2 comic-button rounded-full bg-color-1',
+        'w-fit flex items-center gap-2 button-style rounded-full bg-color-1',
         className
       )}
     >

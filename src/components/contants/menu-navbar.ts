@@ -1,4 +1,4 @@
-import typeMenuItems from '@/types'
+import { typeMenuItems } from '@/types'
 
 export const navbarItems: typeMenuItems[] = [
   {
@@ -7,8 +7,8 @@ export const navbarItems: typeMenuItems[] = [
     icon: 'home',
   },
   {
-    title: 'ABOUT',
-    link: '/about',
+    title: 'DEVELOPER',
+    link: '/developer',
     icon: 'user',
   },
   {

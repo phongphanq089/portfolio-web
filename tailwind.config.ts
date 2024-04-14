@@ -36,7 +36,10 @@ const config = {
         '7xl': '88px',
         '8xl': '96px',
         '9xl': '104px',
-        'auto-text': '8vw',
+        'auto-text': '7vw',
+      },
+      boxShadow: {
+        'shadow-card-skill': '10px 10px var(--color-3)',
       },
       colors: {
         dark: 'var(--dark)',

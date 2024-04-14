@@ -23,19 +23,20 @@
 
   :root {
     --clr: #7808d0;
-    --dark: #030712;
+    --dark: #0f0715;
     --light: rgb(232 232 227 / 1);
-    --white: rgb(191 191 177 / 1) ;
+    --white: rgb(191 191 177 / 1);
     --text-dark: #000;
     --text-gray-light: rgb(191 191 177 / 1);
     --color-1: #056bfa;
+    ///--color-1: #4ade80;
     --color-2: #a555e6;
     --color-3: rgb(57 54 50 / 1);
     --color-4: rgb(191 191 177 / 1);
     --color-5: #ff5252;
     --color-6: rgb(8 8 7 / 1);
     --color-rgba-1: rgba(85, 87, 255, 0.78),
-    --bg-linear: linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
+      --bg-linear: linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
 
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -111,20 +112,34 @@
 
 
 @layer components {
-  .container-xxl {
-    @apply max-w-screen-3xl mx-auto px-1 md:px-3;
-  }
 
   .container-full {
     @apply max-w-full mx-auto px-1 md:px-3 xl:px-5;
+  }
+
+  .container-xxl {
+    @apply max-w-screen-3xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+
+  .container-2xl {
+    @apply max-w-screen-2xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+
+  .container-xl {
+    @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
 }
 
 @layer utilities {
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html.dark {
     body:before {
       background-image: url(https://res.cloudinary.com/dyp6oqixq/image/upload/v1712467018/samples/ecommerce/istockphoto-1394750177-612x612_jlnegj.jpg);
+      // background-image: none;
     }
   }
 
@@ -145,24 +160,54 @@
     color: #aeae9d;
   }
 
-  .BlurryCursor{
+  .typography-style {
+    -webkit-text-fill-color: var(--light);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-3);
+    text-transform: uppercase;
+    line-height: 80%;
+    text-shadow: 2px 2px var(--light), 8px 10px var(--color-1);
+    font-weight: 900;
+
+    @include downSm {
+      text-shadow: 2px 2px var(--light), 8px 5px var(--color-1);
+    }
+  }
+
+
+  .BlurryCursor {
     @include downLg {
       display: none;
     }
   }
+
   .maxim-live-title {
     font-weight: bold;
     max-width: 1000px;
-    color:  var(--white);
+    color: var(--white);
     text-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000, 5px 5px 0px rgba(0, 0, 0, 0.2);
 
-    @include downSm {
+    @include down2xl {
+      max-width: 800px;
+    }
+
+    @include downMd {
       text-shadow: none;
       color: var(--color-3);
       font-size: 24px;
+      font-weight: 900;
     }
-    
+
+    @include downSm {
+      font-size: 18px;
+    }
   }
+
+  .text-shadow {
+    color: var(--white);
+    text-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000, 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
   .block-center {
     position: absolute;
     top: 50%;
@@ -176,23 +221,5 @@
     background: linear-gradient(94deg,
         rgba(49, 50, 52, 0.61) 46.62%,
         rgba(88, 77, 77, 0.61) 115.88%);
-  }
-
-  .bg-rgba {
-    background-color: rgba($color: #4dffaf, $alpha: 0.2);
-  }
-
-  .bg-rotate-360 {
-    animation: bg-rotate-360 15s infinite;
-  }
-
-  @keyframes bg-rotate-360 {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
   }
 }
