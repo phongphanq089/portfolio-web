@@ -13,7 +13,7 @@ export default function Home() {
       <ServiceDev />
       <div className='container-xxl'>
         <div className='py-2 lg:py-6'>
-          <h1 className='text-2xl xl:text-9xl font-[900] text-color-3'>
+          <h1 className='text-xl sm:text-2xl xl:text-9xl font-[900] text-color-3'>
             MY PROJECTS
           </h1>
         </div>

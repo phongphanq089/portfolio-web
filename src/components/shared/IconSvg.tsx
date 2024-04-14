@@ -4,7 +4,9 @@ import React from 'react'
 
 const IconSvg = ({ src, className }: { src: string; className?: string }) => {
   return (
-    <div className={cn('max-w-[60px] sm:max-w-[60px]', className)}>
+    <div
+      className={cn('max-w-[40px] xs:max-w-[60px] sm:max-w-[60px]', className)}
+    >
       <img
         src={src}
         alt='Next generation developer'

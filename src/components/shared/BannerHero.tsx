@@ -37,12 +37,12 @@ const BannerHero = () => {
               <Text3d
                 primary={`HI THERE, I'M`}
                 secondary={`HI THERE, I'M`}
-                className='text-3xl sm:text-4xl md:text-auto-text'
+                className='text-2xl xs:text-3xl sm:text-4xl md:text-auto-text'
               />
               <Text3d
                 primary={'PHONG PHAN'}
                 secondary={'PHONG PHAN'}
-                className='text-3xl sm:text-4xl md:text-auto-text'
+                className='text-2xl xs:text-3xl sm:text-4xl md:text-auto-text'
               />
             </div>
           </div>

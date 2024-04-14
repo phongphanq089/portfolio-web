@@ -96,4 +96,7 @@
   @include downSm {
     font-size: 25px;
   }
+  @include downMobile {
+    font-size: 18px;
+  }
 }
