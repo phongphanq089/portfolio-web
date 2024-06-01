@@ -1,19 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
+'use client'
+import { bgLine } from '@/assets'
 import { projects } from '@/components/contants/data-poduct-portfolio'
-import { NextImageResize } from '@/components/shared/ImageResize'
-import BtnLearnMore from '@/components/ui/BtnLearnMore'
-import ButtonStyle from '@/components/ui/ButtonStyle'
-import { CardContainer, CardItem } from '@/components/ui/Card3d'
 import CardProject from '@/components/ui/CardProject'
-import HeadingBlock from '@/components/ui/HeadingBlock'
-import IconCore from '@/components/ui/IconCore'
-import Link from 'next/link'
+import HeadingSection from '@/components/ui/heading-section'
 import React from 'react'
 
 const ListProject = () => {
   return (
     <div className='container-xxl'>
       <div className='mb-3 md:mb-9'>
-        <HeadingBlock text={'MY PROJECT'} />
+        <HeadingSection text='MY PROJECT/' />
       </div>
       <div className='container-2xl'>
         <div className='relative grid gap-6 md:grid-cols-2 md:gap-8 md:pb-[7rem]'>
@@ -29,12 +26,12 @@ const ListProject = () => {
             )
           })}
         </div>
-        <div className='flex justify-center gap-4'>
+        {/* <div className='flex justify-center gap-4'>
           <ButtonStyle className='flex gap-4'>
             View All
             <IconCore icon='arrow-right' />
           </ButtonStyle>
-        </div>
+        </div> */}
       </div>
     </div>
   )

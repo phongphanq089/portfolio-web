@@ -1,18 +1,15 @@
 'use client'
 import React, { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { navbarItems } from '../contants/menu-navbar'
-import DarkMode from './Dark-mode-setting'
-import LogoDev from './LogoDev'
-import CloseMenuNav from '../ui/CloseMenuNav'
 import { AnimatePresence, motion } from 'framer-motion'
 import { menuSlide, scale, slide } from '@/settings/motion'
-import { ScrollArea } from '../ui/scroll-area'
-import { ImageResize } from './ImageResize'
-import { Curve } from '../ui/Curve'
 import Link from 'next/link'
-import ListSocialcon from './SocialProfile'
-import ButtonSend from '../ui/ButtonSend'
+import LogoDev from '../LogoDev'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { ImageResize } from '../ImageResize'
+import { navbarItems } from '@/components/contants/menu-navbar'
+import { Curve } from './curve'
+import CloseMenuNav from './close-menu-navbar'
 
 const Header = () => {
   const pathname = usePathname()
@@ -20,20 +17,25 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false)
 
   const [selectedIndicator, setSelectedIndicator] = useState(pathname)
-
   return (
-    <>
-      <div
-        className='container-xxl flex items-center justify-between py-2 overflow-hidden'
-        id='scroll-top'
-      >
+    <header className='pt-5' id='scroll-top'>
+      <nav className='container-xxl flex justify-between'>
         <LogoDev />
-        <div className='flex items-center gap-3'>
-          <DarkMode />
-          <ButtonSend className='!hidden md:!flex'>{`Let's Talk`}</ButtonSend>
+        <div className='flex gap-[100px]'>
+          <h3 className='text-lg font-semibold text-color-7 hidden lg:block'>
+            AVAILABLE FOR WORK SEPTEMBER 2024
+          </h3>
+
           <CloseMenuNav setIsActive={setIsActive} isActive={isActive} />
+          <div className='flex flex-col gap-1 '>
+            {/* <h3 className='text-lg font-semibold text-color-7'>Services</h3>
+            <h3 className='text-lg font-semibold text-color-7'>Works</h3>
+            <h3 className='text-lg font-semibold text-color-7'>About</h3>
+            <h3 className='text-lg font-semibold text-color-7'>Contact</h3> */}
+          </div>
         </div>
-      </div>
+      </nav>
+
       <AnimatePresence mode='wait'>
         {isActive && (
           <motion.div
@@ -54,7 +56,6 @@ const Header = () => {
               </div>
               <div className='flex justify-between'>
                 <CloseMenuNav setIsActive={setIsActive} isActive={isActive} />
-                <ButtonSend className='!flex md:!hidden !bg-transparent z-50'>{`Let's Talk`}</ButtonSend>
               </div>
 
               <div className='body'>
@@ -93,9 +94,9 @@ const Header = () => {
                   })}
                 </div>
 
-                <div className='footer mt-5'>
+                {/* <div className='footer mt-5'>
                   <ListSocialcon />
-                </div>
+                </div> */}
               </div>
             </ScrollArea>
 
@@ -103,7 +104,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   )
 }
 

@@ -14,7 +14,7 @@ export default function Text3d({
   const text2 = useRef(null)
 
   return (
-    <div className='text-3d-animation'>
+    <div className='text-3d-animation w-fit'>
       <p className={cn('primary', className)} ref={text1}>
         {primary}
       </p>

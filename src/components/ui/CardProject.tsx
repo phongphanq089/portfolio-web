@@ -16,9 +16,9 @@ const CardProject = (props: propsType) => {
   return (
     <div className='even:md:translate-y-[7rem] p-0.25' key={`${name}-${index}`}>
       <div
-        data-aos='zoom-in-up'
-        data-aos-easing='ease-out-cubic'
-        data-aos-duration={index * 2000}
+      // data-aos='zoom-in-up'
+      // data-aos-easing='ease-out-cubic'
+      // data-aos-duration={index * 2000}
       >
         <CardContainer>
           <CardItem

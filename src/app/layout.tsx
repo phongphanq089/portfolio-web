@@ -20,17 +20,10 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={cn('bg-light dark:bg-dark', inter.className)}
+        className={cn('bg-light', inter.className)}
         suppressHydrationWarning
       >
-        <Providers
-          attribute='class'
-          defaultTheme='light'
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </Providers>
+        {children}
       </body>
     </html>
   )

@@ -39,7 +39,7 @@ const config = {
         'auto-text': '7vw',
       },
       boxShadow: {
-        'shadow-card-skill': '10px 10px var(--color-3)',
+        'shadow-card-skill': '5px 5px var(--color-3)',
       },
       colors: {
         dark: 'var(--dark)',
@@ -53,6 +53,7 @@ const config = {
         'color-4': 'var(--color-4)',
         'color-5': 'var(--color-5)',
         'color-6': 'var(--color-6)',
+        'color-7': 'var(--rbg-2)',
         'bg-color-dark-1': '#262626',
         'bg-dark': '#262626',
         'bg-primary': ' #4dffaf',
@@ -129,7 +130,7 @@ const config = {
         lg: '1024px',
         xl: '1280px',
         '2xl': '1536px',
-        '3xl': '1724px',
+        '3xl': '1625px',
       },
     },
   },

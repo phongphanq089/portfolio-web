@@ -28,16 +28,17 @@
     --white: rgb(191 191 177 / 1);
     --text-dark: #000;
     --text-gray-light: rgb(191 191 177 / 1);
-    --color-1: #056bfa;
-    ///--color-1: #4ade80;
+    // --color-1: #056bfa;
+    --color-1: #ffe900;
     --color-2: #a555e6;
     --color-3: rgb(57 54 50 / 1);
     --color-4: rgb(191 191 177 / 1);
     --color-5: #ff5252;
     --color-6: rgb(8 8 7 / 1);
+    --rgb-1: rgb(20, 20, 20);
+    --rbg-2: rgb(107 100 92/1);
     --color-rgba-1: rgba(85, 87, 255, 0.78),
-      --bg-linear: linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
-
+    --bg-linear: linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
 
@@ -128,22 +129,16 @@
   .container-xl {
     @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
+
+  .title-block {
+    @apply font-bold leading-none
+  } 
 }
 
 @layer utilities {
 
-  html {
-    scroll-behavior: smooth;
-  }
-
-  html.dark {
-    body:before {
-      background-image: url(https://res.cloudinary.com/dyp6oqixq/image/upload/v1712467018/samples/ecommerce/istockphoto-1394750177-612x612_jlnegj.jpg);
-      // background-image: none;
-    }
-  }
-
   body:before {
+    background-color: var(--light);
     background-image: url(https://res.cloudinary.com/dyp6oqixq/image/upload/v1712489739/samples/ecommerce/istockphoto-1221845543-612x612_coq6dm.jpg);
   }
 
@@ -156,7 +151,7 @@
     height: 100%;
     z-index: 3023023023020;
     pointer-events: none;
-    opacity: 20%;
+    opacity: 15%;
     color: #aeae9d;
   }
 
@@ -168,7 +163,6 @@
     line-height: 80%;
     text-shadow: 2px 2px var(--light), 8px 10px var(--color-1);
     font-weight: 900;
-
     @include downSm {
       text-shadow: 2px 2px var(--light), 8px 5px var(--color-1);
     }
@@ -221,5 +215,11 @@
     background: linear-gradient(94deg,
         rgba(49, 50, 52, 0.61) 46.62%,
         rgba(88, 77, 77, 0.61) 115.88%);
+  }
+  
+  .image-cover_auto {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }

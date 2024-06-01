@@ -33,6 +33,22 @@ import react from '../../public/skills-icon/react.svg'
 import tailwind from '../../public/skills-icon/tailwind.svg'
 import typescript from '../../public/skills-icon/typescript.svg'
 import vitejs from '../../public/skills-icon/vitejs.svg'
+/*======================= || bg image || =================  */
+import bgBanner from '../../public/image/banner-dev.png'
+import bgLetWord from '../../public/image/lets-work.png'
+import bgHello from '../../public/image/hello-style.png'
+import bgSmile from '../../public/image/svg-icon/smile.svg'
+import bgPhongphan from '../../public/image/svg-icon/phong-phan.svg'
+import bgBlock from '../../public/image/svg-icon/bg-block.svg'
+import logoNexgendev from '../../public/nexgendev.png'
+import creativeplus from '../../public/image/svg-icon/creativeplus.svg'
+import bgAroundFt from '../../public/image/svg-icon/bg-around-ft.svg'
+import thurnder from '../../public/image/svg-icon/thurnder.svg'
+import heroAbout from '../../public/image/hero-about.png'
+import heroAbout1 from '../../public/image/hero-about-1.jpg'
+import iconBlock1 from '../../public/image/svg-icon/icon-block-1.svg'
+import bgFooter from '../../public/image/svg-icon/bg-footer.svg'
+import bgLine from '../../public/image/svg-icon/line-svg.svg'
 
 export {
   facebook,
@@ -68,4 +84,19 @@ export {
   tailwind,
   typescript,
   vitejs,
+  bgBanner,
+  bgLetWord,
+  bgHello,
+  bgSmile,
+  bgPhongphan,
+  bgBlock,
+  logoNexgendev,
+  creativeplus,
+  bgAroundFt,
+  thurnder,
+  heroAbout,
+  heroAbout1,
+  iconBlock1,
+  bgFooter,
+  bgLine,
 }

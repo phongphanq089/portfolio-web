@@ -11,7 +11,7 @@ const FastMarquee = ({
   className?: string
 }) => {
   return (
-    <div className={cn('py-5', className)}>
+    <div className={cn('py-2', className)}>
       <Marquee>{children}</Marquee>
     </div>
   )

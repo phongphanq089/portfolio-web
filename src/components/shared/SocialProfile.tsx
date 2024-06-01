@@ -5,7 +5,7 @@ import { facebook, instagram, tiktok, twitter } from '@/assets'
 
 const SocialProfile = () => {
   return (
-    <div className='flex items-center gap-4 sm:gap-5'>
+    <div className='flex items-center gap-2 sm:gap-5'>
       <FramerMagnetic>
         <IconSvg src={facebook.src} />
       </FramerMagnetic>
