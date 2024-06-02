@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
-import { Providers } from '@/components/layout/Provider'
 import { cn } from '@/utils/cn'
 import 'aos/dist/aos.css'
+import { seoData } from '../components/contants/seo-data'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NexGenDev | FrontEnd Developer',
-  description: 'Next Generation Developer || Web Developer',
+  ...seoData,
 }
 
 export default function RootLayout({

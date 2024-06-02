@@ -95,7 +95,7 @@ const Header = () => {
 
                           <Link href={data.link} className='font-bold relative'>
                             {data.title}
-                            <span className='text-sm font-medium absolute top-0 right-[-30px] '>
+                            <span className='text-xs lg:text-sm font-medium absolute top-0 right-[-40px] lg:right-[-30px] '>
                               {`(${index + 1})`}
                             </span>
                           </Link>
