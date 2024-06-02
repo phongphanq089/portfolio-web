@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { CardContainer, CardItem } from './Card3d'
 import Link from 'next/link'
@@ -27,12 +28,11 @@ const CardProject = (props: propsType) => {
             rotateZ={-10}
             className='w-full mt-4'
           >
-            <Link href={'#'}>
-              <NextImageResize
-                src={`/image/${src}`}
-                alt='bg-in-hero.png'
-                className='pt-[80%] rounded-xl overflow-hidden'
-              />
+            <Link
+              href={'#'}
+              className='wrapImgResize imgSpecial1 rounded-xl overflow-hidden'
+            >
+              <img src={`/image/${src}`} alt='Nexgendev' />
             </Link>
           </CardItem>
 

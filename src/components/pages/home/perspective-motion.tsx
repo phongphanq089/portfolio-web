@@ -25,7 +25,6 @@ const PerspectiveMotion = () => {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
-
     requestAnimationFrame(raf)
   }, [])
 
@@ -45,7 +44,7 @@ const Section1 = ({ scrollYProgress }: srollType) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className='sticky top-0 min-h-screen bg-color-6 text-[3.5vw]  text-white  rounded-3xl'
+      className='lg:sticky top-0 min-h-screen bg-color-6 text-[3.5vw]  text-white  rounded-2xl'
     >
       <CardAbout />
     </motion.div>

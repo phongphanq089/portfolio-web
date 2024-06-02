@@ -7,7 +7,7 @@ import DescriptionHero from './description-hero'
 
 const BannerHero = () => {
   return (
-    <div className='container-xxl mb-[100px] overflow-hidden'>
+    <div className='container-xxl mb-[30px]  md:mb-[100px] overflow-hidden'>
       <div className='w-full hidden xl:block'>
         <img
           src={bgPhongphan.src}

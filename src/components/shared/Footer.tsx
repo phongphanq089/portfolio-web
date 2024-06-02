@@ -18,7 +18,7 @@ const Footer = () => {
               <h2 className='text-xl text-color-6 font-[900]'>
                 {`Let's work together`}
               </h2>
-              <p className='text-sm text-color-6 leading-none mb-4'>
+              <p className='text-xs text-color-6 leading-none mb-4'>
                 {`If you have any questions or concerns, please don't hesitate to
                 contact me. I am open to any work opportunities that align with
                 my skills and interests.`}

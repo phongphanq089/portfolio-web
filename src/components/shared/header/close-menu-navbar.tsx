@@ -14,7 +14,7 @@ const CloseMenuNav = (props: props) => {
       onClick={() => {
         setIsActive(!isActive)
       }}
-      className={cn('button bg-color-3 fixed top-4 right-4', className)}
+      className={cn('button bg-white fixed top-4 right-4 z-50', className)}
     >
       <div className={`burger ${isActive ? 'burgerActive' : ''}`}></div>
     </div>
