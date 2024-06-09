@@ -28,7 +28,7 @@ export const seoData = {
     siteName: 'Nexgendev (Phong Phan)',
     images: [
       {
-        url: 'https://res.cloudinary.com/dyp6oqixq/image/upload/v1717318864/project-dev/bg-share-seo_dpdumv.png',
+        url: 'https://res.cloudinary.com/dyp6oqixq/image/upload/v1717921488/project-dev/banner-hero_scrh3z.png',
         width: 1200,
         height: 630,
       },
