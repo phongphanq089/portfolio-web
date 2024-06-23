@@ -1,7 +1,8 @@
 export interface typeMenuItems {
-  title: String
+  title: string
   link: string
   icon?: string
+  imgSrc: string
 }
 
 export interface projectType {

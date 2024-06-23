@@ -222,4 +222,20 @@
     height: auto;
     object-fit: cover;
   }
+
+  .btn-open-menu{
+    transition: all 0.3s;
+    transform: scale(0);
+
+    &.active-btn{
+      transform: scale(1);
+    }
+  }
+  .transition-1s {
+    transition: all 1s;
+  }
+   .transition-0-3s {
+    transition: all 0.3s;
+  }
+
 }

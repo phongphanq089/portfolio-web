@@ -60,6 +60,7 @@ const config = {
         'bg-violet': '#644dff',
         'bg-violet-1': '#a555e6',
         'text-color-1': '#261d48',
+        'rbg-2': 'rgb(107 100 92/1)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

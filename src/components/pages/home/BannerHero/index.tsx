@@ -4,17 +4,12 @@ import { bgPhongphan } from '@/assets'
 import React from 'react'
 import HeroImageDev from './hero-image-dev'
 import DescriptionHero from './description-hero'
+import TextFullContainerHero from '@/components/shared/TextFullContainerHero'
 
 const BannerHero = () => {
   return (
     <div className='container-xxl mb-[30px]  md:mb-[100px] overflow-hidden'>
-      <div className='w-full hidden xl:block'>
-        <img
-          src={bgPhongphan.src}
-          alt='Nexgendev'
-          className='image-cover_auto'
-        />
-      </div>
+      <TextFullContainerHero />
       <div className='grid xl:grid-cols-4  xl:gap-7'>
         <div className='flex flex-col'>
           <HeroImageDev />

@@ -8,7 +8,7 @@ const LogoDev = () => {
     <Link
       href={'/'}
       title='Next-generation Developer'
-      className='max-w-[200px] md:max-w-[400px]'
+      className='max-w-[200px] md:max-w-[300px]'
     >
       <img
         src={logoNexgendev.src}

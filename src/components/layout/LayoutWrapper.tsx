@@ -10,7 +10,9 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   }, [])
   return (
     <>
-      <Header />
+      <div className='container-2xl'>
+        <Header />
+      </div>
       <main className=' flex flex-col min-h-screen relative'>
         <div className='flex-grow flex-1'>{children}</div>
       </main>
