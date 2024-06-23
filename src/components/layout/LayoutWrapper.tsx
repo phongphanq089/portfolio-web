@@ -5,17 +5,11 @@ import AOS from 'aos'
 import Header from '../shared/header'
 import { AnimatePresence } from 'framer-motion'
 import LoadingPage from '../shared/loading-page'
-import LocomotiveScroll from 'locomotive-scroll'
-
-declare module 'locomotive-scroll' {
-  interface LocomotiveScroll {}
-}
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     AOS.init()
-    const locomotiveScroll = new LocomotiveScroll()
     if (isLoading) {
       document.body.classList.add('overflow-hidden')
     } else {

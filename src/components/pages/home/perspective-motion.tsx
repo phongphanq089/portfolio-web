@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion'
+import Lenis from 'lenis'
 import React, { useEffect, useRef } from 'react'
 import SkillDev from '../../shared/SkillDev'
 import SkillMarquee from '../../shared/SkillMarquee'
@@ -16,6 +17,16 @@ const PerspectiveMotion = () => {
     target: container,
     offset: ['start start', 'end end'],
   })
+
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
 
   return (
     <section ref={container} className='relative min-h-[200vh] mb-14'>
