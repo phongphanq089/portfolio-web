@@ -3,7 +3,13 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import LinkNavBar from './link-navbar'
-import { background, height, opacity, slideLeft } from '@/settings/motion'
+import {
+  background,
+  height,
+  mountAnim,
+  opacity,
+  slideLeft,
+} from '@/settings/motion'
 import Image from 'next/image'
 import LogoDev from '../LogoDev'
 import TypingMachine from '../TypingMachine'
@@ -11,9 +17,6 @@ import BtnOpenMenu from './btn-action-menu/BtnOpenMenu'
 import BtnCloseMenu from './btn-action-menu/BtnCloseMenu'
 import BannerImage from './link-navbar/BannerImage'
 import SocialLink from './link-navbar/SocialLink'
-
-const mountAnim = { initial: 'initial', animate: 'enter', exit: 'exit' }
-
 export default function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
