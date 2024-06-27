@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Footer from '../shared/Footer'
 import AOS from 'aos'
 import Header from '../shared/header'
 import { AnimatePresence } from 'framer-motion'
 import LoadingPage from '../shared/loading-page'
+import Footer from '../shared/footer'
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true)

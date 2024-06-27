@@ -47,8 +47,8 @@ const TextFullContainerHero = () => {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay: 0.5, type: 'spring', duration: 2, bounce: 0 },
-        opacity: { delay: 0.5, duration: 1 },
+        pathLength: { delay: 3, type: 'spring', duration: 2, bounce: 0 },
+        opacity: { delay: 3, duration: 1 },
       },
     },
   }

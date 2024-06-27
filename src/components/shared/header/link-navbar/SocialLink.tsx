@@ -10,7 +10,12 @@ const SocialLink = () => {
             className='border rounded-3xl px-3 py-2 bg-black'
             key={`${social.name}-${index}`}
           >
-            <FlipLink href='#'>{social.name}</FlipLink>
+            <FlipLink
+              href='#'
+              className='font-semibold  uppercase text-[18px] sm:text-sm lg:text-md 2xl:text-xl !text-white'
+            >
+              {social.name}
+            </FlipLink>
           </li>
         )
       })}

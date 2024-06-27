@@ -14,6 +14,7 @@ import bgCircule from '../../public/image/circule.png'
 import skillDevJson from '../../public/lottie/skillDev.json'
 import coderJson from '../../public/lottie/coder.json'
 import notificationDev from '../../public/lottie/notificationDev.json'
+import developer1 from '../../public/lottie/developer-1.json'
 /*======================= || skill icon || =================  */
 import aws from '../../public/skills-icon/aws.svg'
 import bootstrap from '../../public/skills-icon/bootstrap.svg'
@@ -50,6 +51,9 @@ import iconBlock1 from '../../public/image/svg-icon/icon-block-1.svg'
 import bgFooter from '../../public/image/svg-icon/bg-footer.svg'
 import bgLine from '../../public/image/svg-icon/line-svg.svg'
 
+/*======================= || bg footer || =================  */
+import bgFooter1 from '../../public/image/footer/bg-footer-1.png'
+
 export {
   facebook,
   tiktok,
@@ -66,6 +70,7 @@ export {
   skillDevJson,
   coderJson,
   notificationDev,
+  developer1,
   aws,
   bootstrap,
   coffeescript,
@@ -99,4 +104,6 @@ export {
   iconBlock1,
   bgFooter,
   bgLine,
+  // footer///
+  bgFooter1,
 }

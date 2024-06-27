@@ -3,13 +3,21 @@ import { motion } from 'framer-motion'
 
 const DURATION = 0.25
 const STAGGER = 0.025
-const FlipLink = ({ children, href }: { children: string; href: string }) => {
+const FlipLink = ({
+  children,
+  href,
+  className,
+}: {
+  children: string
+  href: string
+  className: string
+}) => {
   return (
     <motion.a
       initial='initial'
       whileHover='hovered'
       href={href}
-      className='relative block overflow-hidden whitespace-nowrap font-semibold  uppercase text-[18px] sm:text-sm lg:text-md 2xl:text-xl !text-white'
+      className={`relative block overflow-hidden whitespace-nowrap ${className}`}
       style={{
         lineHeight: 0.75,
       }}

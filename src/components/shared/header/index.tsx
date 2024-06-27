@@ -23,13 +23,19 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false)
 
   const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setIsActive(true)
-    } else {
-      setIsActive(false)
+    const footerElement = document.querySelector('#footer')
+    if (footerElement) {
+      const footerPosition =
+        footerElement.getBoundingClientRect().top + window.scrollY
+      const windowBottomPosition = window.scrollY + window.innerHeight
+
+      if (window.scrollY > 300 && windowBottomPosition < footerPosition) {
+        setIsActive(true)
+      } else {
+        setIsActive(false)
+      }
     }
   }
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     if (menuIsOpen) {

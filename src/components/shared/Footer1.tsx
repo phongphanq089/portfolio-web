@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { bgFooter, coderJson, cricleDouble } from '@/assets'
-import AnimationLottie from '../ui/AnimationLottie'
-import LogoDev from './LogoDev'
-import ScrollTop from './ScrollTop'
+import { bgFooter } from '@/assets'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import SocialProfile from './SocialProfile'

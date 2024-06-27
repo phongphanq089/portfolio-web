@@ -13,7 +13,6 @@ const NavLinkAnimated = ({ heading, subTitle, imgSrc, href }: propsType) => {
   const ref = useRef(null)
 
   const pathname = usePathname()
-  console.log(pathname)
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
