@@ -6,30 +6,16 @@ import AnimationLottie from '@/components/ui/AnimationLottie'
 import FlipLink from '@/components/ui/FlipLink'
 import Text3d from '@/components/ui/Text3d'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import ScrollTop from '../ScrollTop'
-import { motion, useAnimation } from 'framer-motion'
+import FastMarquee from '@/components/ui/FastMarquee'
+import { IconContact, IconRound, Misc_1 } from '@/components/ui/RenderIcon'
+import ListNavigaitonMenu from './ListNavigaitonMenu'
+import SocialLink from './SocialLink'
 
 const Footer = () => {
   const plane = useRef<HTMLDivElement>(null)
   const maxRotate = 45
-
-  const [isInView, setIsInView] = useState(false)
-  const controls = useAnimation()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const footer = document.querySelector('#footer')
-      if (footer) {
-        const rect = footer.getBoundingClientRect()
-        const isInView = rect.top + 300 < window.innerHeight && rect.bottom >= 0
-        setIsInView(isInView)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const manageMouseMove = (e: any) => {
     if (!plane.current) return
@@ -43,61 +29,39 @@ const Footer = () => {
     }
   }
   return (
-    <motion.footer
-      className={`min-h-screen md:h-screen w-full bg-black transition-0-5s ${
-        isInView ? 'p-2 2xl:p-5' : 'p-0'
-      }`}
+    <footer
+      className={`w-full bg-light transition-0-5s overflow-hidden`}
       id='footer'
     >
       <div
-        className={`flex mb-2 md:mb-0 flex-col justify-between bg-light w-full min-h-screen md:min-h-[unset] md:h-full p-3 2xl:px-5 2xl:py-2 relative ${
-          isInView ? 'rounded-2xl' : ''
-        }`}
+        className={`container-2xl flex flex-col justify-between  w-full  h-full relative`}
       >
-        <div className='flex flex-col items-end sm:items-center sm:flex-row justify-between relative'>
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs sm:text-[18px] 2xl:text-sm font-semibold'>
-              Web Developer
-            </span>
-          </div>
-          <div className='max-w-[100px] sm:max-w-[150px] absolute left-0 sm:left-1/2 sm:-translate-x-1/2'>
-            <img
-              src={bgFooter1?.src}
-              className='w-full object-cover h-auto'
-              alt='phongphan'
-            />
-          </div>
-          <div className='text-xs sm:text-[18px] 2xl:text-sm font-semibold'>
-            Portfolio 2024 - 2025
-          </div>
-        </div>
-        <div className='md:px-8'>
-          <div className='flex flex-col md:flex-row items-center gap-2 justify-center'>
-            <div className='max-w-[300px] 2xl:max-w-[500px] h-full'>
+        <IconRound className='pointer-events-none absolute left-1/2 top-16 z-1 h-fit w-5/6 sm:w-3/5 lg:w-2/5' />
+        <div className='w-full py-3'>
+          <div className='flex flex-col-reverse sm:grid sm:grid-cols-3'>
+            <div className='max-w-[400px] 2xl:max-w-[600px] h-full'>
               <AnimationLottie animationPath={developer1} />
             </div>
             <div
               onMouseMove={(e) => {
                 manageMouseMove(e)
               }}
-              className='h-full flex flex-col justify-center'
+              className='h-full w-full flex flex-col justify-center px-3 col-span-2 relative z-10'
             >
               <div ref={plane}>
-                <Text3d
-                  primary={`LET'S MAKE IT`}
-                  secondary={`LET'S MAKE IT`}
-                  className='text-md leading-[32px] md:text-[4vw] md:leading-[4vw]'
-                />
-                <Text3d
-                  primary={`HAPPEN TOGETHER.`}
-                  secondary={`HAPPEN TOGETHER.`}
-                  className='text-md leading-[32px] md:text-[4vw] md:leading-[4vw]'
-                />
-                <div className='flex flex-col'>
-                  <span className='text-xs'>Drop me and email:</span>
+                <p className='text-xs md:text-sm 2xl:text-md text-center font-semibold text-text-1'>
+                  interested in working together?
+                </p>
+                <div className='w-full mb-1 sm:mb-2 xl:mb-5 '>
+                  <IconContact />
+                </div>
+                <div className='flex flex-col justify-center items-center'>
+                  <span className='text-xs leading-none'>
+                    Drop me and email:
+                  </span>
                   <Link
-                    className='text-sm'
-                    href='phongphanq089@gmail.com'
+                    className='text-[18px] sm:text-sm'
+                    href='mailto:phongphanq089@gmail.com'
                     title='phongphanq089@gmail.com'
                   >
                     phongphanq089@gmail.com
@@ -107,37 +71,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='xl:absolute xl:left-1/2 xl:-translate-x-1/2  xl:bottom-3 mx-auto'>
-          <ul className='grid grid-cols-2 gap-3 md:flex items-center lg:gap-2 2xl:gap-5 text-white relative z-10'>
-            {socialLink?.map((social, index) => {
-              return (
-                <li
-                  className='border rounded-3xl px-3 py-2 bg-black'
-                  key={`${social.name}-${index}`}
-                >
-                  <FlipLink
-                    href='#'
-                    className='font-semibold  uppercase text-[18px] sm:text-sm lg:text-sm 2xl:text-md !text-white'
-                  >
-                    {social.name}
-                  </FlipLink>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <div className='flex text-center  flex-col xs:flex-row justify-between w-full items-center'>
-          <div className='hidden md:flex flex-col'>
-            <span className='text-xs'>Phone Number:</span>
-            <Link
-              className='text-[18px] 2xl:text-sm font-semibold'
-              href='phongphanq089@gmail.com'
-              title='phongphanq089@gmail.com'
-            >
-              0706113210
-            </Link>
-          </div>
 
+        {/* =====  RENDER LIST MENU */}
+        <ListNavigaitonMenu />
+        {/* =====  END */}
+        <div className='flex text-center flex-col md:flex-row justify-between w-full items-center gap-4'>
+          <SocialLink />
           <div className='flex flex-col'>
             <ScrollTop />
             <span className='text-[18px] 2xl:text-sm font-medium'>
@@ -146,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   )
 }
 

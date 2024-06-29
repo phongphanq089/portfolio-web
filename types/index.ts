@@ -12,3 +12,13 @@ export interface projectType {
   src: string
   year: number
 }
+
+export interface FooterMenuType {
+  heading: string
+  navigation?: boolean
+  children: {
+    name: string
+    link: string
+    target?: true
+  }[]
+}

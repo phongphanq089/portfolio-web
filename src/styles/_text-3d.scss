@@ -18,7 +18,7 @@
   transform-origin: bottom center;
   position: absolute;
   top: 0;
-  color: var(--color-6);
+  color: var(--text-1);
   opacity: 0;
   @include downMd {
     transform: rotateX(-90deg) translateY(16px);

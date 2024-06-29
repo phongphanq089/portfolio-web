@@ -9,7 +9,7 @@ import TextFullContainerHero from '@/components/shared/TextFullContainerHero'
 const BannerHero = () => {
   return (
     <div className='container-xxl mb-[30px]  md:mb-[100px] overflow-hidden'>
-      <TextFullContainerHero />
+      <TextFullContainerHero text1='Phong' text2='Phan' />
       <div className='grid xl:grid-cols-4  xl:gap-7'>
         <div className='flex flex-col'>
           <HeroImageDev />

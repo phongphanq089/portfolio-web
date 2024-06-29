@@ -47,6 +47,7 @@ const config = {
         white: 'var(--white)',
         'text-gray-light': 'var(--text-gray-light)',
         'text-dark': 'var(--text-dark)',
+        'text-1': 'var(--text-1)',
         'color-1': 'var(--color-1)',
         'color-2': 'var(--color-2)',
         'color-3': 'var(--color-3)',

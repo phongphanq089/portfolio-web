@@ -2,7 +2,13 @@
 import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
-const TextFullContainerHero = () => {
+const TextFullContainerHero = ({
+  text1,
+  text2,
+}: {
+  text1: string
+  text2: string
+}) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLSpanElement>(null)
 
@@ -86,10 +92,10 @@ const TextFullContainerHero = () => {
             />
           </motion.svg>
           <span className='relative text-color-3 leading-none font-mono'>
-            Phong
+            {text1}
           </span>
         </span>
-        Phan
+        {text2}
       </span>
     </div>
   )
