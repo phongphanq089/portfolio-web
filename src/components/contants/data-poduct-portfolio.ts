@@ -145,3 +145,54 @@ export const projectDeveloper = [
     link: 'https://microsoft.com',
   },
 ]
+
+export const listBlogs = [
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+  {
+    title: '🔨 Learn How to Build a Custom ReactJS Hook from Scratch',
+    description: `What exactly is a custom hook? Well, it's like a little snippet of reusable logic that you can create and share across different components in your Re`,
+  },
+]

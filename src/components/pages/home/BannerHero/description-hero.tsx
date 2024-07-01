@@ -1,6 +1,8 @@
+'use client'
 /* eslint-disable @next/next/no-img-element */
 import { creativeplus } from '@/assets'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const DescriptionHero = () => {
   return (
@@ -41,13 +43,22 @@ const DescriptionHero = () => {
           </svg>
         </div>
         <div className='col-span-3'>
-          <p className='text-[14px] md:text-[18px] 2xl:text-[24px] font-medium text-bg-dark mb-3'>
+          <motion.p
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: 'easeInOut',
+            }}
+            className='text-[14px] md:text-[18px] 2xl:text-[24px] font-medium text-bg-dark mb-3'
+          >
             I am an enthusiastic and passionate frontend developer, always
             looking for opportunities to flex my creativity and professional
             expertise. With a spirit of continuous learning and active critical
             thinking, I am committed to bringing true value to every project I
             am involved with.
-          </p>
+          </motion.p>
           <div className='max-w-[400px] 2xl:max-w-[600px]'>
             <img
               src={creativeplus.src}

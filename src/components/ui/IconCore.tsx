@@ -41,21 +41,14 @@ const Icons: Record<string, JSX.Element> = {
       <path d='m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z'></path>
     </svg>
   ),
-  imageCreate: (
+  'list-plus': (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
       viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
     >
-      <path d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7' />
-      <line x1='16' x2='22' y1='5' y2='5' />
-      <line x1='19' x2='19' y1='2' y2='8' />
-      <circle cx='9' cy='9' r='2' />
-      <path d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21' />
+      <path d='M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z'></path>
     </svg>
   ),
   people: (

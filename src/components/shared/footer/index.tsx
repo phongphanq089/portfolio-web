@@ -38,7 +38,7 @@ const Footer = () => {
       >
         <IconRound className='pointer-events-none absolute left-1/2 top-16 z-1 h-fit w-5/6 sm:w-3/5 lg:w-2/5' />
         <div className='w-full py-3'>
-          <div className='flex flex-col-reverse sm:grid sm:grid-cols-3'>
+          <div className='flex flex-col sm:grid sm:grid-cols-3'>
             <div className='max-w-[400px] 2xl:max-w-[600px] h-full'>
               <AnimationLottie animationPath={developer1} />
             </div>

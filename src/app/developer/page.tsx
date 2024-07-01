@@ -1,15 +1,15 @@
-'use client'
 import { projectDeveloper } from '@/components/contants/data-poduct-portfolio'
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import { HoverEffect } from '@/components/ui/CardHoverEffect'
-import TabMotion from '@/components/ui/Tabs'
-import React, { useState } from 'react'
+import React from 'react'
+import TextFullContainerHero from '@/components/shared/TextFullContainerHero'
+import TabsAnimation from '@/components/shared/TabsAnimation'
+import { IconHeading } from '@/components/ui/RenderIcon'
 
 const tabs = [
   'Icon',
   'Illustuslation',
   'Photo',
-  'Video',
   'Color',
   'Background',
   'Typography',
@@ -18,21 +18,21 @@ const tabs = [
   'Implementations',
   'Components',
 ]
+
 const PageDeveloper = () => {
-  const [selected, setSelected] = useState(tabs[0])
   return (
     <LayoutWrapper>
       <div className='container-2xl '>
-        <div className='px-4 py-4 rounded-2xl flex flex-wrap items-center gap-2 justify-center'>
-          {tabs.map((tab) => (
-            <TabMotion
-              text={tab}
-              selected={selected === tab}
-              setSelected={setSelected}
-              key={tab}
-            />
-          ))}
+        <div className='max-w-xl mx-auto mt-4'>
+          <div className='flex items-center justify-center gap-2'>
+            <IconHeading className='w-[30px] md:w-[50px] h-auto' />
+            <h1 className='text-sm md:text-xl font-bold text-color-3 uppercase whitespace-nowrap'>
+              Assorted Resources
+            </h1>
+          </div>
         </div>
+        <TabsAnimation tabs={tabs} />
+
         <HoverEffect items={projectDeveloper} />
       </div>
     </LayoutWrapper>
