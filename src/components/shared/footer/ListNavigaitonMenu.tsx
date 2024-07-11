@@ -1,4 +1,5 @@
 import { footerMenu } from '@/components/contants/menu-list'
+import { LinkPreview } from '@/components/ui/LinkPreview'
 import { FooterMenuType } from '@/types'
 import Link from 'next/link'
 import React from 'react'
@@ -24,13 +25,14 @@ const ListNavigaitonMenu = () => {
                 return (
                   <li key={`${index}-${menu.name}`}>
                     {menu.target ? (
-                      <Link
-                        href={menu.link}
+                      <LinkPreview
+                        url={menu.link}
+                        imageSrc={menu.image}
+                        isStatic
                         className='text-rbg-2 font-medium text-xs 2xl:text-sm'
-                        target='_blank'
                       >
                         {menu.name}
-                      </Link>
+                      </LinkPreview>
                     ) : (
                       <Link
                         href={menu.link}

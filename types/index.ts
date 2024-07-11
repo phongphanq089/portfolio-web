@@ -21,5 +21,6 @@ export interface FooterMenuType {
     name: string
     link: string
     target?: true
+    image: string
   }[]
 }
