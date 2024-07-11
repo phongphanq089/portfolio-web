@@ -1,15 +1,3 @@
-import facebook from '../../public/image/svg-icon/facebook.svg'
-import tiktok from '../../public/image/svg-icon/tiktok.svg'
-import instagram from '../../public/image/svg-icon/instagram.svg'
-import twitter from '../../public/image/svg-icon/twitter.svg'
-import cricleDouble from '../../public/image/svg-icon/cricle-double.svg'
-import portal from '../../public/portal.svg'
-import portal1 from '../../public/portal-1.svg'
-import quadrangle from '../../public/image/svg-icon/Shape.svg'
-import Logo from '../../public/logo-1.svg'
-import Border from '../../public/broder.svg'
-import bgShade from '../../public/image/bg-shape.png'
-import bgCircule from '../../public/image/circule.png'
 /*======================= || json lotttie || =================  */
 import skillDevJson from '../../public/lottie/skillDev.json'
 import coderJson from '../../public/lottie/coder.json'
@@ -34,43 +22,32 @@ import react from '../../public/skills-icon/react.svg'
 import tailwind from '../../public/skills-icon/tailwind.svg'
 import typescript from '../../public/skills-icon/typescript.svg'
 import vitejs from '../../public/skills-icon/vitejs.svg'
-/*======================= || bg image || =================  */
+/*======================= || bg banner phong phan || =================  */
 import bgBanner from '../../public/image/banner-dev.png'
 import bgLetWord from '../../public/image/lets-work.png'
 import bgHello from '../../public/image/hello-style.png'
 import bgSmile from '../../public/image/svg-icon/smile.svg'
-import bgPhongphan from '../../public/image/svg-icon/phong-phan.svg'
-import bgBlock from '../../public/image/svg-icon/bg-block.svg'
-import logoNexgendev from '../../public/nexgendev.png'
-import creativeplus from '../../public/image/svg-icon/creativeplus.svg'
-import bgAroundFt from '../../public/image/svg-icon/bg-around-ft.svg'
+import logoNexgendev from '../../public/logo-developer.png'
 import thurnder from '../../public/image/svg-icon/thurnder.svg'
-import heroAbout from '../../public/image/hero-about.png'
 import heroAbout1 from '../../public/image/hero-about-1.jpg'
-import iconBlock1 from '../../public/image/svg-icon/icon-block-1.svg'
-import bgFooter from '../../public/image/svg-icon/bg-footer.svg'
-import bgLine from '../../public/image/svg-icon/line-svg.svg'
-
-/*======================= || bg footer || =================  */
-import bgFooter1 from '../../public/image/footer/bg-footer-1.png'
-
+import creativeplus from '../../public/image/svg-icon/creativeplus.svg'
+// ============ ICON DEV || ===================== //
+import iconPortfolio from '../../public/image/bg-portfolio.png'
+import beanhead from '../../public/image/svg-icon/beanhead.svg'
+import Icon404 from '../../public/image/svg-icon/icon-404.svg'
 export {
-  facebook,
-  tiktok,
-  instagram,
-  twitter,
-  cricleDouble,
-  portal,
-  portal1,
-  quadrangle,
-  Logo,
-  Border,
-  bgShade,
-  bgCircule,
+  // ====== ICON DEV
+  iconPortfolio,
+  beanhead,
+  Icon404,
+  // ======== END
+  //==== json lotttie =====//
   skillDevJson,
   coderJson,
   notificationDev,
   developer1,
+  // ======== END
+  // ======== skill icon
   aws,
   bootstrap,
   coffeescript,
@@ -89,21 +66,15 @@ export {
   tailwind,
   typescript,
   vitejs,
+  // ======== END
+  // ======= bg banner phong phan
   bgBanner,
   bgLetWord,
   bgHello,
   bgSmile,
-  bgPhongphan,
-  bgBlock,
   logoNexgendev,
-  creativeplus,
-  bgAroundFt,
   thurnder,
-  heroAbout,
   heroAbout1,
-  iconBlock1,
-  bgFooter,
-  bgLine,
-  // footer///
-  bgFooter1,
+  // ======== END
+  creativeplus,
 }

@@ -1,42 +1,6 @@
 // Generated from https://coolshap.es by realvjy
 import React from 'react'
 
-export const Misc_1 = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    width='200'
-    height='200'
-    viewBox='0 0 200 200'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <g clip-path='url(#clip0_104_35)'>
-      <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M107.143 0H92.8571V63.2531L69.1621 4.60582L55.9166 9.95735L80.2255 70.1239L34.3401 24.2385L24.2386 34.3401L68.2177 78.3191L11.2241 53.4181L5.50459 66.5089L65.8105 92.8571H0V107.143H65.8104L5.50461 133.491L11.2241 146.582L68.2176 121.681L24.2386 165.66L34.3401 175.761L80.2255 129.876L55.9166 190.043L69.1621 195.394L92.8571 136.747V200H107.143V136.747L130.838 195.394L144.083 190.043L119.775 129.876L165.66 175.761L175.761 165.66L131.782 121.681L188.776 146.582L194.495 133.491L134.19 107.143H200V92.8571H134.189L194.495 66.5089L188.776 53.4181L131.782 78.3191L175.761 34.34L165.66 24.2385L119.775 70.1238L144.083 9.95735L130.838 4.60582L107.143 63.2531V0Z'
-        fill='url(#paint0_linear_104_35)'
-      />
-    </g>
-    <defs>
-      <linearGradient
-        id='paint0_linear_104_35'
-        x1='14'
-        y1='26'
-        x2='179'
-        y2='179.5'
-        gradientUnits='userSpaceOnUse'
-      >
-        <stop stopColor='#0f0715' />{' '}
-        <stop offset='1' stopColor='rgb(57 54 50 / 1)' />
-      </linearGradient>
-      <clipPath id='clip0_104_35'>
-        <rect width='200' height='200' fill='white' />
-      </clipPath>
-    </defs>
-  </svg>
-)
-
 export const IconRound = ({ className }: { className?: string }) => {
   return (
     <svg
@@ -152,10 +116,178 @@ export const IconHeading = ({ className }: { className?: string }) => {
           gradientUnits='userSpaceOnUse'
         >
           {' '}
-          <stop offset='0.0509862' stopColor='rgb(57 54 50 / 1)' />{' '}
-          <stop offset='1' stopColor='rgb(76, 76, 76)' />{' '}
+          <stop offset='0.0509862' stopColor={'rgb(57 54 50 / 1)'} />{' '}
+          <stop offset='1' stopColor={'rgb(57 54 50 / 1)'} />{' '}
         </linearGradient>{' '}
         <clipPath id='clip0_236_1049'>
+          {' '}
+          <rect width='200' height='200' fill='white' />{' '}
+        </clipPath>{' '}
+      </defs>{' '}
+    </svg>
+  )
+}
+export const IconHeading1 = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      width='200'
+      height='200'
+      viewBox='0 0 200 200'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      className={className}
+    >
+      <g clipPath='url(#clip0_236_1049)'>
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M200 2.62268e-06V60L200 200H140V130.033C139.982 168.678 108.649 200 70 200C31.3401 200 0 168.66 0 130C0 91.3401 31.3401 60 70 60C108.649 60 139.982 91.3222 140 129.967V60H70H0V2.62268e-06L140 0L200 2.62268e-06Z'
+          fill='url(#paint0_linear_236_1049)'
+        />{' '}
+      </g>{' '}
+      <defs>
+        {' '}
+        <linearGradient
+          id='paint0_linear_236_1049'
+          x1='157.5'
+          y1='32'
+          x2='44'
+          y2='147.5'
+          gradientUnits='userSpaceOnUse'
+        >
+          {' '}
+          <stop offset='0.0509862' stopColor={'rgb(191 191 177 / 1)'} />{' '}
+          <stop offset='1' stopColor={'rgb(191 191 177 / 1)'} />{' '}
+        </linearGradient>{' '}
+        <clipPath id='clip0_236_1049'>
+          {' '}
+          <rect width='200' height='200' fill='white' />{' '}
+        </clipPath>{' '}
+      </defs>{' '}
+    </svg>
+  )
+}
+
+export const IconShapes_1 = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      className={className}
+      width='200'
+      height='200'
+      viewBox='0 0 200 200'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      {' '}
+      <g clipPath='url(#clip0_104_128)'>
+        {' '}
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M107.143 4C107.143 1.79086 105.352 0 103.143 0H96.8571C94.648 0 92.8571 1.79086 92.8571 4V42.6749C92.8571 47.0714 86.7954 48.2497 85.1484 44.1733L70.6605 8.31456C69.833 6.26628 67.5016 5.27669 65.4534 6.10425L59.6253 8.45892C57.5771 9.28648 56.5875 11.6178 57.415 13.6661L72.8605 51.8949C74.4928 55.9351 69.4045 59.303 66.3233 56.2218L37.1685 27.067C35.6064 25.5049 33.0737 25.5049 31.5116 27.067L27.067 31.5116C25.5049 33.0737 25.5049 35.6064 27.067 37.1685L53.2479 63.3494C56.3733 66.4748 52.8683 71.6129 48.818 69.8432L14.8895 55.0196C12.8651 54.1351 10.5071 55.0592 9.62262 57.0835L7.10604 62.8435C6.22158 64.8679 7.14565 67.2259 9.17001 68.1104L48.2659 85.1917C52.2376 86.927 50.9987 92.8571 46.6644 92.8571H4C1.79086 92.8571 0 94.648 0 96.8571V103.143C0 105.352 1.79086 107.143 4 107.143H46.6642C50.9985 107.143 52.2374 113.073 48.2657 114.808L9.17006 131.89C7.1457 132.774 6.22163 135.132 7.10609 137.156L9.62267 142.916C10.5071 144.941 12.8652 145.865 14.8895 144.98L48.818 130.157C52.8683 128.387 56.3733 133.525 53.2479 136.651L27.067 162.831C25.5049 164.394 25.5049 166.926 27.067 168.488L31.5117 172.933C33.0737 174.495 35.6064 174.495 37.1685 172.933L66.3233 143.778C69.4046 140.697 74.4929 144.065 72.8605 148.105L57.415 186.334C56.5875 188.382 57.577 190.713 59.6253 191.541L65.4533 193.896C67.5016 194.723 69.8329 193.734 70.6605 191.685L85.1484 155.827C86.7954 151.75 92.8571 152.929 92.8571 157.325V196C92.8571 198.209 94.648 200 96.8571 200H103.143C105.352 200 107.143 198.209 107.143 196V157.325C107.143 152.929 113.205 151.75 114.852 155.827L129.339 191.685C130.167 193.734 132.498 194.723 134.547 193.896L140.375 191.541C142.423 190.713 143.413 188.382 142.585 186.334L127.14 148.105C125.507 144.065 130.595 140.697 133.677 143.778L162.831 172.933C164.394 174.495 166.926 174.495 168.488 172.933L172.933 168.488C174.495 166.926 174.495 164.394 172.933 162.831L146.752 136.651C143.627 133.525 147.132 128.387 151.182 130.157L185.11 144.98C187.135 145.865 189.493 144.941 190.377 142.916L192.894 137.156C193.778 135.132 192.854 132.774 190.83 131.89L151.734 114.808C147.763 113.073 149.001 107.143 153.336 107.143H196C198.209 107.143 200 105.352 200 103.143V96.8571C200 94.648 198.209 92.8571 196 92.8571H153.336C149.001 92.8571 147.762 86.927 151.734 85.1917L190.83 68.1104C192.854 67.2259 193.778 64.8678 192.894 62.8435L190.377 57.0835C189.493 55.0592 187.135 54.1351 185.11 55.0196L151.182 69.8432C147.132 71.6128 143.627 66.4748 146.752 63.3494L172.933 37.1684C174.495 35.6063 174.495 33.0737 172.933 31.5116L168.488 27.0669C166.926 25.5048 164.394 25.5048 162.831 27.0669L133.677 56.2217C130.595 59.3029 125.507 55.935 127.14 51.8948L142.585 13.6661C143.413 11.6178 142.423 9.28648 140.375 8.45892L134.547 6.10425C132.498 5.27669 130.167 6.26628 129.339 8.31456L114.852 44.1733C113.205 48.2497 107.143 47.0714 107.143 42.6749V4Z'
+          fill='url(#paint0_linear_104_128)'
+        />{' '}
+      </g>{' '}
+      <defs>
+        {' '}
+        <linearGradient
+          id='paint0_linear_104_128'
+          x1='27.5'
+          y1='19'
+          x2='149'
+          y2='174.5'
+          gradientUnits='userSpaceOnUse'
+        >
+          {' '}
+          <stop stopColor='#FFD9A0' /> <stop offset='1' stopColor='#FFF5F1' />{' '}
+        </linearGradient>{' '}
+        <clipPath id='clip0_104_128'>
+          {' '}
+          <rect width='200' height='200' fill='white' />{' '}
+        </clipPath>{' '}
+      </defs>{' '}
+    </svg>
+  )
+}
+
+export const IconShapes_2 = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      className={className}
+      width='200'
+      height='200'
+      viewBox='0 0 200 200'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      {' '}
+      <g clipPath='url(#clip0_231_793)'>
+        {' '}
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M50 0H200V50V150L150 200L150 50H0L50 0ZM0 165.067V100L65.067 100L0 165.067ZM100 200H35.7777L100 135.778L100 200Z'
+          fill='url(#paint0_linear_231_793)'
+        />{' '}
+      </g>{' '}
+      <defs>
+        {' '}
+        <linearGradient
+          id='paint0_linear_231_793'
+          x1='177'
+          y1='-9.23648e-06'
+          x2='39.5'
+          y2='152.5'
+          gradientUnits='userSpaceOnUse'
+        >
+          {' '}
+          <stop stopColor='rgb(191 191 177)' />{' '}
+          <stop offset='1' stopColor='rgb(191 191 177)' />{' '}
+        </linearGradient>{' '}
+        <clipPath id='clip0_231_793'>
+          {' '}
+          <rect width='200' height='200' fill='white' />{' '}
+        </clipPath>{' '}
+      </defs>{' '}
+    </svg>
+  )
+}
+
+export const IconHeading2 = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      className={className}
+      width='200'
+      height='200'
+      viewBox='0 0 200 200'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      {' '}
+      <g clipPath='url(#clip0_234_854)'>
+        {' '}
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M44 0H0V150C0 177.614 22.3858 200 50 200H94V50C94 22.3858 71.6142 0 44 0ZM156 0C128.386 0 106 22.3858 106 50V200H150C177.614 200 200 177.614 200 150V0H156Z'
+          fill='url(#paint0_linear_234_854)'
+        />{' '}
+      </g>{' '}
+      <defs>
+        {' '}
+        <linearGradient
+          id='paint0_linear_234_854'
+          x1='100'
+          y1='0'
+          x2='100'
+          y2='200'
+          gradientUnits='userSpaceOnUse'
+        >
+          {' '}
+          <stop stopColor='rgb(57 54 50 / 1)' />{' '}
+          <stop offset='1' stopColor='rgb(57 54 50 / 1)' />{' '}
+        </linearGradient>{' '}
+        <clipPath id='clip0_234_854'>
           {' '}
           <rect width='200' height='200' fill='white' />{' '}
         </clipPath>{' '}

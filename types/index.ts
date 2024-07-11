@@ -3,6 +3,7 @@ export interface typeMenuItems {
   link: string
   icon?: string
   imgSrc: string
+  isNotfound: boolean
 }
 
 export interface projectType {

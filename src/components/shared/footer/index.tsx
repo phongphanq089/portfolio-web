@@ -1,15 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { bgFooter1, developer1 } from '@/assets'
-import { socialLink } from '@/components/contants/social-link'
+import { developer1 } from '@/assets'
 import AnimationLottie from '@/components/ui/AnimationLottie'
-import FlipLink from '@/components/ui/FlipLink'
-import Text3d from '@/components/ui/Text3d'
 import Link from 'next/link'
 import React, { useRef } from 'react'
 import ScrollTop from '../ScrollTop'
-import FastMarquee from '@/components/ui/FastMarquee'
-import { IconContact, IconRound, Misc_1 } from '@/components/ui/RenderIcon'
+import { IconContact, IconRound } from '@/components/ui/RenderIcon'
 import ListNavigaitonMenu from './ListNavigaitonMenu'
 import SocialLink from './SocialLink'
 
@@ -46,7 +42,7 @@ const Footer = () => {
               onMouseMove={(e) => {
                 manageMouseMove(e)
               }}
-              className='h-full w-full flex flex-col justify-center px-3 col-span-2 relative z-10'
+              className='h-full w-full flex flex-col justify-center px-3 col-span-2 relative z-10 mb-5'
             >
               <div ref={plane}>
                 <p className='text-xs md:text-sm 2xl:text-md text-center font-semibold text-text-1'>

@@ -6,6 +6,11 @@
   gap: 2vw;
   padding: 2vw;
   overflow: hidden;
+
+  @include downSm {
+    gap: 2px;
+    padding: 2px;
+  }
   .column {
     position: relative;
     height: 100%;
@@ -16,8 +21,9 @@
     gap: 2vw;
 
     @include downSm {
-      width: 200px;
-      min-width: none;
+      width: 100px;
+      min-width: unset;
+      gap: 2px;
     }
     .imageContainer {
       height: 100%;

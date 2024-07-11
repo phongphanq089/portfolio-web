@@ -1,21 +1,20 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
-import ListProject from '@/components/pages/home/ListProject'
-import BannerHero from '@/components/pages/home/BannerHero'
-import PerspectiveMotion from '@/components/pages/home/perspective-motion'
-import SmoothParalaxSroll from '@/components/pages/home/SmoothParalaxSroll'
+import BannerHero from '@/components/pages/home/banner-hero'
+import ListProject from '@/components/pages/home/projects'
+import CardAbout from '@/components/pages/home/card-about'
+import SkillDeveloper from '@/components/pages/home/skill-developer'
+import ImageParalaxSroll from '@/components/pages/home/ImageParalaxSroll'
 
 export default function Home() {
   return (
     <LayoutWrapper>
-      {/* ================= */}
-      {/* BANNER HERO */}
       <BannerHero />
-      {/* ABOUT DEV */}
-      <PerspectiveMotion />
-      {/* ================= */}
+      <div className='bg-black py-8 z-20 relative rounded-2xl'>
+        <CardAbout />
+        <SkillDeveloper />
+      </div>
       <ListProject />
-      <SmoothParalaxSroll />
-      {/* ================= */}
+      <ImageParalaxSroll />
     </LayoutWrapper>
   )
 }

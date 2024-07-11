@@ -15,3 +15,7 @@
 @import './gallery-smooth-scroll';
 
 @import './resize-image';
+
+.rfm-marquee-container {
+  overflow: hidden !important;
+}

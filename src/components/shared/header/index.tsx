@@ -3,20 +3,12 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import LinkNavBar from './link-navbar'
-import {
-  background,
-  height,
-  mountAnim,
-  opacity,
-  slideLeft,
-} from '@/settings/motion'
-import Image from 'next/image'
+import { menuSlide } from '@/settings/motion'
 import LogoDev from '../LogoDev'
 import TypingMachine from '../TypingMachine'
 import BtnOpenMenu from './btn-action-menu/BtnOpenMenu'
-import BtnCloseMenu from './btn-action-menu/BtnCloseMenu'
-import BannerImage from './link-navbar/BannerImage'
-import SocialLink from './link-navbar/SocialLink'
+import Link from 'next/link'
+import { IconShapes_2 } from '@/components/ui/RenderIcon'
 export default function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -31,14 +23,8 @@ export default function Header() {
   }
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    if (menuIsOpen) {
-      document.body.classList.add('overflow-hidden')
-    } else {
-      document.body.classList.remove('overflow-hidden')
-    }
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      document.body.classList.remove('overflow-hidden')
     }
   }, [menuIsOpen, isActive])
 
@@ -67,50 +53,59 @@ export default function Header() {
         <AnimatePresence mode='wait'>
           {menuIsOpen && (
             <>
-              <motion.div className='fixed top-0 left-0 z-50 h-screen flex pointer-events-none transition-1s'>
-                {[...Array(5)].map((_, index) => {
-                  return (
-                    <motion.div
-                      variants={height}
-                      {...mountAnim}
-                      custom={4 - index}
-                      className='w-[20vw] h-full border-r bg-black'
-                      key={index}
-                    ></motion.div>
-                  )
-                })}
-                <motion.div
-                  variants={background}
-                  {...mountAnim}
-                  className='w-full h-full absolute bg-black'
-                ></motion.div>
-              </motion.div>
               <motion.div
-                className='menu1 fixed flex justify-between flex-col top-0 left-0 w-full h-full bg-black z-[999]'
-                variants={opacity}
+                variants={menuSlide}
                 initial='initial'
                 animate='enter'
                 exit='exit'
+                className='menu z-40 bg-color-3'
               >
-                <BtnCloseMenu
-                  openMenu={() => {
-                    setMenuIsOpen(false)
-                  }}
-                />
-                <div
-                  className={
-                    'w-full h-full px-1 sm:px-5 flex flex-col justify-between relative'
-                  }
-                >
+                <div className='body relative'>
+                  <div className='absolute right-0 top-1/2 -translate-y-1/2 z-0 opacity-20'>
+                    <IconShapes_2 className='w-[400px] h-[400px]' />
+                  </div>
                   <LinkNavBar />
-                  <SocialLink />
-                  <BannerImage className='max-w-[300px] sm:max-w-[400px] 2xl:max-w-[600px] h-auto absolute bottom-0 -right-3 md:top-3 md:right-0 z-0' />
+                  <div className='p-1 flex justify-between flex-wrap'>
+                    <div className='flex flex-col'>
+                      <span className='font-light'> EMAIL ADDRESS</span>
+                      <Link
+                        href={'mailto:phongphanq089@gmail.com'}
+                        title='phongphanq089@gmail.com'
+                        className='text-sm'
+                      >
+                        phongphanq089@gmail.com
+                      </Link>
+                    </div>
+                    <div className='flex flex-col'>
+                      <span className='font-light'> PHONE NUMBER</span>
+                      <Link
+                        href={'phone:0706113210'}
+                        title='0706113210'
+                        className='text-sm'
+                      >
+                        0706113210
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
+              <motion.div
+                variants={menuSlide}
+                onClick={() => setMenuIsOpen(false)}
+                className={
+                  'fixed w-full h-full top-0 right-0 bg-[rgba(0,0,0,0.6)] z-[90]'
+                }
+              ></motion.div>
             </>
           )}
         </AnimatePresence>
       </div>
     </>
   )
+}
+
+{
+  /* <LinkNavBar />
+                  <SocialLink />
+                  <BannerImage className='max-w-[300px] sm:max-w-[400px] 2xl:max-w-[600px] h-auto absolute bottom-0 -right-3 md:top-3 md:right-0 z-0' /> */
 }

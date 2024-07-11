@@ -5,9 +5,11 @@ import { motion } from 'framer-motion'
 const TextFullContainerHero = ({
   text1,
   text2,
+  className,
 }: {
   text1: string
   text2: string
+  className?: string
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLSpanElement>(null)
@@ -61,7 +63,7 @@ const TextFullContainerHero = ({
 
   return (
     <div
-      className='flex w-full items-center  h-auto relative'
+      className={`flex w-full items-center  h-auto relative ${className}`}
       ref={containerRef}
     >
       <span

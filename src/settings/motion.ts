@@ -1,11 +1,16 @@
 export const menuSlide = {
-  initial: { x: 'calc(100% + 100px)' },
+  initial: { x: '100%', y: '-50%' },
 
-  enter: { x: '0', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } },
+  enter: {
+    x: 0,
+    y: '-50%',
+    transition: { duration: 0.5, ease: [0.68, -0.55, 0.27, 1.55] },
+  },
 
   exit: {
-    x: 'calc(100% + 100px)',
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    x: '100%',
+    y: '-50%',
+    transition: { duration: 0.5, ease: [0.68, -0.55, 0.27, 1.55] },
   },
 }
 
