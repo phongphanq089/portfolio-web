@@ -68,18 +68,40 @@ const Icons: Record<string, JSX.Element> = {
   ),
   'arrow-right': (
     <svg
-      id='arrow-horizontal'
       xmlns='http://www.w3.org/2000/svg'
-      width='30'
-      height='10'
-      viewBox='0 0 46 16'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className='icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right'
     >
-      <path
-        id='Path_10'
-        data-name='Path 10'
-        d='M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z'
-        transform='translate(30)'
-      ></path>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M5 12l14 0' />
+      <path d='M15 16l4 -4' />
+      <path d='M15 8l4 4' />
+    </svg>
+  ),
+  'arrow-left': (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className='icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left'
+    >
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M5 12l14 0' />
+      <path d='M5 12l4 4' />
+      <path d='M5 12l4 -4' />
     </svg>
   ),
 }

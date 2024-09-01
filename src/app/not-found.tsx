@@ -1,3 +1,4 @@
+import ButtonStyle from '@/components/shared/ButtonStyle'
 import Link from 'next/link'
 import React from 'react'
 
@@ -62,11 +63,9 @@ const NotFoundPage = () => {
           <div className='base2'></div>
           <div className='base3'></div>
         </div>
-        <Link className='btn-fancy mt-5' href='/'>
-          <span className='top-key'></span>
-          <span className='text'>Go Back Home</span>
-          <span className='bottom-key-1'></span>
-          <span className='bottom-key-2'></span>
+
+        <Link href='/' className='bg-black flex w-fit my-3'>
+          <ButtonStyle text='Go back home' />
         </Link>
       </div>
       <div className='text_404'>

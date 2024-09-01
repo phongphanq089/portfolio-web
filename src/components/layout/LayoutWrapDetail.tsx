@@ -1,9 +1,19 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../shared/header'
 import Footer from '../shared/footer'
+import Lenis from 'lenis'
 
 const LayoutWrapperDetail = ({ children }: { children: React.ReactNode }) => {
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
   return (
     <>
       <div className='container-2xl'>

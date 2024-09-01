@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 /*====== || custom style || ======= */
-@import "../styles/index";
+@import '../styles/index';
 
 @layer base {
-
   :root {
     --clr: #7808d0;
     --dark: #0f0715;
@@ -24,7 +23,8 @@
     --rgb-1: rgb(20, 20, 20);
     --rbg-2: rgb(107 100 92/1);
     --color-rgba-1: rgba(85, 87, 255, 0.78),
-      --bg-linear: linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
+      --bg-linear:
+        linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
 
@@ -97,9 +97,7 @@
   }
 }
 
-
 @layer components {
-
   .container-full {
     @apply max-w-full mx-auto px-1 md:px-3 xl:px-5;
   }
@@ -109,7 +107,7 @@
   }
 
   .container-2xl {
-    @apply max-w-screen-3xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-3xl mx-auto px-2 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .container-xl {
@@ -121,37 +119,35 @@
   }
 
   .title-block {
-    @apply font-bold leading-none
+    @apply font-bold leading-none;
   }
 
   .heading-section {
-    @apply text-md sm:text-lg md:text-3xl 2xl:text-5xl font-bold text-white uppercase whitespace-nowrap
+    @apply text-md sm:text-lg md:text-3xl 2xl:text-5xl font-bold text-white uppercase whitespace-nowrap;
   }
 
   .typography-h1 {
-    @apply text-2xl font-bold
+    @apply text-2xl font-bold;
   }
 
   .typography-h2 {
-    @apply text-xl font-bold
+    @apply text-xl font-bold;
   }
 
   .typography-h3 {
-    @apply text-md font-bold
+    @apply text-md font-bold;
   }
 
   .typography-h4 {
-    @apply text-sm font-bold
+    @apply text-sm font-bold;
   }
 
   .typography-p {
-    @apply text-[18px] font-medium
+    @apply text-[18px] font-medium;
   }
-
 }
 
 @layer utilities {
-
   body:before {
     background-color: var(--light);
     background-image: url(../../public/image/bg-image-body.jpg);
@@ -161,7 +157,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     z-index: 3023023023020;
@@ -169,8 +165,6 @@
     opacity: 15%;
     color: #aeae9d;
   }
-
-
 
   .menu {
     height: 98vh;
@@ -212,7 +206,6 @@
       }
     }
   }
-
 
   .btn-open-menu {
     transition: all 0.3s;
@@ -320,8 +313,6 @@
     }
   }
 
-
-
   .box-shadow-v1 {
     box-shadow: 7px 7px 0 -1px var(--color-3);
   }
@@ -361,7 +352,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -377,4 +368,3 @@
     }
   }
 }
-

@@ -17,7 +17,7 @@ export const footerMenu = [
       },
       {
         name: 'Blogs',
-        link: '/blog',
+        link: '/blog?slug=all',
       },
       {
         name: 'Contact',

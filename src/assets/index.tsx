@@ -35,6 +35,7 @@ import creativeplus from '../../public/image/svg-icon/creativeplus.svg'
 import iconPortfolio from '../../public/image/bg-portfolio.png'
 import beanhead from '../../public/image/svg-icon/beanhead.svg'
 import Icon404 from '../../public/image/svg-icon/icon-404.svg'
+import noDataIcon from '../../public/image/svg-icon/no-data.svg'
 export {
   // ====== ICON DEV
   iconPortfolio,
@@ -77,4 +78,5 @@ export {
   heroAbout1,
   // ======== END
   creativeplus,
+  noDataIcon,
 }
