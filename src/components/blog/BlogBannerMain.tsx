@@ -1,44 +1,16 @@
-/* eslint-disable @next/next/no-img-element */
-import { beanhead } from '@/assets'
 import { formatDate } from '@/lib/utils'
 import { urlFor } from '@/sanity/config'
 import { SanityDocument } from 'next-sanity'
 import Link from 'next/link'
 import React from 'react'
-
-const Avatar = () => {
-  return (
-    <div className='w-[85px] h-auto'>
-      <img
-        src={beanhead.src}
-        alt='phong phan'
-        className='w-full h-auto object-cover'
-      />
-    </div>
-  )
-}
+import { NextImageResize } from '../shared/ImageResize'
 
 const BlogBannerMain = ({ postDetail }: { postDetail: SanityDocument }) => {
   return (
     <div className='pb-2 border-b-2 border-color-3'>
-      <h1 className='text-sm lg:text-lg font-semibold mb-3'>
-        {postDetail?.title}
-      </h1>
-      <div className='flex items-center gap-3 mb-5'>
-        <div className='flex items-center gap-1 '>
-          <div className='bg-white w-6 h-6 rounded-full flex items-center justify-center'>
-            <Avatar />
-          </div>
-          <div className='flex flex-col'>
-            <div className='text-[18px] font-semibold'>
-              {postDetail?.author?.name}
-            </div>
-            <div className='text-[18px] font-semibold'>
-              {formatDate(postDetail?._createdAt)}
-            </div>
-          </div>
-        </div>
-        <Link href='/blog' className='flex items-center gap-1 text-sm'>
+      <div className='flex items-center flex-wrap gap-3 mb-3'>
+        <Link href='/blog' className='button-style-2'>
+          <span className='text'>Back</span>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -55,14 +27,21 @@ const BlogBannerMain = ({ postDetail }: { postDetail: SanityDocument }) => {
             <path d='M5 12l14 0' />
             <path d='M5 12l4 4' />
             <path d='M5 12l4 -4' />
-          </svg>{' '}
-          Previous
+          </svg>
         </Link>
+        <div className='flex items-center gap-1 text-xs sm:text-[18px]'>
+          <div className='font-bold'>PHONG PHAN</div>
+          <div className='h-[3px] w-4 bg-color-3 relative top-1 left-[2px]'></div>
+          <div className='font-bold'>{formatDate(postDetail?._createdAt)}</div>
+        </div>
       </div>
-      <img
+      <h1 className='text-sm lg:text-lg font-semibold leading-[1.4] lg:leading-none mb-3'>
+        {postDetail?.title}
+      </h1>
+      <NextImageResize
         src={urlFor(postDetail?.mainImage?.asset._ref).url()}
-        alt='Setup React Typescript with Vite & ESLint'
-        className='w-full object-cover h-auto mb-2'
+        alt={postDetail?.title}
+        className='pt-[56.25%] mb-5'
       />
       <p className='mb-2 text-[18px]'>{postDetail?.meta_description}</p>
     </div>

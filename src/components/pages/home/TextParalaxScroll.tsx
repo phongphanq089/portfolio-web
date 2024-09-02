@@ -11,12 +11,12 @@ const TextParalaxScroll = () => {
     offset: ['start end', 'end start'],
   })
   return (
-    <main className='overflow-hidden'>
+    <div className='overflow-hidden pb-4'>
       <div ref={container}>
         <Slide direction={'left'} left={'-40%'} progress={scrollYProgress} />
         <Slide direction={'right'} left={'-25%'} progress={scrollYProgress} />
       </div>
-    </main>
+    </div>
   )
 }
 const Slide = (props: {
@@ -52,17 +52,11 @@ const Slide = (props: {
 
 const Phrase = () => {
   return (
-    <div className={'px-2 lg:px-5 flex gap-3 lg:gap-5 items-center'}>
-      <p className='text-md lg:text-[4vw] text-text-1 font-semibold'>
+    <div className={'px-2 lg:px-5 flex gap-3 lg:gap-2 items-center'}>
+      <p className='text-md lg:text-[4vw] text-text-1 font-semibold leading-none'>
         FRONTEND DEVELOPER
       </p>
-      <div className='w-[100px] lg:w-[200px]'>
-        <img
-          src={creativeplus.src}
-          alt='nextgendev'
-          className='w-full h-auto object-cover'
-        />
-      </div>
+      <div className='w-[100px] lg:w-[200px] h-[3px] bg-color-3'></div>
     </div>
   )
 }

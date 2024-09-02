@@ -34,7 +34,7 @@ const ListBlogs = ({
                   mainImage={urlFor(blog.mainImage.asset._ref).url()}
                   description={blog?.meta_description}
                   createdAt={blog?._createdAt}
-                  slug={blog?.slug}
+                  slug={blog?.slug.current}
                 />
               )
             })}

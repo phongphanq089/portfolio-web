@@ -20,8 +20,8 @@
     flex-direction: column;
     gap: 2vw;
 
-    @include downSm {
-      width: 100px;
+    @include downMd {
+      width: 150px;
       min-width: unset;
       gap: 2px;
     }

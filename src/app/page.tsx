@@ -4,6 +4,7 @@ import ListProject from '@/components/pages/home/projects'
 import CardAbout from '@/components/pages/home/card-about'
 import SkillDeveloper from '@/components/pages/home/skill-developer'
 import ImageParalaxSroll from '@/components/pages/home/ImageParalaxSroll'
+import TextSrcollMotion from '@/components/shared/TextSrcollMotion'
 
 export default function Home() {
   return (
@@ -13,7 +14,11 @@ export default function Home() {
         <CardAbout />
         <SkillDeveloper />
       </div>
+      <div className='overflow-x-clip'>
+        <TextSrcollMotion />
+      </div>
       <ListProject />
+
       <ImageParalaxSroll />
     </LayoutWrapper>
   )

@@ -12,8 +12,9 @@ export const getCategoriesQuery = groq`*[_type == "category"] {
     "postCount": count(*[_type == "post" && references(^._id)]),
   }`
 
-export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug.current]{
+export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug.     current]{
     _id,
+    slug,
     _createdAt,
     title,
     body,

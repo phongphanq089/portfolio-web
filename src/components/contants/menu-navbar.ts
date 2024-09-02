@@ -7,7 +7,7 @@ export const navbarItems = [
     isNotfound: false,
   },
   {
-    title: 'DEVELOPER',
+    title: 'RESOURCES',
     link: '/developer/all',
     icon: 'user',
     imgSrc: '/image/decimal.jpg',

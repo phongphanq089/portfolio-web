@@ -45,12 +45,15 @@ const Footer = () => {
               className='h-full w-full flex flex-col justify-center px-3 col-span-2 relative z-10 mb-5'
             >
               <div ref={plane}>
-                <p className='text-xs md:text-sm 2xl:text-md text-center font-semibold text-text-1'>
-                  interested in working together?
+                <p className='text-xs md:text-sm uppercase 2xl:text-md text-center font-semibold text-text-1'>
+                  interested in working together
                 </p>
-                <div className='w-full mb-1 sm:mb-2 xl:mb-5 '>
+                <Link
+                  href={'/contact'}
+                  className='w-full mb-3 xl:mb-5 block link-contact '
+                >
                   <IconContact />
-                </div>
+                </Link>
                 <div className='flex flex-col justify-center items-center'>
                   <span className='text-xs leading-none'>
                     Drop me and email:
@@ -71,13 +74,14 @@ const Footer = () => {
         {/* =====  RENDER LIST MENU */}
         <ListNavigaitonMenu />
         {/* =====  END */}
-        <div className='flex text-center flex-col md:flex-row justify-between w-full items-center gap-4'>
-          <SocialLink />
-          <div className='flex flex-col'>
+        <div className='flex md:text-center flex-col md:flex-row justify-between w-full md:items-center gap-4 pt-5 pb-2 relative'>
+          {/* <SocialLink /> */}
+          <div className='flex flex-col text-sm sm:text-md md:text-xl text-start font-bold text-color-3 leading-none'>
+            <p>© 2024 Phong Phan</p>
+            <p>All rights reserved</p>
+          </div>
+          <div className='flex flex-col absolute bottom-3 sm:bottom-5 right-3 md:relative'>
             <ScrollTop />
-            <span className='text-[18px] 2xl:text-sm font-medium'>
-              @2024-All rights reserved
-            </span>
           </div>
         </div>
       </div>

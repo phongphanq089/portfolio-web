@@ -31,6 +31,7 @@ const PageCategory = async ({ params }: Props) => {
   } catch (error) {
     return notFound()
   }
+
   return (
     <LayoutWrapperDetail>
       <div className='container-2xl'>

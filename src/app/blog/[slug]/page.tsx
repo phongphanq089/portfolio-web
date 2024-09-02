@@ -43,8 +43,8 @@ const PageDetail = async ({ params }: Props) => {
 
   return (
     <LayoutWrapperDetail>
-      <div className='container-2xl overflow-hidden'>
-        <TracingBeam className='pl-6 lg:px-6'>
+      <div className='container-2xl overflow-hidden py-10'>
+        <TracingBeam className='sm:pl-6 lg:px-6'>
           <div className='mx-auto antialiased pt-4 relative'>
             <BlogBannerMain postDetail={postDetail} />
 

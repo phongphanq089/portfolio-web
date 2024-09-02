@@ -28,7 +28,6 @@ const PageCategory = async ({ params }: Props) => {
   } catch (error) {
     return notFound()
   }
-  console.log(listDeveloper, 'listDeveloper')
 
   return (
     <LayoutWrapperDetail>

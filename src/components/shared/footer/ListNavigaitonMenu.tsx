@@ -17,7 +17,7 @@ const ListNavigaitonMenu = () => {
             }
             key={`${index}-${navigate.heading}`}
           >
-            <h3 className='w-full border-b border-color-4 mb-2 pb-1 font-bold text-[18px] 2xl:text-sm whitespace-nowrap'>
+            <h3 className='w-full border-b border-[#9ca3af] mb-2 pb-1 font-bold text-[18px] xl:text-sm whitespace-nowrap'>
               {navigate.heading}
             </h3>
             <ul>
@@ -29,14 +29,14 @@ const ListNavigaitonMenu = () => {
                         url={menu.link}
                         imageSrc={menu.image}
                         isStatic
-                        className='text-rbg-2 font-medium text-xs 2xl:text-sm'
+                        className='text-color-3 font-normal text-[18px]  md:text-xs xl:text-sm'
                       >
                         {menu.name}
                       </LinkPreview>
                     ) : (
                       <Link
                         href={menu.link}
-                        className='text-rbg-2 font-medium text-xs 2xl:text-sm'
+                        className='text-color-3 font-normal text-[18px] md:text-xs xl:text-sm'
                       >
                         {menu.name}
                       </Link>

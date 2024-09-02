@@ -49,7 +49,7 @@ export const footerMenu = [
     ],
   },
   {
-    heading: 'DESIGN IMPLEMENTATION',
+    heading: 'DESIGN INSPIRATION',
     children: [
       {
         name: 'Darkmodedesign',
