@@ -9,7 +9,7 @@ interface PropTextType {
 const DescripTionMotion = ({ text, className }: PropTextType) => {
   return (
     <motion.p
-      className={`text-[18px] md:text-[18px] 2xl:text-sm font-normal text-bg-dark mb-3 ${className}`}
+      className={`text-[18px] font-normal text-bg-dark mb-3 ${className}`}
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{

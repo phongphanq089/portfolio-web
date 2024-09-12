@@ -3,6 +3,7 @@ import ListBlogs from '@/components/pages/blogs/ListBlogs'
 import CategoryTabChange from '@/components/shared/CategoryTabChange'
 import HeadingPage from '@/components/shared/HeadingPage'
 import {
+  footerQuery,
   getCategoriesQuery,
   getCategoryRelatedPostQuery,
 } from '@/lib/queries-data'
@@ -21,7 +22,9 @@ const PageCategory = async ({ params }: Props) => {
   const categories = await sanityFetch<SanityDocument>({
     query: getCategoriesQuery,
   })
-
+  const footeNav = await sanityFetch<SanityDocument>({
+    query: footerQuery,
+  })
   let listBlog
   try {
     listBlog = await sanityFetch<SanityDocument>({
@@ -33,7 +36,7 @@ const PageCategory = async ({ params }: Props) => {
   }
 
   return (
-    <LayoutWrapperDetail>
+    <LayoutWrapperDetail footer={footeNav as SanityDocument}>
       <div className='container-2xl'>
         <HeadingPage text='BLOG POST' />
         <div className='agencium-subtitle'>

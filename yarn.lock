@@ -4441,11 +4441,6 @@ groq@^3.37.1, groq@3.54.0:
   resolved "https://registry.npmjs.org/groq/-/groq-3.54.0.tgz"
   integrity sha512-leqfyLx7somDC5HTchv4iboWPIZU7LYEOTDZgd0/u91BCMgXB4EnYqmvYllYejTgEV2/Hq7lHl6bm7HWfzDrmQ==
 
-gsap@^3.12.5:
-  version "3.12.5"
-  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz"
-  integrity sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==
-
 gunzip-maybe@^1.4.1:
   version "1.4.2"
   resolved "https://registry.npmjs.org/gunzip-maybe/-/gunzip-maybe-1.4.2.tgz"

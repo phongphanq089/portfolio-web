@@ -5,8 +5,15 @@ import { AnimatePresence } from 'framer-motion'
 import LoadingPage from '../shared/LoadingPage'
 import Footer from '../shared/footer'
 import Lenis from 'lenis'
+import { SanityDocument } from 'next-sanity'
 
-const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
+const LayoutWrapper = ({
+  children,
+  footer,
+}: {
+  children: React.ReactNode
+  footer: SanityDocument
+}) => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -43,7 +50,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
       <main className=' flex flex-col min-h-screen relative'>
         <div className='flex-grow flex-1'>{children}</div>
       </main>
-      <Footer />
+      <Footer footer={footer as SanityDocument} />
     </>
   )
 }

@@ -1,8 +1,14 @@
 import React from 'react'
 
-const ButtonStyle = ({ text }: { text: string }) => {
+const ButtonStyle = ({
+  text,
+  className,
+}: {
+  text: string
+  className?: string
+}) => {
   return (
-    <div className='button-style'>
+    <div className={`button-style ${className}`}>
       <span></span>
       <span></span>
       <span></span>

@@ -2,7 +2,11 @@ import LayoutWrapperDetail from '@/components/layout/LayoutWrapDetail'
 import ListProject from '@/components/pages/projects/ListProject'
 import CategoryTabChange from '@/components/shared/CategoryTabChange'
 import HeadingPage from '@/components/shared/HeadingPage'
-import { categoriesProject, projectQueryCategory } from '@/lib/queries-data'
+import {
+  categoriesProject,
+  footerQuery,
+  projectQueryCategory,
+} from '@/lib/queries-data'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
 import Link from 'next/link'
@@ -19,7 +23,9 @@ const PageProject = async ({ params }: Props) => {
   const category = await sanityFetch<SanityDocument>({
     query: categoriesProject,
   })
-
+  const footeNav = await sanityFetch<SanityDocument>({
+    query: footerQuery,
+  })
   let listDeveloper
   try {
     listDeveloper = await sanityFetch<SanityDocument>({
@@ -31,7 +37,7 @@ const PageProject = async ({ params }: Props) => {
   }
 
   return (
-    <LayoutWrapperDetail>
+    <LayoutWrapperDetail footer={footeNav as SanityDocument}>
       <div className='container-2xl '>
         <HeadingPage text='Portfolio Metro' />
         <div className='agencium-subtitle'>

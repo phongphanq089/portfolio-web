@@ -1,13 +1,11 @@
-import { footerMenu } from '@/components/contants/menu-list'
 import { LinkPreview } from '@/components/ui/LinkPreview'
-import { FooterMenuType } from '@/types'
+import { SanityDocument } from 'next-sanity'
 import Link from 'next/link'
-import React from 'react'
 
-const ListNavigaitonMenu = () => {
+const ListNavigaitonMenu = ({ footer }: { footer: SanityDocument }) => {
   return (
     <div className='grid grid-cols-2 md:grid-cols-12 gap-4 pb-3 relative z-10'>
-      {(footerMenu as FooterMenuType[])?.map((navigate, index) => {
+      {footer?.map((navigate: SanityDocument, index: number) => {
         return (
           <div
             className={
@@ -21,13 +19,13 @@ const ListNavigaitonMenu = () => {
               {navigate.heading}
             </h3>
             <ul>
-              {navigate.children?.map((menu, index) => {
+              {navigate.children?.map((menu: any, index: number) => {
                 return (
                   <li key={`${index}-${menu.name}`}>
                     {menu.target ? (
                       <LinkPreview
                         url={menu.link}
-                        imageSrc={menu.image}
+                        imageSrc={menu.imageUrl}
                         isStatic
                         className='text-color-3 font-normal text-[18px]  md:text-xs xl:text-sm'
                       >

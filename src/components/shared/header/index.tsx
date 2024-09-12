@@ -9,6 +9,7 @@ import TypingMachine from '../TypingMachine'
 import BtnOpenMenu from './btn-action-menu/BtnOpenMenu'
 import Link from 'next/link'
 import { IconShapes_2 } from '@/components/ui/RenderIcon'
+import LetterPullup from '@/components/ui/StaggeredLetter'
 export default function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
@@ -34,10 +35,9 @@ export default function Header() {
         <nav className='container-2xl flex justify-between flex-wrap gap-2'>
           <LogoDev />
           <div className='flex gap-[100px]'>
-            <TypingMachine
-              text='Just an ordinary designer.From Vietnam with love.'
-              speed={10}
+            <LetterPullup
               className='hidden lg:block sm:text-sm'
+              words='Just an ordinary designer.From Vietnam with love.'
             />
             <BtnOpenMenu
               menuIsOpen={menuIsOpen}

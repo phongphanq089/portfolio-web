@@ -1,23 +1,15 @@
 'use client'
+import { urlFor } from '@/sanity/config'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import { SanityDocument } from 'next-sanity'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const images = [
-  '1.jpg',
-  '2.jpg',
-  '3.jpg',
-  '4.jpg',
-  '5.jpg',
-  '6.jpg',
-  '7.jpg',
-  '8.jpg',
-  '9.jpg',
-  '10.jpg',
-  '11.jpg',
-  '12.jpg',
-]
-const ImageParalaxSroll = () => {
+const ImageParalaxSroll = ({
+  listParalaxImageScroll,
+}: {
+  listParalaxImageScroll: SanityDocument
+}) => {
   const gallery = useRef(null)
   const [dimension, setDimension] = useState({ width: 0, height: 0 })
 
@@ -45,16 +37,42 @@ const ImageParalaxSroll = () => {
   }, [])
 
   return (
-    <main>
-      {/* <div className='spacer'></div> */}
+    <section>
       <div ref={gallery} className='gallery'>
-        <Column images={[images[0], images[1], images[2]]} y={y} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} />
-        <Column images={[images[6], images[7], images[8]]} y={y3} />
-        <Column images={[images[9], images[10], images[11]]} y={y4} />
+        <Column
+          images={[
+            urlFor(listParalaxImageScroll[0].mainImage).url(),
+            urlFor(listParalaxImageScroll[1].mainImage).url(),
+            urlFor(listParalaxImageScroll[2].mainImage).url(),
+          ]}
+          y={y}
+        />
+        <Column
+          images={[
+            urlFor(listParalaxImageScroll[3].mainImage).url(),
+            urlFor(listParalaxImageScroll[4].mainImage).url(),
+            urlFor(listParalaxImageScroll[11].mainImage).url(),
+          ]}
+          y={y2}
+        />
+        <Column
+          images={[
+            urlFor(listParalaxImageScroll[6].mainImage).url(),
+            urlFor(listParalaxImageScroll[7].mainImage).url(),
+            urlFor(listParalaxImageScroll[8].mainImage).url(),
+          ]}
+          y={y3}
+        />
+        <Column
+          images={[
+            urlFor(listParalaxImageScroll[9].mainImage).url(),
+            urlFor(listParalaxImageScroll[10].mainImage).url(),
+            urlFor(listParalaxImageScroll[11].mainImage).url(),
+          ]}
+          y={y4}
+        />
       </div>
-      {/* <div className='spacer'></div> */}
-    </main>
+    </section>
   )
 }
 
@@ -64,7 +82,7 @@ const Column = ({ images, y }: { images: string[]; y: any }) => {
       {images.map((src: string, i: any) => {
         return (
           <div key={i} className='imageContainer'>
-            <Image src={`/image/scroll-parallax/${src}`} alt='image' fill />
+            <Image src={src} alt='image' fill />
           </div>
         )
       })}

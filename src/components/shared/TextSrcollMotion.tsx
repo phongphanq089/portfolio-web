@@ -27,8 +27,6 @@ const TextSrcollMotion = () => {
 
   const finalTextScale = useTransform(scrollYProgress, [0.8, 0.9], [1, 0.7])
 
-  console.log(scale)
-
   return (
     <motion.section
       style={stylesWithCssVar({

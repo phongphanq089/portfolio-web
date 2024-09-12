@@ -3,8 +3,15 @@ import React, { useEffect } from 'react'
 import Header from '../shared/header'
 import Footer from '../shared/footer'
 import Lenis from 'lenis'
+import { SanityDocument } from 'next-sanity'
 
-const LayoutWrapperDetail = ({ children }: { children: React.ReactNode }) => {
+const LayoutWrapperDetail = ({
+  children,
+  footer,
+}: {
+  children: React.ReactNode
+  footer: SanityDocument
+}) => {
   useEffect(() => {
     const lenis = new Lenis()
 
@@ -22,7 +29,7 @@ const LayoutWrapperDetail = ({ children }: { children: React.ReactNode }) => {
       <main className=' flex flex-col min-h-screen relative'>
         <div className='flex-grow flex-1'>{children}</div>
       </main>
-      <Footer />
+      <Footer footer={footer as SanityDocument} />
     </>
   )
 }

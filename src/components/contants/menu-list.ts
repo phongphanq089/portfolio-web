@@ -1,3 +1,7 @@
+import { footerQuery } from '@/lib/queries-data'
+import { sanityFetch } from '@/sanity/sanityFetch'
+import { SanityDocument } from 'next-sanity'
+
 export const footerMenu = [
   {
     heading: 'NAVIGATON',

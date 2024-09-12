@@ -62,7 +62,7 @@ const TextFullContainerHero = ({
   }
 
   return (
-    <div
+    <h1
       className={`flex w-full items-center  h-auto relative ${className}`}
       ref={containerRef}
     >
@@ -99,7 +99,7 @@ const TextFullContainerHero = ({
         </span>
         {text2}
       </span>
-    </div>
+    </h1>
   )
 }
 

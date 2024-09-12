@@ -2,7 +2,7 @@
 import BlogBannerMain from '@/components/blog/BlogBannerMain'
 import LayoutWrapperDetail from '@/components/layout/LayoutWrapDetail'
 import { TracingBeam } from '@/components/ui/TracingBeam'
-import { postQueryDetail } from '@/lib/queries-data'
+import { postQueryDetail, footerQuery } from '@/lib/queries-data'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { Metadata } from 'next'
 import { SanityDocument } from 'next-sanity'
@@ -41,8 +41,12 @@ const PageDetail = async ({ params }: Props) => {
     params,
   })
 
+  const footeNav = await sanityFetch<SanityDocument>({
+    query: footerQuery,
+  })
+
   return (
-    <LayoutWrapperDetail>
+    <LayoutWrapperDetail footer={footeNav as SanityDocument}>
       <div className='container-2xl overflow-hidden py-10'>
         <TracingBeam className='sm:pl-6 lg:px-6'>
           <div className='mx-auto antialiased pt-4 relative'>

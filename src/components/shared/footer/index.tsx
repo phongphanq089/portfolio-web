@@ -3,13 +3,16 @@
 import { developer1 } from '@/assets'
 import AnimationLottie from '@/components/ui/AnimationLottie'
 import Link from 'next/link'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ScrollTop from '../ScrollTop'
 import { IconContact, IconRound } from '@/components/ui/RenderIcon'
 import ListNavigaitonMenu from './ListNavigaitonMenu'
 import SocialLink from './SocialLink'
+import { SanityDocument } from 'next-sanity'
+import { footerQuery } from '@/lib/queries-data'
+import { sanityFetch } from '@/sanity/sanityFetch'
 
-const Footer = () => {
+const Footer = ({ footer }: { footer: SanityDocument }) => {
   const plane = useRef<HTMLDivElement>(null)
   const maxRotate = 45
 
@@ -72,7 +75,7 @@ const Footer = () => {
         </div>
 
         {/* =====  RENDER LIST MENU */}
-        <ListNavigaitonMenu />
+        <ListNavigaitonMenu footer={footer as SanityDocument} />
         {/* =====  END */}
         <div className='flex md:text-center flex-col md:flex-row justify-between w-full md:items-center gap-4 pt-5 pb-2 relative'>
           {/* <SocialLink /> */}

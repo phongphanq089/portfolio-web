@@ -48,6 +48,7 @@ const DescriptionHero = () => {
             expertise. With a spirit of continuous learning and active critical
             thinking, I am committed to bringing true value to every project I
             am involved with.'
+            className='text-[18px] 2xl:text-sm font-medium'
           />
           <div className='max-w-[400px] 2xl:max-w-[600px]'>
             <img

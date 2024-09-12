@@ -1,24 +1,36 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { BentoGrid, BentoGridItem } from '@/components/ui/BentoGird'
-import { IconShapes_1 } from '@/components/ui/RenderIcon'
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { items } from './ListItem'
+import HyperText from '@/components/ui/HyperText'
 
 const SkillDeveloper = () => {
   return (
     <>
-      <div className='container'>
-        <div className=' flex flex-col mb-5'>
-          <div className='flex items-center gap-2'>
-            <IconShapes_1 className='w-[30px] md:w-[70px] h-auto' />
-            <h1 className='heading-section leading-none'>MY SERVICE</h1>
+      <div className='container-2xl'>
+        <div className='flex flex-col-reverse sm:flex-row mb-5 sm:mb-10 gap-1 sm:gap-4'>
+          <HyperText
+            className='text-xl lg:text-[7vw] font-semibold text-white leading-none mt-auto'
+            text='MY SERVICE'
+          />
+          <div className='flex flex-col w-[130px] 2xl:w-[200px]'>
+            <div className='flex items-center gap-[5px] mb-1'>
+              <div className='w-2 h-2 bg-white'></div>
+              <h3 className='text-white font-semibold text-[14px] 2xl:text-[18px] whitespace-nowrap uppercase'>
+                {`SKILL`}
+              </h3>
+            </div>
+            <img
+              src='https://clarissemichard.com/9.2e0f7da2.gif'
+              alt='phongphan'
+              className='object-cover w-full h-auto rounded-md'
+            />
           </div>
-          <h1 className='heading-section leading-none xl:ml-[200px]'>
-            SKILL DEVLEOPER
-          </h1>
         </div>
       </div>
+
       <BentoGrid className='mx-auto'>
         {items.map((item, i) => (
           <BentoGridItem

@@ -116,3 +116,51 @@ export const projectQueryCategory = groq`*[_type == "project" && $slug in catego
   "categoryProject": categoryProject[]-> {title},
   publishedAt,
 }`
+
+/**
+ * @FOOTER
+ */
+
+export const footerQuery = groq`*[_type == "footer"]  {
+  heading,
+  navigation,
+  children[]{
+    name,
+    link,
+    target,
+    "imageUrl": image.asset->url
+  }
+}`
+
+/**
+ * @PORFOLIOPAGE
+ */
+
+export const portfolioHome = groq`*[_type == "portfolio"]  {
+ _id,
+ title,
+ mainImage,
+ tags,
+ urlPage
+}`
+
+/**
+ * @PARALAXIMAGESCROLL
+ */
+
+export const paralaxImageScroll = groq`*[_type == "imageGallery"]  {
+ _id,
+ gallery,
+ mainImage
+}`
+
+/**
+ * @SOCIAL
+ */
+
+export const ListSocial = groq`*[_type == "social"]  {
+ _id,
+ title,
+ icon,
+ url
+}`
