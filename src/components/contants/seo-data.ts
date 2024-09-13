@@ -1,31 +1,47 @@
 export const seoData = {
   title: {
-    template: '%s | Fullstack Developer ',
-    default: 'Nexgendev (Phong Phan)',
+    template: '%s | Web Developer and Designer ',
+    default: 'Phong Phan - Web Developer and Designer',
   },
+  icons: {
+    icon: [
+      {
+        rel: 'icon',
+        type: 'image/ico',
+        url: '/favicon.ico',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        url: '/android-chrome-192x192.png',
+      },
+    ],
+  },
+
   description:
     'A Fullstack Developer helping startups all around the world gain their unfair advantage through innovative web development solutions.',
-  applicationName: 'Nexgendev (Phong Phan)',
+  applicationName: 'Phong Phan - Web Developer and Designer',
   authors: [
     {
-      name: 'Nexgendev (Phong Phan)',
-      url: 'https://portfolio-nexgendev.vercel.app',
+      name: 'Phong Phan - Web Developer and Designer',
+      url: 'https://phongphan.xyz',
     },
   ],
-  creator: 'Nexgendev (Phong Phan)',
-  publisher: 'Nexgendev (Phong Phan)',
+  creator: 'Phong Phan - Web Developer and Designer',
+  publisher: 'Phong Phan - Web Developer and Designer',
   keywords: [
-    'front-end developer',
-    'Nexgendev',
+    'Front end developer',
     'Phong Phan',
+    'Web Developer',
     'Fullstack Developer ',
   ],
   openGraph: {
-    title: 'Nexgendev (Phong Phan) | Fullstack Developer',
+    title: 'Phong Phan - Web Developer and Designer',
     description:
       'A Fullstack Developer helping startups all around the world gain their unfair advantage through innovative web development solutions.',
-    url: 'https://fastmovie-app.vercel.app',
-    siteName: 'Nexgendev (Phong Phan)',
+    url: 'https://phongphan.xyz',
+    siteName: 'Phong Phan - Web Developer and Designer',
     images: [
       {
         url: 'https://res.cloudinary.com/dyp6oqixq/image/upload/v1717921488/project-dev/banner-hero_scrh3z.png',
