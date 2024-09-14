@@ -164,3 +164,15 @@ export const ListSocial = groq`*[_type == "social"]  {
  icon,
  url
 }`
+
+/**
+ * @VIDEO
+ */
+
+export const videoQuery = groq`*[_type == "video"]{
+_id,
+  title,
+   "thumbnail": thumbnail.asset->url,
+   "videoFileUrl": videoFile.asset->url,
+    videoURL
+}`

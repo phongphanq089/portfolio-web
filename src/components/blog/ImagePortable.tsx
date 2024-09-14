@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { urlFor } from '@/sanity/config'
-import Image from 'next/image'
 import React from 'react'
 
 const ImagePortable = ({ value }: { value: any }) => {

@@ -93,7 +93,7 @@ export default function HyperText({
   return (
     <div
       ref={elementRef}
-      className='overflow-hidden py-2 flex cursor-default scale-100'
+      className='overflow-hidden  flex cursor-default scale-100'
     >
       <AnimatePresence>
         {displayText.map((letter, i) => (

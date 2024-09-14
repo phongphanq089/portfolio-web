@@ -50,10 +50,6 @@ export const items = [
     description: (
       <div className='flex flex-col'>
         <span>
-          🌐 HTML, CSS, jQuery: 1 year of experience, proficient in using to
-          create user interfaces.
-        </span>
-        <span>
           🌐 React, Next.js, Node.js: Self-taught and can develop comprehensive
           web applications (full-stack).
         </span>

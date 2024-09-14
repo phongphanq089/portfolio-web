@@ -65,13 +65,13 @@ export default function Header() {
                     <IconShapes_2 className='w-[400px] h-[400px]' />
                   </div>
                   <LinkNavBar />
-                  <div className='p-1 flex justify-between flex-wrap'>
+                  <div className='p-1 flex justify-between gap-1 flex-wrap'>
                     <div className='flex flex-col'>
                       <span className='font-light'> EMAIL ADDRESS</span>
                       <Link
                         href={'mailto:phongphanq089@gmail.com'}
                         title='phongphanq089@gmail.com'
-                        className='text-sm'
+                        className='text-xs 2xl:text-sm'
                       >
                         phongphanq089@gmail.com
                       </Link>
@@ -81,7 +81,7 @@ export default function Header() {
                       <Link
                         href={'phone:0706113210'}
                         title='0706113210'
-                        className='text-sm'
+                        className='text-xs 2xl:text-sm'
                       >
                         0706113210
                       </Link>

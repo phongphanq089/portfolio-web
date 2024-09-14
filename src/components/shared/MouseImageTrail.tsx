@@ -53,7 +53,6 @@ export const MouseImageTrail = ({
     const deltaX = x2 - x1
     const deltaY = y2 - y1
 
-    // Using the Pythagorean theorem to calculate the distance
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
 
     return distance
@@ -106,14 +105,13 @@ export const MouseImageTrail = ({
   return (
     <div
       ref={scope}
-      className='absolute w-full h-full'
+      className='realtive overflow-hidden h-ful w-full'
       onMouseMove={handleMouseMove}
     >
       {children}
-
       {images.map((img, index) => (
         <img
-          className='pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0'
+          className='pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0 z-20'
           src={img}
           alt={`Mouse move image ${index}`}
           key={index}

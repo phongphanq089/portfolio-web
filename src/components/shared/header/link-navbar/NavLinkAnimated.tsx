@@ -63,7 +63,7 @@ const NavLinkAnimated = ({
               staggerChildren: 0.075,
               delayChildren: 0.25,
             }}
-            className={`relative z-10 block font-bold  transition-colors duration-500 group-hover:text-color-1  whitespace-nowrap text-xl xl:text-2xl 2xl:text-4xl ${
+            className={`relative z-10 block font-bold  transition-colors duration-500 group-hover:text-color-1  whitespace-nowrap text-xl xl:text-2xl 2xl:text-4xl leading-none ${
               pathname === href ? 'text-color-1' : 'text-white'
             }`}
           >
@@ -80,15 +80,6 @@ const NavLinkAnimated = ({
                 {l}
               </motion.span>
             ))}
-            {isNotfound && (
-              <span className='absolute top-2 -right-16 2xl:-right-10 max-w-6 xl:max-w-7'>
-                <img
-                  src={Icon404.src}
-                  alt='icon-404'
-                  className='w-full h-auto object-cover'
-                />
-              </span>
-            )}
           </motion.span>
         </div>
       </motion.div>

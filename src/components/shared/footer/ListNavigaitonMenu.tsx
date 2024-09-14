@@ -15,7 +15,7 @@ const ListNavigaitonMenu = ({ footer }: { footer: SanityDocument }) => {
             }
             key={`${index}-${navigate.heading}`}
           >
-            <h3 className='w-full border-b border-[#9ca3af] mb-2 pb-1 font-bold text-[18px] xl:text-sm whitespace-nowrap'>
+            <h3 className='w-full border-b border-[#9ca3af] mb-2 pb-1 font-bold text-xs xs:text-[18px] xl:text-sm whitespace-nowrap'>
               {navigate.heading}
             </h3>
             <ul>

@@ -19,7 +19,7 @@ const SkillDeveloper = () => {
             <div className='flex items-center gap-[5px] mb-1'>
               <div className='w-2 h-2 bg-white'></div>
               <h3 className='text-white font-semibold text-[14px] 2xl:text-[18px] whitespace-nowrap uppercase'>
-                {`SKILL`}
+                {`MY SKILL`}
               </h3>
             </div>
             <img

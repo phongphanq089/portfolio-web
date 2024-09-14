@@ -13,6 +13,7 @@ import {
 import { SanityDocument } from 'next-sanity'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import CardAbout from '@/components/pages/home/card-about'
+import MouseRenderImage from '@/components/pages/home/projects/MouseRenderImage'
 
 export default async function Home() {
   const footeNav = await sanityFetch<SanityDocument>({
@@ -33,16 +34,17 @@ export default async function Home() {
   return (
     <LayoutWrapper footer={footeNav as SanityDocument}>
       <BannerHero />
-      <div className='bg-black py-6 md:py-[100px] xl:py-[100px] z-20  rounded-2xl relative'>
-        {/* <CardAbout /> */}
+      <div className='bg-black py-6 md:py-[100px] xl:py-[100px] z-20  rounded-3xl relative'>
         <CardAbout listScocial={listScocial as SanityDocument} />
         <SkillDeveloper />
       </div>
       <div className='overflow-x-clip'>
         <TextSrcollMotion />
       </div>
+      <div className='relative overflow-hidden h-auto md:h-[50vh] lg:h-screen'>
+        <MouseRenderImage />
+      </div>
       <ListProject lisProject={lisProject as SanityDocument} />
-
       <ImageParalaxSroll
         listParalaxImageScroll={listParalaxImageScroll as SanityDocument}
       />

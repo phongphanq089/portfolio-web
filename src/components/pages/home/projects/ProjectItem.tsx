@@ -4,6 +4,7 @@ import React, { MouseEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import ButtonAutoRounded from './ButtonAutoRounded'
 import { NextImageResize } from '@/components/shared/ImageResize'
+import CursorViewHover from '@/components/ui/CursorViewHover'
 interface Proptype {
   index: number
   image: string

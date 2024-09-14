@@ -28,8 +28,8 @@ export const navbarItems = [
     isNotfound: false,
   },
   {
-    title: 'CONTACT',
-    link: '/contact',
+    title: 'LIFE - ADVICE',
+    link: '/video',
     icon: 'contact',
     imgSrc: '/image/decimal.jpg',
     isNotfound: true,

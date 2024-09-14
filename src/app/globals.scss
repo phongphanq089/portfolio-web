@@ -167,7 +167,7 @@
   }
 
   .menu {
-    height: 98vh;
+    height: 100vh;
     position: fixed;
     max-width: 700px;
     right: 0;
@@ -180,13 +180,13 @@
     border-bottom-left-radius: 20px;
     z-index: 900;
 
+    @include down2xl {
+      max-width: 550px;
+    }
+
     @include downSm {
       width: 95%;
       border-radius: 0px;
-    }
-
-    @include downLg {
-      height: 100vh;
     }
 
     .body {
