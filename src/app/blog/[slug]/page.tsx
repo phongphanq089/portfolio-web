@@ -10,6 +10,7 @@ import { cookies } from 'next/headers'
 import React from 'react'
 import { PortableText } from '@portabletext/react'
 import articePortableText from '@/components/blog/PortTableComponent'
+import { urlFor } from '@/sanity/config'
 
 interface Props {
   params: {
@@ -32,6 +33,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post?.title,
     description: post?.meta_description,
     keywords: post?.meta_tags,
+    publisher: post?.title,
+    openGraph: {
+      title: post?.title,
+      description: post?.meta_description,
+      siteName: post?.title,
+      images: [
+        {
+          url: urlFor(post?.mainImage?.asset._ref).url(),
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   }
 }
 
