@@ -9,7 +9,7 @@ const BlogBannerMain = ({ postDetail }: { postDetail: SanityDocument }) => {
   return (
     <div className='pb-2 border-b-2 border-color-3'>
       <div className='flex items-center flex-wrap gap-3 mb-3'>
-        <Link href='/blog' className='button-style-2'>
+        <Link href='/blogs' className='button-style-2'>
           <span className='text'>Back</span>
           <svg
             xmlns='http://www.w3.org/2000/svg'
