@@ -37,7 +37,7 @@ export default function Header() {
           <div className='flex gap-[100px]'>
             <LetterPullup
               className='hidden lg:block sm:text-sm'
-              words='Just an ordinary designer.From Vietnam with love.'
+              words='Just an ordinary developer.From Vietnam with love.'
             />
             <BtnOpenMenu
               menuIsOpen={menuIsOpen}
