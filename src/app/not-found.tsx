@@ -1,4 +1,4 @@
-import ButtonStyle from '@/components/shared/ButtonStyle'
+// import ButtonStyle from '@/components/shared/ButtonStyle'
 import Link from 'next/link'
 import React from 'react'
 
@@ -64,9 +64,9 @@ const NotFoundPage = () => {
           <div className='base3'></div>
         </div>
 
-        <Link href='/' className='bg-black flex w-fit my-3'>
+        {/* <Link href='/' className='bg-black flex w-fit my-3'>
           <ButtonStyle text='Go back home' />
-        </Link>
+        </Link> */}
       </div>
       <div className='text_404'>
         <div className='text_4041'>4</div>

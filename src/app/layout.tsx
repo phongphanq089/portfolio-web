@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.scss'
 import { cn } from '@/utils/cn'
-import { seoData } from '../components/contants/seo-data'
+// import { seoData } from '../components/contants/seo-data'
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://phongphan.xyz'),
-  ...seoData,
-}
+// export const metadata: Metadata = {
+//   metadataBase: new URL('https://phongphan.xyz'),
+//   ...seoData,
+// }
 
 export default function RootLayout({
   children,

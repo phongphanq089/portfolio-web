@@ -1,21 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import Header from '../shared/header'
-import { AnimatePresence } from 'framer-motion'
-import LoadingPage from '../shared/LoadingPage'
-import Footer from '../shared/footer'
 import Lenis from 'lenis'
-import { SanityDocument } from 'next-sanity'
+import React, { useEffect } from 'react'
+import Header from '../shared/Header'
+import Footer from '../shared/Footer'
 
-const LayoutWrapper = ({
-  children,
-  footer,
-}: {
-  children: React.ReactNode
-  footer: SanityDocument
-}) => {
-  const [isLoading, setIsLoading] = useState(true)
-
+const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const lenis = new Lenis()
 
@@ -24,34 +13,13 @@ const LayoutWrapper = ({
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-
-    if (isLoading) {
-      document.body.classList.add('overflow-hidden')
-    } else {
-      document.body.classList.remove('overflow-hidden')
-    }
-    setTimeout(() => {
-      setIsLoading(false)
-      document.body.style.cursor = 'default'
-      window.scrollTo(0, 0)
-    }, 2000)
-
-    return () => {
-      document.body.classList.remove('overflow-hidden')
-    }
-  }, [isLoading])
-
+  }, [])
   return (
-    <>
-      <AnimatePresence mode='wait'>
-        {isLoading && <LoadingPage />}
-      </AnimatePresence>
+    <div className='min-h-screen flex flex-col'>
       <Header />
-      <main className=' flex flex-col min-h-screen relative'>
-        <div className='flex-grow flex-1'>{children}</div>
-      </main>
-      <Footer footer={footer as SanityDocument} />
-    </>
+      <main className='flex-1 bg-gray-100 relative'>{children}</main>
+      <Footer />
+    </div>
   )
 }
 
