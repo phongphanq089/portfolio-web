@@ -14,6 +14,8 @@ import { SanityDocument } from 'next-sanity'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import CardAbout from '@/components/pages/home/card-about'
 import MouseRenderImage from '@/components/pages/home/projects/MouseRenderImage'
+import DemoLayout from '@/components/pages/DemoLayout'
+import LayoutWrapperDemo from '@/components/layout/LayoutWrapperDemo'
 
 export default async function Home() {
   const footeNav = await sanityFetch<SanityDocument>({
@@ -32,7 +34,7 @@ export default async function Home() {
   })
 
   return (
-    <LayoutWrapper footer={footeNav as SanityDocument}>
+    <LayoutWrapper>
       <BannerHero />
       <div className='bg-black py-6 md:py-[100px] xl:py-[100px] z-20  rounded-3xl relative'>
         <CardAbout listScocial={listScocial as SanityDocument} />
