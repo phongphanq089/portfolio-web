@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { cn } from '@/lib/utils'
-import { NextImageResize } from '../shared/ImageResize'
 
 type AnimationStyle =
   | 'from-bottom'
@@ -84,11 +83,11 @@ export default function HeroVideoDialog({
         className='relative cursor-pointer group'
         onClick={() => setIsVideoOpen(true)}
       >
-        <NextImageResize
+        {/* <NextImageResize
           src={thumbnailSrc}
           alt={thumbnailAlt}
           className='pt-[56.25%]'
-        />
+        /> */}
         <div className='absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl'>
           <div className='btn-player'>
             <div className='btn-player__ico'>

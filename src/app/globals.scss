@@ -7,24 +7,21 @@
 
 @layer base {
   :root {
-    --clr: #7808d0;
-    --dark: #0f0715;
+    --dark: rgb(8 8 7 / 1);
     --light: rgb(232 232 227 / 1);
     --white: #ffff;
-    --text-dark: #000;
-    --text-1: rgb(76, 76, 76);
-    --text-gray-light: rgb(191 191 177 / 1);
-    --color-1: #ffe900;
+    --color-1: #7808d0;
     --color-2: #a555e6;
     --color-3: rgb(57 54 50 / 1);
     --color-4: rgb(191 191 177 / 1);
-    --color-5: #ff5252;
+    --color-5: #cdd0c3;
     --color-6: rgb(8 8 7 / 1);
-    --rgb-1: rgb(20, 20, 20);
-    --rbg-2: rgb(107 100 92/1);
-    --color-rgba-1: rgba(85, 87, 255, 0.78),
-      --bg-linear:
-        linear-gradient(135deg, var(--color-1) 0%, var(--color-rgba-1) 100%);
+    --color-7: rgb(107 100 92/1);
+    --bg-linear: linear-gradient(
+      135deg,
+      var(--color-1) 0%,
+      var(--color-rgba-1) 100%
+    );
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
 
@@ -102,16 +99,18 @@
     @apply max-w-full mx-auto px-1 md:px-3 xl:px-5;
   }
 
-  .container-xxl {
-    @apply max-w-screen-3xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  .container-xl {
+    @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .container-2xl {
-    @apply max-w-screen-3xl mx-auto px-2 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-2xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
-
-  .container-xl {
-    @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  .container-3xl {
+    @apply max-w-screen-3xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+  .container-4xl {
+    @apply max-w-screen-4xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .container-lg {
@@ -149,7 +148,6 @@
 
 @layer utilities {
   body:before {
-    background-color: var(--light);
     background-image: url(../../public/image/bg-image-body.jpg);
   }
 
@@ -164,5 +162,26 @@
     pointer-events: none;
     opacity: 15%;
     color: #aeae9d;
+  }
+
+  .link-hover {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      background-color: var(--color-3);
+      transition: 0.5s;
+      @include downSm {
+        height: 2px;
+      }
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
