@@ -29,7 +29,7 @@ const menuNav = [
 ]
 
 const ListMenuNav = () => {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => setIsOpen((prev) => !prev)
 
   const itemVariants = {

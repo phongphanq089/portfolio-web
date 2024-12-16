@@ -3,12 +3,12 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { heroAbout1 } from '@/assets'
 
 const cardData = [
   {
     id: 1,
-    imgSrc:
-      'https://cdn.prod.website-files.com/66f594a3776bdc5c680392e2/66fa93b7010975c6564112ea_Images%20Hero%2001.jpg',
+    imgSrc: heroAbout1.src,
   },
   {
     id: 2,
@@ -18,20 +18,15 @@ const cardData = [
   {
     id: 3,
     imgSrc:
-      'https://cdn.prod.website-files.com/66f594a3776bdc5c680392e2/66fa93b7c6d1a72c0dc53f3b_Images%20Hero%2003.jpg',
+      'https://i-p.rmcdn.net/6680737dae957b0053a46105/4868815/image-c6c1102b-b9dc-4306-88da-9367784a3a45.png?w=896&e=webp&nll=true',
   },
 ]
 const CardStack = () => {
   const [isHovered, setIsHovered] = useState(false)
   return (
     <div
-      style={{
-        perspective: '1000px',
-        position: 'relative',
-        height: '55vh',
-        width: '45vh',
-        margin: 'auto',
-      }}
+      style={{ perspective: '1000px' }}
+      className='h-[30vh] w-[25vh] md:h-[40vh] md:w-[30vh] lg:h-[55vh] lg:w-[45vh] m-auto relative'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <React.Fragment>
-      <NeonCursor />
+      {/* <NeonCursor /> */}
       {children}
     </React.Fragment>
   )

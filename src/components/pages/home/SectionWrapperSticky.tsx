@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import BannerHero from './banner-hero/BannerHero'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import SectionAbout from './secction-about'
 
 const SectionWrapperSticky = () => {
   const container = useRef<HTMLDivElement>(null)
@@ -12,16 +13,14 @@ const SectionWrapperSticky = () => {
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
-
   return (
     <div ref={container}>
-      <motion.section style={{ scale, rotate }} className='sticky  top-0'>
+      <motion.section style={{ scale, rotate }} className='sm:sticky top-0'>
         <BannerHero />
       </motion.section>
 
-      <motion.section className='sticky top-0 bg-color-5 rounded-xl'>
-        {' '}
-        <div className='min-h-screen bg-dark'></div>
+      <motion.section className='sm:sticky top-0 rounded-xl overflow-hidden'>
+        <SectionAbout />
       </motion.section>
     </div>
   )

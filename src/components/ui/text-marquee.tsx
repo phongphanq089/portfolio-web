@@ -77,15 +77,15 @@ export default function ScrollBaseAnimation({
         style={{ x }}
       >
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
-        <span className='h-[3px] block w-[150px] bg-black dark:bg-white'></span>
+        <span className='h-[3px] block w-[100px] sm:w-[150px] bg-black dark:bg-white'></span>
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
-        <span className='h-[3px] block w-[150px] bg-black dark:bg-white'></span>
+        <span className='h-[3px] block w-[100px] sm:w-[150px] bg-black dark:bg-white'></span>
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
-        <span className='h-[3px] block w-[150px] bg-black dark:bg-white'></span>
+        <span className='h-[3px] block w-[100px] sm:w-[150px] bg-black dark:bg-white'></span>
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
-        <span className='h-[3px] block w-[150px] bg-black dark:bg-white'></span>
+        <span className='h-[3px] block w-[100px] sm:w-[150px] bg-black dark:bg-white'></span>
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
-        <span className='h-[3px] block w-[150px] bg-black dark:bg-white'></span>
+        <span className='h-[3px] block w-[100px] sm:w-[150px] bg-black dark:bg-white'></span>
         <span className={cn(`block text-[12vw]`, clasname)}>{children}</span>
       </motion.div>
     </div>

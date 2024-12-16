@@ -1,8 +1,8 @@
 /*======================= || json lotttie || =================  */
-import skillDevJson from '../../public/lottie/skillDev.json'
-import coderJson from '../../public/lottie/coder.json'
-import notificationDev from '../../public/lottie/notificationDev.json'
-import developer1 from '../../public/lottie/developer-1.json'
+// import skillDevJson from '../../public/lottie/skillDev.json'
+// import coderJson from '../../public/lottie/coder.json'
+// import notificationDev from '../../public/lottie/notificationDev.json'
+// import developer1 from '../../public/lottie/developer-1.json'
 /*======================= || skill icon || =================  */
 import aws from '../../public/skills-icon/aws.svg'
 import bootstrap from '../../public/skills-icon/bootstrap.svg'
@@ -24,8 +24,8 @@ import typescript from '../../public/skills-icon/typescript.svg'
 import vitejs from '../../public/skills-icon/vitejs.svg'
 /*======================= || bg banner phong phan || =================  */
 import bgBanner from '../../public/image/banner-dev.png'
-import bgLetWord from '../../public/image/lets-work.png'
-import bgHello from '../../public/image/hello-style.png'
+// import bgLetWord from '../../public/image/lets-work.png'
+// import bgHello from '../../public/image/hello-style.png'
 import bgSmile from '../../public/image/svg-icon/smile.svg'
 import logoNexgendev from '../../public/logo-developer.png'
 import thurnder from '../../public/image/svg-icon/thurnder.svg'
@@ -43,10 +43,10 @@ export {
   Icon404,
   // ======== END
   //==== json lotttie =====//
-  skillDevJson,
-  coderJson,
-  notificationDev,
-  developer1,
+  // skillDevJson,
+  // coderJson,
+  // notificationDev,
+  // developer1,
   // ======== END
   // ======== skill icon
   aws,
@@ -70,8 +70,6 @@ export {
   // ======== END
   // ======= bg banner phong phan
   bgBanner,
-  bgLetWord,
-  bgHello,
   bgSmile,
   logoNexgendev,
   thurnder,

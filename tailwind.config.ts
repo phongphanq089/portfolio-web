@@ -43,6 +43,7 @@ const config = {
         'shadow-card-skill': '5px 5px var(--color-3)',
       },
       colors: {
+        'primary-color': 'var(--primary-color)',
         dark: 'var(--dark)',
         light: 'var(--light)',
         white: 'var(--white)',
