@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import BannerHero from './banner-hero/BannerHero'
 import { useScroll, useTransform, motion } from 'framer-motion'
-import SectionAbout from './secction-about'
+import SectionService from './section-service'
 
 const SectionWrapperSticky = () => {
   const container = useRef<HTMLDivElement>(null)
@@ -19,8 +19,9 @@ const SectionWrapperSticky = () => {
         <BannerHero />
       </motion.section>
 
-      <motion.section className='sm:sticky top-0 rounded-xl overflow-hidden'>
-        <SectionAbout />
+      <motion.section className='sm:sticky top-0 rounded-t-[50px]  overflow-hidden'>
+        {/* <SectionAbout /> */}
+        <SectionService />
       </motion.section>
     </div>
   )

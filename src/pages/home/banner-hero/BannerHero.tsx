@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import CardStack from '@/components/pages/home/banner-hero/CardStack'
 import ScrollBaseAnimation from '@/components/ui/text-marquee'
 import React from 'react'
 import HeadingBlock from './HeadingBlock'
 import Link from 'next/link'
 import { heroAbout1 } from '@/assets'
+import CardStack from './CardStack'
 
 const BannerHero = () => {
   return (
-    <div className='sm:h-[95vh] 2xl:h-[95vh] overflow-hidden relative max-sm:p-3'>
+    <div className='sm:h-[95vh] 2xl:h-[95vh] overflow-hidden relative max-sm:p-3 z-50'>
       <div className='flex flex-col h-full justify-between items-center max-md:gap-5'>
         <HeadingBlock />
         <div className='max-sm:hidden z-[1] w-full h-full flex justify-center items-center  absolute sm:-bottom-5'>

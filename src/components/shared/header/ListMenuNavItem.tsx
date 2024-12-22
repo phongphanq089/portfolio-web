@@ -16,7 +16,7 @@ const ListMenuNavItem = ({ navItem, index, itemVariants }: PropsType) => {
   return (
     <motion.li
       key={index}
-      className='min-w-[200px] relative bg-color-3 dark:bg-color-4 px-4 py-2 rounded-sm'
+      className='min-w-[200px] relative bg-color-3 dark:bg-color-4 px-4 py-2 rounded-sm border'
       variants={itemVariants}
     >
       <motion.div initial='rest' whileHover='hover' animate='rest'>

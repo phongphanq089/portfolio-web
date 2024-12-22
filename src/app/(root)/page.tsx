@@ -1,5 +1,4 @@
-import BannerHero from '@/components/pages/home/banner-hero/BannerHero'
-import SectionWrapperSticky from '@/components/pages/home/SectionWrapperSticky'
+import SectionWrapperSticky from '@/pages/home/SectionWrapperSticky'
 
 const HomePage = async () => {
   return (

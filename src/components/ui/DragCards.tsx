@@ -52,7 +52,7 @@ const DragCards = ({
         zIndex,
       }}
       className={twMerge(
-        'drag-elements absolute min-w-[400px] bg-neutral-200 border border-color-6 rounded-sm cursor-move',
+        'drag-elements absolute min-w-[400px] bg-neutral-200  border border-color-6 rounded-sm cursor-move text-dark',
         className
       )}
       drag
@@ -60,7 +60,7 @@ const DragCards = ({
       dragElastic={0.65}
     >
       <div className='flex items-center justify-between px-4 py-2 border-b border-color-6'>
-        <h3 className='font-bold text-sm'>{title}</h3>
+        <h3 className='font-bold text-sm dark:text-dark'>{title}</h3>
         <div className='flex items-center gap-3'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
