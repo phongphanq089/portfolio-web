@@ -7,20 +7,24 @@ import HeadingBlock from './HeadingBlock'
 import Link from 'next/link'
 import { heroAbout1 } from '@/assets'
 import CardStack from './CardStack'
+import Stack from '@/components/ui/CardRotate'
 
 const BannerHero = () => {
   return (
-    <div className='sm:h-[95vh] 2xl:h-[95vh] overflow-hidden relative max-sm:p-3 z-50'>
+    <div className=' h-[95vh] sm:h-[95vh] 2xl:h-[95vh] overflow-hidden relative max-sm:p-3 z-50'>
       <div className='flex flex-col h-full justify-between items-center max-md:gap-5'>
         <HeadingBlock />
-        <div className='max-sm:hidden z-[1] w-full h-full flex justify-center items-center  absolute sm:-bottom-5'>
-          <CardStack />
+        <div className='z-[1] w-full h-full flex justify-center items-center  absolute sm:-bottom-10'>
+          {/* <CardStack /> */}
+          <div className='relative'>
+            <Stack />
+          </div>
         </div>
-        <div className='md:hidden z-[1] w-full h-full m-auto p-10 rounded-sm overflow-hidden'>
+        {/* <div className='md:hidden z-[1] w-full h-full m-auto p-10 rounded-sm overflow-hidden'>
           <div className='wrapImgResize imgSquare'>
             <img src={heroAbout1.src} alt='phongphan' />
           </div>
-        </div>
+        </div> */}
         <div className='z-0 pointer-events-none w-[74vw]  max-w-[80rem] mt-[-4vw] absolute'>
           <img
             src='https://cdn.prod.website-files.com/66f594a3776bdc5c680392e2/66f5a43e83a41d9f75c52a49_Hero%20Background%20Grid.svg'

@@ -17,10 +17,9 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <React.Fragment>
-      <div className='fixed top-0 left-0 -z-[1]'>
+      <div className='fixed top-0 left-0 z-10 pointer-events-none'>
         <canvas id='fluid' className='w-screen h-screen' />
       </div>
-      {/* <NeonCursor /> */}
       {children}
     </React.Fragment>
   )

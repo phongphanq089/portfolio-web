@@ -35,9 +35,13 @@ const Footer = ({ footer }: { footer: SanityDocument }) => {
       <div className='container-4xl  px-4 mx-auto relative' ref={container}>
         {/* =====  RENDER LIST MENU */}
         <IconRound className='pointer-events-none absolute left-1/2 -translate-x-1/2 top-[150px] z-1 h-fit w-5/6 sm:w-3/5 lg:w-2/5 z-0' />
+        <div className='block md:hidden'>
+          <ContactMe />
+        </div>
         <ListNavigaitonMenu footer={footer as SanityDocument} />
-
-        <ContactMe />
+        <div className='hidden md:block'>
+          <ContactMe />
+        </div>
         <div className='md:py-4 relative z-10'>
           <motion.svg
             ref={ref}
@@ -47,7 +51,7 @@ const Footer = ({ footer }: { footer: SanityDocument }) => {
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
             initial='hidden'
-            className='sm:h-fit footer-logo w-full'
+            className='h-fit footer-logo w-full'
             animate={isInView ? 'visible' : 'hidden'}
           >
             {pathArr.map((path, index) => {
@@ -64,12 +68,12 @@ const Footer = ({ footer }: { footer: SanityDocument }) => {
             })}
           </motion.svg>
         </div>
-        <div className='flex md:flex-row flex-col-reverse gap-3 justify-between py-2'>
-          <div className='flex flex-col text-sm sm:text-md md:text-xl text-start font-bold text-color-3 leading-none'>
+        <div className='flex md:flex-row flex-col-reverse gap-3 justify-between py-2 relative z-50'>
+          <div className='flex flex-col text-sm sm:text-md xl:text-xl text-start font-bold text-color-3 leading-none'>
             <p>&copy; 2024 Phong Phan</p>
             <p>All rights reserved</p>
           </div>
-          <ClockDateTime />
+          <ClockDateTime className='text-xs md:text-sm font-bold' />
           <ScrollTop />
         </div>
       </div>

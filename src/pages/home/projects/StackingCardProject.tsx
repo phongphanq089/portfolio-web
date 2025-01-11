@@ -6,6 +6,7 @@ import { useTransform, motion, useScroll, MotionValue } from 'framer-motion'
 import { useRef } from 'react'
 import HeadingSection from '@/components/shared/HeadingSection'
 import ScratchToReveal from '@/components/ui/ScratchToReveal'
+import TrueFocus from '@/components/ui/TrueFocus'
 const projects = [
   {
     title: 'Matthias Leidinger',
@@ -50,11 +51,16 @@ export default function StackingCardProject(): JSX.Element {
     <ReactLenis root>
       <main className='bg-dark' ref={container}>
         <div className='container-3xl'>
-          <HeadingSection
-            text1='SELECTTED'
-            text2='WORKS.'
-            className='pb-9 sm:pb-[60px]'
-          />
+          <div className='pt-20 pb-20 px-8 !text-[6vw]'>
+            <TrueFocus
+              sentence='SELECTTED WORKS'
+              manualMode={false}
+              blurAmount={5}
+              borderColor='#a3e635'
+              animationDuration={2}
+              pauseBetweenAnimations={1}
+            />
+          </div>
           <section className='text-white w-full bg-dark  '>
             {projects.map((project, i) => {
               const targetScale = 1 - (projects.length - i) * 0.05

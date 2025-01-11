@@ -1,8 +1,12 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import React, { useEffect, useState } from 'react'
 
-const ClockDateTime = () => {
+interface PropsType {
+  className?: string
+}
+const ClockDateTime = ({ className }: PropsType) => {
   const [time, setTime] = useState('')
 
   const getFormattedTime = () => {
@@ -26,7 +30,11 @@ const ClockDateTime = () => {
     return () => clearInterval(interval)
   }, [])
 
-  return <div className='relative z-10 dark:text-color-4'>{time}</div>
+  return (
+    <div className={cn('relative z-10 dark:text-color-4', className)}>
+      {time}
+    </div>
+  )
 }
 
 export default ClockDateTime
