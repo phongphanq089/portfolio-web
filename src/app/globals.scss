@@ -147,9 +147,9 @@
 }
 
 @layer utilities {
-  body:before {
-    background-image: url(../../public/image/bg-image-body.jpg);
-  }
+  // body:before {
+  //   background-image: url(../../public/image/bg-image-body.jpg);
+  // }
 
   body:before {
     position: fixed;
@@ -164,6 +164,9 @@
     color: #aeae9d;
   }
 
+  .bg-rgba-1 {
+    background-color: rgba($color: #f3d8ba, $alpha: 0.7);
+  }
   .link-hover {
     position: relative;
 

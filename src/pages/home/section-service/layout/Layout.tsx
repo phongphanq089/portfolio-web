@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import BlockAbout from './BlockAbout'
 import InfomationMe from './InfomationMe'

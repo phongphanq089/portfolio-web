@@ -111,12 +111,16 @@ const config = {
           from: { transform: 'translateY(0)' },
           to: { transform: 'translateY(calc(-100% - var(--gap)))' },
         },
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+        border: 'border 4s linear infinite',
       },
       screens: {
         xs: '475px',

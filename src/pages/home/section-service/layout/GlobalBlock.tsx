@@ -3,6 +3,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import AnimationLottie from '@/components/ui/AnimationLottie'
+import { developer1 } from '@/assets'
 
 const World = dynamic(
   () => import('../../../../components/ui/Globe').then((m) => m.World),
@@ -427,7 +429,10 @@ export function GlobeDemo() {
 
         <div className='absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-dark z-40' />
         <div className='absolute w-full bottom-0 3xl:-bottom-20 h-[400px] 3xl:h-full z-10'>
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
+          {/* <div className='max-w-[300px] 2xl:max-w-[400px] h-full'>
+            <AnimationLottie animationPath={developer1} />
+          </div> */}
         </div>
 
         <div className='absolute bottom-0 left-0 z-50 p-5'>

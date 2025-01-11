@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { listSKill } from '@/assets'
 import { Marquee } from '@/components/ui/Marquee'
-import MorphingText from '@/components/ui/useMorphingText'
+import MorphingText from '@/components/ui/UseMorphingText'
 import React from 'react'
 
 const firstRow = listSKill.slice(0, listSKill.length / 2)

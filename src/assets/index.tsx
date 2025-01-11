@@ -2,7 +2,7 @@
 // import skillDevJson from '../../public/lottie/skillDev.json'
 // import coderJson from '../../public/lottie/coder.json'
 // import notificationDev from '../../public/lottie/notificationDev.json'
-// import developer1 from '../../public/lottie/developer-1.json'
+import developer1 from '../../public/lottie/developer-1.json'
 /*======================= || skill icon || =================  */
 import skill1 from '../../public/skills-icon/auth0.svg'
 import skill2 from '../../public/skills-icon/bootstrap.svg'
@@ -14,7 +14,7 @@ import skill7 from '../../public/skills-icon/javascript.svg'
 import skill8 from '../../public/skills-icon/jquery_dark.svg'
 import skill9 from '../../public/skills-icon/jwt.svg'
 import skill10 from '../../public/skills-icon/materialui.svg'
-import skill11 from '../../public/skills-icon/mongodb.svg'
+import skill11 from '../../public/skills-icon/mongoDB.svg'
 import skill12 from '../../public/skills-icon/netlify.svg'
 import skill13 from '../../public/skills-icon/nextjs_icon_dark.svg'
 import skill14 from '../../public/skills-icon/nodejs.svg'
@@ -105,6 +105,7 @@ export {
   skill29,
   skill30,
   skill31,
+  developer1,
 }
 
 export const listSKill = [
