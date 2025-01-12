@@ -3,12 +3,12 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { heroAbout1 } from '@/assets'
 
 const cardData = [
   {
     id: 1,
-    imgSrc: heroAbout1.src,
+    imgSrc:
+      'https://cdn.prod.website-files.com/66f594a3776bdc5c680392e2/66fa93b709501e1825fa0891_Images%20Hero%2002.jpg',
   },
   {
     id: 2,

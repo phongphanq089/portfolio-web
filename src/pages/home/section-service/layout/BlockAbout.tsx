@@ -7,7 +7,7 @@ import { SkeletonOne } from './Skeleton'
 const BlockAbout = () => {
   return (
     <div>
-      <div className='max-w-[250px] max-h-[250px]  overflow-hidden'>
+      <div className='max-w-[150px] sm:max-w-[250px] max-h-[150px] sm:max-h-[250px]  overflow-hidden'>
         {/* <img
           src={heroAbout1.src}
           alt='phong Phan'

@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeadingBlock = () => {
   return (
-    <div className='flex flex-col justify-center items-center translate-y-7 2xl:translate-y-10 relative z-10'>
+    <div className='flex flex-col justify-center items-center translate-y-7 2xl:translate-y-10 relative z-10 max-sm:mb-8'>
       {/* <h2 className='button-style-1 text-xs 2xl:text-sm mb-2'>
         <span></span>
         <span></span>

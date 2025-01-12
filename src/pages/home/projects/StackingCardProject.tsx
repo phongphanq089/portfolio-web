@@ -7,41 +7,14 @@ import { useRef } from 'react'
 import HeadingSection from '@/components/shared/HeadingSection'
 import ScratchToReveal from '@/components/ui/ScratchToReveal'
 import TrueFocus from '@/components/ui/TrueFocus'
-const projects = [
-  {
-    title: 'Matthias Leidinger',
-    description:
-      'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-    src: 'https://cdn.prod.website-files.com/670974d50e0651ca64eec305/670c0c6666108a00ac42eb61_jose-p-ortiz--w0jStVTjc4-unsplash-min-p-2000.jpg',
-    link: 'https://cdn.prod.website-files.com/670974d50e0651ca64eec305/670c0c6666108a00ac42eb61_jose-p-ortiz--w0jStVTjc4-unsplash-min-p-2000.jpg',
-    color: '#5196fd',
-  },
-  {
-    title: 'Zissou',
-    description:
-      'Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal.',
-    src: 'https://cdn.prod.website-files.com/670974d50e0651ca64eec305/670c0c737b2d0225cce39af2_jose-p-ortiz-fhoCfSRKV3w-unsplash-min-p-2000.jpg',
-    link: 'https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop',
-    color: '#13006c',
-  },
-  {
-    title: 'Mathias Svold and Ulrik Hasemann',
-    description:
-      'The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.',
-    src: 'https://cdn.prod.website-files.com/670974d50e0651ca64eec305/670c0c7f9383d712147273a7_jose-p-ortiz-_rtOYVggXk0-unsplash-min-p-2000.jpg',
-    link: 'https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60',
-    color: '#ed649e',
-  },
-  {
-    title: 'Mark Rammers',
-    description:
-      'Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote.',
-    src: 'https://cdn.prod.website-files.com/670974d50e0651ca64eec305/670c0c899383d71214727960_jose-p-ortiz-empgFabDoHU-unsplash-min-p-2000.jpg',
-    link: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop',
-    color: '#fd521a',
-  },
-]
-export default function StackingCardProject(): JSX.Element {
+import { SanityDocument } from 'next-sanity'
+import { urlFor } from '@/sanity/config'
+
+export default function StackingCardProject({
+  lisProject,
+}: {
+  lisProject: SanityDocument
+}): JSX.Element {
   const container = useRef(null)
   const { scrollYProgress } = useScroll({
     target: container,
@@ -62,17 +35,15 @@ export default function StackingCardProject(): JSX.Element {
             />
           </div>
           <section className='text-white w-full bg-dark  '>
-            {projects.map((project, i) => {
-              const targetScale = 1 - (projects.length - i) * 0.05
+            {lisProject.map((project: SanityDocument, i: number) => {
+              const targetScale = 1 - (lisProject.length - i) * 0.05
               return (
                 <Card
                   key={`p_${i}`}
                   i={i}
-                  url={project?.link}
-                  src={project?.src}
+                  url={project.urlPage}
+                  src={urlFor(project.mainImage).url()}
                   title={project?.title}
-                  color={project?.color}
-                  description={project?.description}
                   progress={scrollYProgress}
                   range={[i * 0.25, 1]}
                   targetScale={targetScale}
@@ -88,10 +59,8 @@ export default function StackingCardProject(): JSX.Element {
 interface CardProps {
   i: number
   title: string
-  description: string
   src: string
   url: string
-  color: string
   progress: MotionValue<number>
   range: [number, number]
   targetScale: number
@@ -99,10 +68,8 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   i,
   title,
-  description,
   src,
   url,
-  color,
   progress,
   range,
   targetScale,
@@ -112,13 +79,14 @@ export const Card: React.FC<CardProps> = ({
   const scale = useTransform(progress, range, [1, targetScale])
 
   return (
-    <div
+    <a
+      href={url}
       ref={container}
+      target='_blank'
       className='sm:h-screen flex items-center justify-center sticky top-0 w-full pb-6'
     >
       <motion.div
         style={{
-          backgroundColor: color,
           scale,
           top: `calc(-2vh + ${i * 2}px)`,
         }}
@@ -128,6 +96,7 @@ export const Card: React.FC<CardProps> = ({
           minScratchPercentage={70}
           cursorBackgroundColor='#a3e635'
           customCursorText='VIEW'
+          className='h-full'
         >
           <span className='absolute bottom-4 right-4 font-bold text-[10vw]'>{`0${i + 1}`}</span>
           <div className='absolute top-8 left-4 sm:left-8 flex flex-col items-start gap-4'>
@@ -152,6 +121,6 @@ export const Card: React.FC<CardProps> = ({
           </motion.div>
         </ScratchToReveal>
       </motion.div>
-    </div>
+    </a>
   )
 }

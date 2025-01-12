@@ -35,76 +35,34 @@ import skill28 from '../../public/skills-icon/vercel_wordmark_dark.svg'
 import skill29 from '../../public/skills-icon/vitejs.svg'
 import skill30 from '../../public/skills-icon/vue.svg'
 import skill31 from '../../public/skills-icon/zod.svg'
-/*======================= || bg banner phong phan || =================  */
-import bgBanner from '../../public/image/banner-dev.png'
-// import bgLetWord from '../../public/image/lets-work.png'
-// import bgHello from '../../public/image/hello-style.png'
-import bgSmile from '../../public/image/svg-icon/smile.svg'
-import logoNexgendev from '../../public/logo-developer.png'
-import thurnder from '../../public/image/svg-icon/thurnder.svg'
-import heroAbout1 from '../../public/image/hero-about-1.jpg'
-import creativeplus from '../../public/image/svg-icon/creativeplus.svg'
-// ============ ICON DEV || ===================== //
-import iconPortfolio from '../../public/image/bg-portfolio.png'
-import beanhead from '../../public/image/svg-icon/beanhead.svg'
-import Icon404 from '../../public/image/svg-icon/icon-404.svg'
-import noDataIcon from '../../public/image/svg-icon/no-data.svg'
-export {
-  // ====== ICON DEV
-  iconPortfolio,
-  beanhead,
-  Icon404,
-  // ======== END
-  //==== json lotttie =====//
-  // skillDevJson,
-  // coderJson,
-  // notificationDev,
-  // developer1,
-  // ======== END
-  // ======== skill icon
+/*======================= || BANNER HERO|| =================  */
+import banner1 from '../../public/image/banner/banner-1.jpg'
+import banner2 from '../../public/image/banner/banner-2.jpg'
+import banner3 from '../../public/image/banner/banner-3.jpg'
+import banner4 from '../../public/image/banner/banner-4.jpg'
+import banner5 from '../../public/image/banner/banner-5.jpg'
+import banner6 from '../../public/image/banner/banner-6.jpg'
+import banner7 from '../../public/image/banner/banner-7.jpg'
+import banner8 from '../../public/image/banner/banner-8.jpg'
+import bgBanner1 from '../../public/image/svg-icon/bg-banner-1.svg'
+import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
 
-  // ======== END
-  // ======= bg banner phong phan
-  bgBanner,
-  bgSmile,
-  logoNexgendev,
-  thurnder,
-  heroAbout1,
-  // ======== END
-  creativeplus,
-  noDataIcon,
+// ============ ICON DEV || ===================== //
+import beanhead from '../../public/image/svg-icon/beanhead.svg'
+export {
+  beanhead,
+  // BANNER HERO
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  banner5,
+  banner6,
+  banner7,
+  banner8,
+  bgBanner1,
+  bgBanner2,
   // ===== slill developer =========//
-  skill1,
-  skill2,
-  skill3,
-  skill4,
-  skill5,
-  skill6,
-  skill7,
-  skill8,
-  skill9,
-  skill10,
-  skill11,
-  skill12,
-  skill13,
-  skill14,
-  skill15,
-  skill16,
-  skill17,
-  skill18,
-  skill19,
-  skill20,
-  skill21,
-  skill22,
-  skill23,
-  skill24,
-  skill25,
-  skill26,
-  skill27,
-  skill28,
-  skill29,
-  skill30,
-  skill31,
   developer1,
 }
 

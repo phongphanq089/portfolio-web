@@ -15,7 +15,7 @@ const ListNavigaitonMenu = ({ footer }: { footer: SanityDocument }) => {
             }
             key={`${index}-${navigate.heading}`}
           >
-            <h3 className='w-full border-b border-[#9ca3af] mb-2 pb-1 font-bold text-xs xs:text-[18px] xl:text-sm whitespace-nowrap'>
+            <h3 className='dark:text-white w-full border-b border-[#d4d4d8] dark:border-[#3f3f46] mb-2 pb-1 font-bold text-xs xs:text-[18px] xl:text-sm whitespace-nowrap'>
               {navigate.heading}
             </h3>
             <ul>
@@ -27,14 +27,14 @@ const ListNavigaitonMenu = ({ footer }: { footer: SanityDocument }) => {
                         url={menu.link}
                         imageSrc={menu.imageUrl}
                         isStatic
-                        className='text-color-3 font-normal text-[18px]  md:text-xs xl:text-sm'
+                        className='text-color-3 dark:text-white font-normal text-[18px]  md:text-xs xl:text-sm'
                       >
                         {menu.name}
                       </LinkPreview>
                     ) : (
                       <Link
                         href={menu.link}
-                        className='text-color-3 font-normal text-[18px] md:text-xs xl:text-sm'
+                        className=' text-color-3 dark:text-white font-normal text-[18px] md:text-xs xl:text-sm'
                       >
                         {menu.name}
                       </Link>

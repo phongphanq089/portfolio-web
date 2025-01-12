@@ -13,7 +13,7 @@ const ContactMe = () => {
               title='phongphanq089@gmail.com'
               className='block link-contact pb-4 mb-4'
             >
-              <p className='text-xs text-center font-semibold text-text-1'>
+              <p className='text-xs text-center font-semibold dark:text-white mb-3'>
                 phongphanq089@gmail.com
               </p>
               <div className='w-full block  '>

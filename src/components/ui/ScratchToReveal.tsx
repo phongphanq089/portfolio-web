@@ -120,7 +120,7 @@ const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
 
   return (
     <motion.div
-      className={cn('relative select-none h-full w-full', className)}
+      className={cn('relative select-none ', className)}
       style={{
         width,
         height,

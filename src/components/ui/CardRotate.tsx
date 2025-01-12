@@ -1,5 +1,15 @@
 import React, { useState, useMemo } from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
+import {
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  banner5,
+  banner6,
+  banner7,
+  banner8,
+} from '@/assets'
 
 interface CardData {
   id: number
@@ -11,35 +21,35 @@ const SwipeCards: React.FC = () => {
     () => [
       {
         id: 1,
-        url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner1.src,
       },
       {
         id: 2,
-        url: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner2.src,
       },
       {
         id: 3,
-        url: 'https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner3.src,
       },
       {
         id: 4,
-        url: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner4.src,
       },
       {
         id: 5,
-        url: 'https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner5.src,
       },
       {
         id: 6,
-        url: 'https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner6.src,
       },
       {
         id: 7,
-        url: 'https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner7.src,
       },
       {
         id: 8,
-        url: 'https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url: banner8.src,
       },
     ],
     []
@@ -103,7 +113,7 @@ const Card: React.FC<CardProps> = ({ card, cards, onRemove }) => {
     <motion.img
       src={card.url}
       alt='Placeholder alt'
-      className='h-96 w-72 4xl:h-[450px] 4xl:w-[350px] origin-bottom rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing'
+      className='h-96 w-72 4xl:h-[450px] 4xl:w-[350px] origin-bottom rounded-lg bg-white object-cover '
       style={{
         gridRow: 1,
         gridColumn: 1,
