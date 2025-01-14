@@ -4,7 +4,6 @@
 import { ReactLenis } from 'lenis/react'
 import { useTransform, motion, useScroll, MotionValue } from 'framer-motion'
 import { useRef } from 'react'
-import HeadingSection from '@/components/shared/HeadingSection'
 import ScratchToReveal from '@/components/ui/ScratchToReveal'
 import TrueFocus from '@/components/ui/TrueFocus'
 import { SanityDocument } from 'next-sanity'
@@ -87,19 +86,19 @@ export const Card: React.FC<CardProps> = ({
     >
       <motion.div
         style={{
-          scale,
-          top: `calc(-2vh + ${i * 2}px)`,
+          top: `calc(-2vh + ${i * 10}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-[500px] sm:h-[95%] w-full rounded-md p-0 origin-top [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border overflow-hidden`}
+        className={`flex flex-col relative -top-[25%] h-[500px] sm:h-[95%] w-full rounded-md p-0 origin-top  overflow-hidden`}
       >
         <ScratchToReveal
           minScratchPercentage={70}
           cursorBackgroundColor='#a3e635'
           customCursorText='VIEW'
-          className='h-full'
+          className='h-full w-full'
         >
           <span className='absolute bottom-4 right-4 font-bold text-[10vw]'>{`0${i + 1}`}</span>
-          <div className='absolute top-8 left-4 sm:left-8 flex flex-col items-start gap-4'>
+
+          <div className='absolute top-8 left-4 sm:left-8 flex flex-col items-start gap-4 backdrop-blur-xl bg-gray/80 z-10 p-8 rounded-md'>
             <h3 className='text-md md:text-lg lg:text-[3vw] font-bold max-w-[350px]  sm:max-w-[500px] leading-none'>
               {title}
             </h3>

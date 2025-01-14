@@ -13,7 +13,7 @@ const ScrollTop = () => {
     <>
       <span
         onClick={scrollToTop}
-        className='scroll-top fixed right-2 bottom-2 md:relative'
+        className='scroll-top absolute right-2 bottom-2 md:relative'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'

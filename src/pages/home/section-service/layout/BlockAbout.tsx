@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { heroAbout1 } from '@/assets'
 import ListSocialLink from '@/components/shared/ListSocialLink'
 import React from 'react'
 import { SkeletonOne } from './Skeleton'

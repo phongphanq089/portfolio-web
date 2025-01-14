@@ -113,7 +113,7 @@ const Card: React.FC<CardProps> = ({ card, cards, onRemove }) => {
     <motion.img
       src={card.url}
       alt='Placeholder alt'
-      className='h-96 w-72 4xl:h-[450px] 4xl:w-[350px] origin-bottom rounded-lg bg-white object-cover '
+      className='h-[360px] w-[260px] xs:h-96 xs:w-72 4xl:h-[450px] 4xl:w-[350px] origin-bottom rounded-lg bg-white object-cover '
       style={{
         gridRow: 1,
         gridColumn: 1,

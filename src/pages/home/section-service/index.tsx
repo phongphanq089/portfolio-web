@@ -7,7 +7,7 @@ const SectionService = () => {
   return (
     <section className='relative  min-h-[150vh] w-full  overflow-hidden bg-dark'>
       <div className='container-3xl'>
-        <div className='mt-20 mb-6 px-8 !text-[6vw]'>
+        <div className='mt-20 mb-6 px-8 text-[32px] sm:!text-[6vw]'>
           <TrueFocus
             sentence='ABOUT ME'
             manualMode={false}
