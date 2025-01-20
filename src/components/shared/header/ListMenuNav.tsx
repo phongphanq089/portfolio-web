@@ -12,7 +12,7 @@ const menuNav = [
   },
   {
     name: 'Resoures',
-    link: '/resoures',
+    link: '/resoures/all',
   },
   {
     name: 'Project',

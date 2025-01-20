@@ -46,6 +46,8 @@ import banner7 from '../../public/image/banner/banner-7.jpg'
 import banner8 from '../../public/image/banner/banner-8.jpg'
 import bgBanner1 from '../../public/image/svg-icon/bg-banner-1.svg'
 import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
+import bgCardResoure from '../../public/image/bg-card.png'
+import cutHover from '../../public/image/cut-hover.png'
 
 // ============ ICON DEV || ===================== //
 import beanhead from '../../public/image/svg-icon/beanhead.svg'
@@ -62,6 +64,8 @@ export {
   banner8,
   bgBanner1,
   bgBanner2,
+  bgCardResoure,
+  cutHover,
   // ===== slill developer =========//
   developer1,
 }

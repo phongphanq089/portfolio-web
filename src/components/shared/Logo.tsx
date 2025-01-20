@@ -1,8 +1,12 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Logo = () => {
   return (
-    <div className='w-[130px] sm:w-[150px] md:w-[200px]'>
+    <Link
+      href={'/'}
+      className='w-[130px] sm:w-[150px] md:w-[200px] inline-block'
+    >
       <svg
         width='846'
         height='191'
@@ -20,7 +24,7 @@ const Logo = () => {
           className='dark:fill-white fill-[#3c3935]'
         />
       </svg>
-    </div>
+    </Link>
   )
 }
 

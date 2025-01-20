@@ -7,7 +7,8 @@
   :root {
     --dark: rgb(8 8 7 / 1);
     // --dark: #27221e;
-    --primary-color: #a3e635;
+    // --primary-color: #a3e635;
+    --primary-color: #f59e0b;
     --light: rgb(232 232 227 / 1);
     --white: #ffff;
     --color-1: #7808d0;
@@ -107,7 +108,7 @@
     @apply max-w-screen-2xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
   }
   .container-3xl {
-    @apply max-w-screen-3xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-3xl mx-auto px-2 md:px-3 lg:px-5 2xl:px-3;
   }
   .container-4xl {
     @apply max-w-screen-4xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
@@ -219,5 +220,31 @@
     ::-webkit-scrollbar-thumb {
       border-radius: 0;
     }
+  }
+
+  .bg-linear-gradient-1 {
+    background: linear-gradient(
+        160deg,
+        rgba(103, 103, 103, 0.25) 14%,
+        rgba(14, 14, 14, 0.2) 97.3%
+      ),
+      rgb(12, 12, 12);
+    box-shadow:
+      rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
+      rgba(0, 0, 0, 0.2) 0px 4.8px 4.8px inset,
+      rgba(0, 0, 0, 0.45) 2px 3px 1.2px inset;
+    border-radius: 12px;
+  }
+
+  .pagination-item {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .pagination-item.active {
+    font-weight: bold;
+    color: #007bff;
   }
 }

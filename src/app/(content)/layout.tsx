@@ -16,8 +16,8 @@ const Layout = async ({
   })
   return (
     <>
-      <Header />
-      <div className='min-h-screen flex flex-col'>
+      <Header className='relative' />
+      <div className='min-h-screen flex flex-col overflow-hidden'>
         <main className='flex-1'> {children}</main>
       </div>
       <Footer footer={footeNav as SanityDocument} />

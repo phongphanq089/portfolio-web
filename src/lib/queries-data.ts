@@ -77,19 +77,22 @@ export const categoriesDeveloper = groq`*[_type == "categoryDeveloper"] {
     "postCount": count(*[_type == "developer" && references(^._id)]),
   }`
 
-export const developerQueryCategory = groq`*[_type == "developer" && $slug in categoryDeveloper[]->slug.current]{
-  _id,
-  _createdAt,
-  _updatedAt,
-  title,
-  mainImage,
-  url,
-  tags,
-  "categoryDeveloper": categoryDeveloper[]-> {title},
-  publishedAt,
-}`
+export const developerQueryCategory = groq`
+  *[_type == "developer" && $slug in categoryDeveloper[]->slug.current] 
+  | order(_createdAt desc) [$start..$start + $limit - 1] {
+    _id,
+    _createdAt,
+    _updatedAt,
+    title,
+    mainImage,
+    url,
+    tags,
+    "categoryDeveloper": categoryDeveloper[]-> {title},
+    publishedAt,
+  }
+`
 
-export const countQuery = groq`count(*[_type == "developer" && $slug in categoryDeveloper[]->slug.current])`
+export const countQueryCategory = groq`count(*[_type == "developer" && $slug in categoryDeveloper[]->slug.current])`
 
 /**
  * @PROJECT
