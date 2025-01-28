@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef } from 'react'
-import BannerHero from './banner-hero/BannerHero'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import BannerHero from './banner-hero/BannerHero'
 import SectionService from './section-service'
 
 const SectionWrapperSticky = () => {

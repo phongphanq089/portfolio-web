@@ -1,7 +1,7 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import Footer from '@/components/shared/Footer/Index'
 import Header from '@/components/shared/header/Header'
-import { footerQuery } from '@/lib/queries-data'
+import { footerQuery } from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
 import React from 'react'

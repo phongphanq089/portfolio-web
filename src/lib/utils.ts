@@ -55,30 +55,3 @@ type MotionStyleWithCssVar = {
 }
 
 export const stylesWithCssVar = (styles: MotionStyleWithCssVar) => styles as any
-
-{
-  /* <LayoutCursorWrapper
-        cursorVariants={cursorVariants}
-        renderContent={(handleMouseEnter, handleMouseLeave) => (
-          <React.Fragment>
-            <div
-              className='p-8 bg-white rounded shadow m-4'
-              onMouseEnter={() => handleMouseEnter('project', 'View')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <span className='text-lg font-medium'>
-                Project: Discord Onboarding
-              </span>
-            </div>
-
-            <div
-              className='p-8 bg-white rounded shadow m-4'
-              onMouseEnter={() => handleMouseEnter('contact', '👋')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <span className='text-lg font-medium'>Want to Chat?</span>
-            </div>
-          </React.Fragment>
-        )}
-      /> */
-}

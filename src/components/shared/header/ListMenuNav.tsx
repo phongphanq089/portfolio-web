@@ -4,29 +4,7 @@ import ListMenuNavItem from './ListMenuNavItem'
 import { AnimatePresence } from 'framer-motion'
 import { motion } from 'framer-motion'
 import DarkModeToogle from '../DarkModeToogle'
-
-const menuNav = [
-  {
-    name: 'Home',
-    link: '/',
-  },
-  {
-    name: 'Resoures',
-    link: '/resoures/all',
-  },
-  {
-    name: 'Project',
-    link: '/project',
-  },
-  {
-    name: 'Blog',
-    link: '/blog',
-  },
-  {
-    name: 'Life - advice',
-    link: '/life-advice',
-  },
-]
+import { navbarList } from '@/setting'
 
 const ListMenuNav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -74,7 +52,7 @@ const ListMenuNav = () => {
               exit='exit'
               transition={{ staggerChildren: 0.1 }}
             >
-              {menuNav.map((item, index) => {
+              {navbarList.map((item, index) => {
                 return (
                   <ListMenuNavItem
                     navItem={item}

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import './globals.scss'
-import { cn } from '@/utils/cn'
+import '../styles/globals.scss'
 import { Nunito } from 'next/font/google'
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import { cn } from '@/lib/utils'
 
 const nunito = Nunito({
   weight: ['300', '400', '500', '600', '700', '800', '900'],

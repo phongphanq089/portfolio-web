@@ -1,12 +1,12 @@
 import Pagination from '@/components/shared/Pagination'
 import TabsLiquid from '@/components/shared/TabsLiquid'
+
+import CardResoure from '@/app/(content)/resoures/components/CardResoure'
 import {
   categoriesDeveloper,
   countQueryCategory,
   developerQueryCategory,
-} from '@/lib/queries-data'
-import CardResoure from '@/pages/resoure/components/CardResoure'
-import Layout from '@/pages/resoure/Layout'
+} from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
 import { notFound } from 'next/navigation'
@@ -53,7 +53,7 @@ const PageResoures = async ({ params, searchParams }: Props) => {
 
   // console.log(listDeveloper, 'listDevleoper')
   return (
-    <Layout>
+    <div className='container-3xl py-20'>
       <div className='mb-[50px]'>
         <TabsLiquid category={category as SanityDocument} />
       </div>
@@ -68,7 +68,7 @@ const PageResoures = async ({ params, searchParams }: Props) => {
       <div className='w-full flex justify-center items-center mt-16'>
         <Pagination totalPages={totalPages} currentPage={page} />
       </div>
-    </Layout>
+    </div>
   )
 }
 

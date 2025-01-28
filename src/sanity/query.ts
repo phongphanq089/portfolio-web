@@ -140,11 +140,11 @@ export const footerQuery = groq`*[_type == "footer"]  {
  */
 
 export const portfolioHome = groq`*[_type == "portfolio"]  {
- _id,
- title,
- mainImage,
- tags,
- urlPage
+  _id,
+  title,
+  mainImage,
+  tags,
+  urlPage
 }`
 
 /**

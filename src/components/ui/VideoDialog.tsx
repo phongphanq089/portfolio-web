@@ -67,7 +67,7 @@ const animationVariants = {
   },
 }
 
-export default function HeroVideoDialog({
+export default function VideoDialog({
   animationStyle = 'from-center',
   videoSrc,
   thumbnailSrc,
@@ -83,11 +83,9 @@ export default function HeroVideoDialog({
         className='relative cursor-pointer group'
         onClick={() => setIsVideoOpen(true)}
       >
-        {/* <NextImageResize
-          src={thumbnailSrc}
-          alt={thumbnailAlt}
-          className='pt-[56.25%]'
-        /> */}
+        <div className='wrapImgResize img16And9'>
+          <img src={thumbnailSrc} alt={thumbnailAlt} />
+        </div>
         <div className='absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl'>
           <div className='btn-player'>
             <div className='btn-player__ico'>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { developer1 } from '@/assets'
 
 const AnimationLottie = dynamic(
-  () => import('../../../../components/ui/AnimationLottie'),
+  () => import('../../../../../components/ui/AnimationLottie'),
   {
     ssr: false,
   }

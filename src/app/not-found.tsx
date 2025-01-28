@@ -1,4 +1,5 @@
 // import ButtonStyle from '@/components/shared/ButtonStyle'
+import ButtonGradient from '@/components/ui/ButtonGradient'
 import Link from 'next/link'
 import React from 'react'
 
@@ -64,9 +65,11 @@ const NotFoundPage = () => {
           <div className='base3'></div>
         </div>
 
-        {/* <Link href='/' className='bg-black flex w-fit my-3'>
-          <ButtonStyle text='Go back home' />
-        </Link> */}
+        <div className='mt-10'>
+          <ButtonGradient link='/'>
+            <span className='text-xs inline-block'>Go back home</span>
+          </ButtonGradient>
+        </div>
       </div>
       <div className='text_404'>
         <div className='text_4041'>4</div>
