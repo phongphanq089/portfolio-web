@@ -67,7 +67,9 @@ const NotFoundPage = () => {
 
         <div className='mt-10'>
           <ButtonGradient link='/'>
-            <span className='text-xs inline-block'>Go back home</span>
+            <span className='text-xs flex items-center justify-center'>
+              Go back home
+            </span>
           </ButtonGradient>
         </div>
       </div>

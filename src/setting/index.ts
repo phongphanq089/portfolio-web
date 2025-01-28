@@ -13,7 +13,7 @@ export const navbarList = [
   },
   {
     name: 'Blog',
-    link: '/blog',
+    link: '/blogs/all',
   },
   {
     name: 'Life - advice',

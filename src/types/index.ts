@@ -24,3 +24,28 @@ export interface FooterMenuType {
     image: string
   }[]
 }
+
+// ===== BLOG  ==== //
+export interface BLogList {
+  title: string
+  body?: string[]
+  meta_description: string
+  mainImage: {
+    _type: string
+    alt: string
+    asset: {
+      _ref: string
+    }
+  }
+  category: {
+    title: string
+    slug: object
+  }[]
+  publishedAt?: string
+  _id?: string
+  _createdAt?: string
+  slug: {
+    current: string
+    _type: string
+  }
+}

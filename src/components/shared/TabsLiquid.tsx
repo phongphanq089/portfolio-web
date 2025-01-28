@@ -6,8 +6,15 @@ import { SanityDocument } from 'next-sanity'
 import { usePathname, useRouter } from 'next/navigation'
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
 import { useEffect, useRef } from 'react'
+import { constants } from 'fs'
 
-const TabsLiquid = ({ category }: { category: SanityDocument }) => {
+const TabsLiquid = ({
+  category,
+  isPageBlog,
+}: {
+  category: SanityDocument
+  isPageBlog?: boolean
+}) => {
   const router = useRouter()
 
   const pathname = usePathname()
@@ -60,14 +67,20 @@ const TabsLiquid = ({ category }: { category: SanityDocument }) => {
             <motion.li
               key={item._id + index}
               ref={
-                pathname === `/resoures/${item.slug.current}`
+                pathname ===
+                `${isPageBlog ? '/blogs' : '/resoures'}/${item.slug.current}`
                   ? activeTabRef
                   : null
               }
-              onClick={() => router.push(`/resoures/${item.slug.current}`)}
+              onClick={() =>
+                router.push(
+                  `${isPageBlog ? '/blogs' : '/resoures'}/${item.slug.current}`
+                )
+              }
               className={cn(
                 'bg-color-3 text-white px-7 h-full items-center mx-0 transition-all duration-500 cursor-pointer justify-center flex capitalize font-bold',
-                pathname === `/resoures/${item.slug.current}` &&
+                pathname ===
+                  `${isPageBlog ? '/blogs' : '/resoures'}/${item.slug.current}` &&
                   'bg-primary-color mx-6'
               )}
             >

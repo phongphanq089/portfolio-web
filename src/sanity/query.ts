@@ -3,7 +3,7 @@ import { groq } from 'next-sanity'
 /**
  * @CATEGORY
  */
-export const getCategoriesQuery = groq`*[_type == "category"] {
+export const categoryPostList = groq`*[_type == "category"] {
     _id,
     title,
     slug,
@@ -12,7 +12,7 @@ export const getCategoriesQuery = groq`*[_type == "category"] {
     "postCount": count(*[_type == "post" && references(^._id)]),
   }`
 
-export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug.     current]{
+export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug. current] [$start..$start + $limit - 1]{
     _id,
     slug,
     _createdAt,
@@ -24,11 +24,13 @@ export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in ca
     publishedAt,
 }`
 
+export const totalBlogList = groq`count(*[_type == "post" && $slug in categories[]->slug.current])`
+
 /**
  * @POST details/posts
  */
 
-export const postsQuery = groq`*[_type == "post"] | order(_createdAt desc){
+export const postsQuery = groq`*[_type == "post"] | order(_createdAt desc) [$start..$start + $limit - 1]{
     _createdAt,
     _updatedAt,
   title,

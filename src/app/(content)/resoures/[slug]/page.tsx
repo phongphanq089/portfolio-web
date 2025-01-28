@@ -51,7 +51,6 @@ const PageResoures = async ({ params, searchParams }: Props) => {
 
   const totalPages = Math.ceil(totalQueryCategory / pageSize)
 
-  // console.log(listDeveloper, 'listDevleoper')
   return (
     <div className='container-3xl py-20'>
       <div className='mb-[50px]'>

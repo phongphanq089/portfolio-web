@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body
         className={cn(
-          'bg-light dark:bg-dark',
+          'bg-light dark:bg-dark overflow-x-hidden',
           nunito.variable,
           nunito.className
         )}
