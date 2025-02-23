@@ -44,6 +44,7 @@ import banner5 from '../../public/image/banner/banner-5.jpg'
 import banner6 from '../../public/image/banner/banner-6.jpg'
 import banner7 from '../../public/image/banner/banner-7.jpg'
 import banner8 from '../../public/image/banner/banner-8.jpg'
+import banner9 from '../../public/image/banner/banner-9.jpg'
 import bgBanner1 from '../../public/image/svg-icon/bg-banner-1.svg'
 import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
 import bgCardResoure from '../../public/image/bg-card.png'
@@ -62,6 +63,7 @@ export {
   banner6,
   banner7,
   banner8,
+  banner9,
   bgBanner1,
   bgBanner2,
   bgCardResoure,

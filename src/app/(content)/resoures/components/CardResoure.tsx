@@ -7,9 +7,11 @@ import { urlFor } from '@/sanity/config'
 
 interface PropType {
   _ref: string
+  title: string
+  url: string
 }
 
-const CardResoure = ({ _ref }: PropType) => {
+const CardResoure = ({ _ref, title, url }: PropType) => {
   const [ishover, setIsHover] = useState<boolean>(false)
 
   return (
@@ -26,7 +28,8 @@ const CardResoure = ({ _ref }: PropType) => {
         x: 0,
         type: 'spring',
       }}
-      href='#'
+      href={url}
+      target='_blank'
     >
       <div
         className='w-full h-full'
@@ -39,7 +42,7 @@ const CardResoure = ({ _ref }: PropType) => {
           <div className='h-[60%] w-[80%] absolute top-[70px] left-[53%] -translate-x-1/2 bg-linear-gradient-1'>
             <div className='realtive h-full w-full flex flex-col p-2'>
               <h3 className='text-primary-color text-sm font-bold uppercase pl-2'>
-                lunarui.dev
+                {title}
               </h3>
               <div className='wrapImgResize img16And9 rounded-md overflow-hidden mt-auto'>
                 <img src={urlFor(_ref).url()} alt='phongphan' />

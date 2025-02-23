@@ -52,50 +52,52 @@ const PageBlog = async ({ params, searchParams }: Props) => {
   const totalPages = Math.ceil(totalBlog / pageSize)
 
   return (
-    <div className='container-3xl py-20'>
-      <div className='mb-[50px]'>
-        <TabsLiquid
-          category={listCategoryPost as SanityDocument}
-          isPageBlog={isPageBlog}
-        />
-      </div>
-      <BackgroundGradientAnimation></BackgroundGradientAnimation>
+    <div className='overflow-hidden'>
+      <div className='container-3xl py-20'>
+        <div className='mb-[50px]'>
+          <TabsLiquid
+            category={listCategoryPost as SanityDocument}
+            isPageBlog={isPageBlog}
+          />
+        </div>
+        {/* <BackgroundGradientAnimation></BackgroundGradientAnimation> */}
 
-      <div className='flex flex-wrap justify-center gap-6'>
-        {listBlog.map((blog: BLogList, index: number) => {
-          let widthClass = ''
+        <div className='flex flex-wrap justify-center gap-6'>
+          {listBlog.map((blog: BLogList, index: number) => {
+            let widthClass = ''
 
-          switch (index % 4) {
-            case 0:
-              widthClass = 'w-full md:w-[50%] xl:w-[40%]'
-              break
-            case 1:
-              widthClass = 'w-full md:w-[50%] xl:w-[33%]'
-              break
-            case 2:
-              widthClass = 'w-full md:w-[50%] xl:w-[50%]'
-              break
-            case 3:
-              widthClass = 'w-full md:w-[50%] xl:w-[40%]'
-              break
-            default:
-              widthClass = 'w-full md:w-[60%] xl:w-[60%]'
-          }
-          return (
-            <div key={blog._id} className={widthClass}>
-              <CardBlog
-                title={blog.title}
-                meta_description={blog.meta_description}
-                slug={blog.slug}
-                mainImage={blog.mainImage}
-                category={blog.category}
-              />
-            </div>
-          )
-        })}
-      </div>
-      <div className='w-full flex justify-center items-center mt-16'>
-        <Pagination totalPages={totalPages} currentPage={page} />
+            switch (index % 4) {
+              case 0:
+                widthClass = 'w-full md:w-[50%] xl:w-[40%]'
+                break
+              case 1:
+                widthClass = 'w-full md:w-[50%] xl:w-[33%]'
+                break
+              case 2:
+                widthClass = 'w-full md:w-[50%] xl:w-[50%]'
+                break
+              case 3:
+                widthClass = 'w-full md:w-[50%] xl:w-[40%]'
+                break
+              default:
+                widthClass = 'w-full md:w-[60%] xl:w-[60%]'
+            }
+            return (
+              <div key={blog._id} className={widthClass}>
+                <CardBlog
+                  title={blog.title}
+                  meta_description={blog.meta_description}
+                  slug={blog.slug}
+                  mainImage={blog.mainImage}
+                  category={blog.category}
+                />
+              </div>
+            )
+          })}
+        </div>
+        <div className='w-full flex justify-center items-center mt-16'>
+          <Pagination totalPages={totalPages} currentPage={page} />
+        </div>
       </div>
     </div>
   )

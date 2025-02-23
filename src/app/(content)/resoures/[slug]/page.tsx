@@ -22,6 +22,21 @@ interface Props {
   }
 }
 
+interface CartResouresType {
+  _id: string
+  title: string
+  url: string
+  mainImage: {
+    alt: string
+    asset: {
+      _ref: string
+    }
+  }
+  categoryDeveloper: string[]
+}
+
+type ExtendedCartResources = SanityDocument<CartResouresType>
+
 const PageResoures = async ({ params, searchParams }: Props) => {
   let listDeveloper
   let totalQueryCategory
@@ -31,12 +46,12 @@ const PageResoures = async ({ params, searchParams }: Props) => {
 
   const start = (page - 1) * pageSize
 
-  const category = await sanityFetch<SanityDocument>({
+  const category = await sanityFetch<ExtendedCartResources>({
     query: categoriesDeveloper,
   })
 
   try {
-    listDeveloper = await sanityFetch<SanityDocument[]>({
+    listDeveloper = await sanityFetch<ExtendedCartResources[]>({
       query: developerQueryCategory,
       param: { ...params, start, limit: pageSize },
     })
@@ -49,6 +64,7 @@ const PageResoures = async ({ params, searchParams }: Props) => {
     return notFound()
   }
 
+  console.log(listDeveloper)
   const totalPages = Math.ceil(totalQueryCategory / pageSize)
 
   return (
@@ -58,9 +74,14 @@ const PageResoures = async ({ params, searchParams }: Props) => {
       </div>
       <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:gap-16'>
         {listDeveloper &&
-          listDeveloper.map((item: any, index: number) => {
+          listDeveloper.map((item: CartResouresType, index: number) => {
             return (
-              <CardResoure key={index} _ref={item?.mainImage?.asset?._ref} />
+              <CardResoure
+                key={index}
+                _ref={item?.mainImage?.asset?._ref}
+                title={item.title}
+                url={item.url}
+              />
             )
           })}
       </div>

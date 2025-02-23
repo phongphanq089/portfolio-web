@@ -4,8 +4,8 @@ import { Nunito } from 'next/font/google'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 import { cn } from '@/lib/utils'
 
-const nunito = Nunito({
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+const font = Nunito({
+  weight: ['300', '400', '500', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-heading2',
 })
@@ -31,8 +31,8 @@ export default function RootLayout({
       <body
         className={cn(
           'bg-light dark:bg-dark overflow-x-hidden',
-          nunito.variable,
-          nunito.className
+          font.variable,
+          font.className
         )}
       >
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>

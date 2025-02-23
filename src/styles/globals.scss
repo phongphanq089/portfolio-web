@@ -8,7 +8,7 @@
     --dark: rgb(8 8 7 / 1);
     // --dark: #27221e;
     // --primary-color: #a3e635;
-    --primary-color: #f59e0b;
+    --primary-color: #a3e635;
     --light: rgb(232 232 227 / 1);
     --white: #ffff;
     --color-1: #7808d0;
@@ -229,8 +229,7 @@
         rgba(14, 14, 14, 0.2) 97.3%
       ),
       rgb(12, 12, 12);
-    box-shadow:
-      rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
+    box-shadow: rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
       rgba(0, 0, 0, 0.2) 0px 4.8px 4.8px inset,
       rgba(0, 0, 0, 0.45) 2px 3px 1.2px inset;
     border-radius: 12px;
@@ -246,5 +245,38 @@
   .pagination-item.active {
     font-weight: bold;
     color: #007bff;
+  }
+
+  #parent-content p {
+    margin-bottom: 14px;
+  }
+  #parent-content br {
+    display: none;
+  }
+
+  .tilted-card-demo-text {
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: -0.5px;
+    background: #0006;
+    border-radius: 6px;
+    padding: 0.5rem 1em;
+    font-weight: 900;
+    box-shadow: 0 5px 30px #06060659;
+  }
+  html.dark {
+    .card-gradient {
+      background: linear-gradient(black, black) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
+      border: 2px solid transparent;
+    }
+  }
+  html.light {
+    .card-gradient {
+      background: linear-gradient(rgb(232 232 227 / 1), rgb(232 232 227 / 1))
+          padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
+      border: 2px solid transparent;
+    }
   }
 }

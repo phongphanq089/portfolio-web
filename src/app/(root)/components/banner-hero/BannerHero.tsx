@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import ScrollBaseAnimation from '@/components/ui/text-marquee'
 import React, { useRef } from 'react'
-import HeadingBlock from './HeadingBlock'
-import Link from 'next/link'
-import SwipeCards from '@/components/ui/CardRotate'
-import ScratchToReveal from '@/components/ui/ScratchToReveal'
+
 import Blocks from '@/components/ui/Blocks'
+import TextPressure from '@/components/ui/text-animation/TextPressure'
+import { banner1, banner9 } from '@/assets'
+import RotatingText from '@/components/ui/text-animation/RotatingText'
+import TiltedCard from './TiltedCard'
 
 const BannerHero = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -42,44 +42,66 @@ const BannerHero = () => {
       </div>
 
       <div className='flex flex-col h-full justify-between items-center max-md:gap-5'>
-        <HeadingBlock />
-        <div className='z-[1] w-full h-full flex justify-center items-center  sm:absolute sm:-bottom-10'>
-          <ScratchToReveal
-            minScratchPercentage={70}
-            cursorBackgroundColor='#a3e635'
-            customCursorText='DRAG'
-          >
-            <SwipeCards />
-          </ScratchToReveal>
+        <div></div>
+        <div className='z-[1] w-[300px] h-[400px] sm:absolute top-[40%] sm:-translate-y-1/2'>
+          <TiltedCard
+            imageSrc={banner9.src}
+            altText='Phong Phan - PH'
+            captionText='Phong Phan - PH'
+            containerHeight='400px'
+            containerWidth='300px'
+            imageHeight='430px'
+            imageWidth='300px'
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={
+              <p className='tilted-card-demo-text '>Web Developer</p>
+            }
+          />
         </div>
 
-        {/* <div className='z-0 pointer-events-none w-[74vw]  max-w-[80rem] mt-[-4vw] absolute'>
-          <img src={bgBanner2.src} className='w-full object-cover h-auto' />
-        </div>
-        <div className='z-0 pointer-events-none w-[50vw]  max-w-[50rem] mt-[-4vw] absolute'>
-          <img src={bgBanner1.src} className='w-full object-cover h-auto' />
-        </div> */}
-
-        <div className='flex flex-col w-full gap-10 sm:gap-4 sm:-translate-y-7'>
+        <div className='flex flex-col w-full gap-10 sm:gap-0 sm:-translate-y-7 relative z-50'>
           <div className='container-4xl flex flex-col gap-3 sm:flex-row w-full justify-between items-center text-xs sm:text-sm font-medium'>
-            <span>[ Personal portfolio 2024 ]</span>
+            <div className='w-full'>
+              <div className='flex items-center gap-2 text-lg sm:text-xl mb-2'>
+                <div className='text-black dark:text-white'>Creative</div>
+                <RotatingText
+                  texts={['React', 'Bits', 'Motion', 'Cool!']}
+                  mainClassName='px-2 sm:px-2 md:px-5 bg-primary-color text-white overflow-hidden py-0.5 sm:py-1 md:py-1 justify-center rounded-lg'
+                  staggerFrom={'last'}
+                  initial={{ y: '100%' }}
+                  animate={{ y: 0 }}
+                  exit={{ y: '-120%' }}
+                  staggerDuration={0.025}
+                  splitLevelClassName='overflow-hidden pb-0.5 sm:pb-1 md:pb-1'
+                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
+              </div>
+              <span>[ Personal portfolio 2024 ]</span>
+            </div>
 
-            <Link
-              href={'mailto:phongphanq089@gmail.com'}
-              title='phongphanq089@gmail.com'
-              className='link-hover z-50'
-            >
-              phongphanq089@gmail.com
-            </Link>
+            <h3 className='dark:text-color-4 md:text-end text-sm md:text-lg 3xl:text-xl font-light dark:font-extralight max-w-[500px] 3xl:max-w-[700px] leading-none'>
+              Just an ordinary devleoper. From Vietnamese with love.
+            </h3>
           </div>
-          <ScrollBaseAnimation
-            delay={500}
-            baseVelocity={0.5}
-            scrollDependent={true}
-            clasname='font-[900] tracking-[-0.07em] leading-[90%] z-10'
-          >
-            FRONTEND DEVELOPER
-          </ScrollBaseAnimation>
+          <div>
+            <TextPressure
+              text='PHONG PHAN'
+              flex={true}
+              alpha={false}
+              stroke={false}
+              width={true}
+              weight={true}
+              italic={true}
+              textColor='#000'
+              strokeColor='#ff0000'
+              minFontSize={30}
+            />
+          </div>
         </div>
       </div>
     </div>

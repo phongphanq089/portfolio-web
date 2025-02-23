@@ -1,6 +1,5 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
-import LoadingLayout from '@/components/layout/LoadingLayout'
-import Footer from '@/components/shared/Footer/Index'
+import FooterV2 from '@/components/shared/Footer-v2/Index'
 import Header from '@/components/shared/header/Header'
 import { footerQuery } from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'
@@ -21,7 +20,8 @@ const LayoutRoot = async ({
       <div className='min-h-screen flex flex-col'>
         <main className='flex-1'> {children}</main>
       </div>
-      <Footer footer={footeNav as SanityDocument} />
+      {/* <Footer footer={footeNav as SanityDocument} /> */}
+      <FooterV2 />
     </LayoutWrapper>
   )
 }

@@ -19,7 +19,7 @@ const SectionWrapperSticky = () => {
         <BannerHero />
       </motion.section>
 
-      <motion.section className='sm:sticky top-0 rounded-t-[20px]  md:rounded-t-[50px]  overflow-hidden'>
+      <motion.section className='sm:sticky top-0 rounded-t-[20px]  md:rounded-t-[50px]  overflow-hidden '>
         {/* <SectionAbout /> */}
         <SectionService />
       </motion.section>

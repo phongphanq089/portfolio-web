@@ -33,7 +33,7 @@ const Footer = ({ footer }: { footer: SanityDocument }) => {
 
   return (
     <>
-      <div className='relative h-full sm:pt-14 pt-8  text-black overflow-hidden'>
+      <div className='relative h-full sm:pt-14 pt-8  overflow-hidden'>
         <div className='container-4xl  px-4 mx-auto relative' ref={container}>
           {/* =====  RENDER LIST MENU */}
           <IconRound className='pointer-events-none absolute left-1/2 -translate-x-1/2 top-[150px] z-1 h-fit w-5/6 sm:w-3/5 lg:w-2/5 z-0 dark:opacity-5' />

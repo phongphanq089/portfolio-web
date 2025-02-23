@@ -6,7 +6,6 @@ import { SanityDocument } from 'next-sanity'
 import { usePathname, useRouter } from 'next/navigation'
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
 import { useEffect, useRef } from 'react'
-import { constants } from 'fs'
 
 const TabsLiquid = ({
   category,
