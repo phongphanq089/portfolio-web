@@ -6,7 +6,7 @@ import React, {
   useMemo,
   useState,
 } from 'react'
-import { motion, AnimatePresence, Transition } from 'framer-motion'
+import { motion, AnimatePresence, Transition } from 'motion/react'
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(' ')

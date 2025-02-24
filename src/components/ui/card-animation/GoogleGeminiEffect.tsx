@@ -1,6 +1,6 @@
 'use client'
 import { cn } from '@/lib/utils'
-import { motion, MotionValue } from 'framer-motion'
+import { motion, MotionValue } from 'motion/react'
 import Link from 'next/link'
 import React from 'react'
 

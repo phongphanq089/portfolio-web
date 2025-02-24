@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'motion/react'
 
 let interval: NodeJS.Timeout
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {

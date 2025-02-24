@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { SanityDocument } from 'next-sanity'
 import { usePathname, useRouter } from 'next/navigation'
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
@@ -79,8 +79,9 @@ const TabsLiquid = ({
               className={cn(
                 'bg-color-3 text-white px-7 h-full items-center mx-0 transition-all duration-500 cursor-pointer justify-center flex capitalize font-bold',
                 pathname ===
-                  `${isPageBlog ? '/blogs' : '/resoures'}/${item.slug.current}` &&
-                  'bg-primary-color mx-6'
+                  `${isPageBlog ? '/blogs' : '/resoures'}/${
+                    item.slug.current
+                  }` && 'bg-primary-color mx-6'
               )}
             >
               {item.title}

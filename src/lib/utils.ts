@@ -1,6 +1,6 @@
 import { urlFor } from '@/sanity/config'
 import { type ClassValue, clsx } from 'clsx'
-import { MotionStyle, MotionValue } from 'framer-motion'
+import { MotionStyle, MotionValue } from 'motion/react'
 import { twMerge } from 'tailwind-merge'
 import SVGPathCommander from 'svg-path-commander'
 

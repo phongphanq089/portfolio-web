@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { bgCardResoure, cutHover } from '@/assets'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { urlFor } from '@/sanity/config'
 
 interface PropType {

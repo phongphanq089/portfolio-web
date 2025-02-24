@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { beanhead } from '@/assets'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 const Avatar = () => {
   return (

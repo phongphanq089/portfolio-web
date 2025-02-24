@@ -3,7 +3,7 @@ import { ScrollArea } from '@/components/ui/scroll-area'
 import React, { useState } from 'react'
 import TableOfContent from './TableOfContent'
 import { ArrowRightToLine, X } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 const ExtractHeadings = () => {
   const [isOpen, setIsOpen] = useState(false)

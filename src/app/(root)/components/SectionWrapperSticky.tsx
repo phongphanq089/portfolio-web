@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef } from 'react'
-import { useScroll, useTransform, motion } from 'framer-motion'
+import { useScroll, useTransform, motion } from 'motion/react'
 import BannerHero from './banner-hero/BannerHero'
 import SectionService from './section-service'
 

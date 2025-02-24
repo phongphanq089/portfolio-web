@@ -6,7 +6,7 @@ import {
   motion,
   useAnimationControls,
   ValueAnimationTransition,
-} from 'framer-motion'
+} from 'motion/react'
 
 interface GoesOutComesInUnderlineProps {
   label: string

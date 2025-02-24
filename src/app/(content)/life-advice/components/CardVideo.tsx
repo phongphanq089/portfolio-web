@@ -1,7 +1,6 @@
 'use client'
-import React, { MouseEvent, useState } from 'react'
+import React from 'react'
 
-import { motion } from 'framer-motion'
 import VideoDialog from '@/components/ui/VideoDialog'
 
 interface propsType {

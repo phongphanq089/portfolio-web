@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 interface TrueFocusProps {
   sentence?: string
@@ -41,12 +41,9 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
 
   useEffect(() => {
     if (!manualMode) {
-      const interval = setInterval(
-        () => {
-          setCurrentIndex((prev) => (prev + 1) % words.length)
-        },
-        (animationDuration + pauseBetweenAnimations) * 1000
-      )
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % words.length)
+      }, (animationDuration + pauseBetweenAnimations) * 1000)
 
       return () => clearInterval(interval)
     }
@@ -102,8 +99,8 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
                     ? `blur(0px)`
                     : `blur(${blurAmount}px)`
                   : isActive
-                    ? `blur(0px)`
-                    : `blur(${blurAmount}px)`,
+                  ? `blur(0px)`
+                  : `blur(${blurAmount}px)`,
                 '--border-color': borderColor,
                 '--glow-color': glowColor,
                 transition: `filter ${animationDuration}s ease`,

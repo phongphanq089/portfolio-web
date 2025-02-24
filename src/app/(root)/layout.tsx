@@ -1,5 +1,5 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
-import FooterV2 from '@/components/shared/Footer-v2/Index'
+import FooterV2 from '@/components/shared/Footer/Index'
 import Header from '@/components/shared/header/Header'
 import { footerQuery } from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'

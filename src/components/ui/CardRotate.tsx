@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'motion/react'
 import {
   banner1,
   banner2,

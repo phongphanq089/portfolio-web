@@ -1,7 +1,7 @@
 'use client'
 import { GoogleGeminiEffect } from '@/components/ui/card-animation/GoogleGeminiEffect'
-// import { useScroll, useTransform } from 'motion/react'
-import { useScroll, useTransform } from 'framer-motion'
+import { useScroll, useTransform } from 'motion/react'
+
 import React from 'react'
 
 const Templates = () => {

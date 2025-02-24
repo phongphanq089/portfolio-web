@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { MutableRefObject, useRef } from 'react'
-import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
+import { useScroll, useTransform, motion, MotionValue } from 'motion/react'
 
 const TextParalaxScroll = () => {
   const container: MutableRefObject<HTMLDivElement | null> = useRef(null)

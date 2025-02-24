@@ -5,7 +5,7 @@ import ListMenuNav from './ListMenuNav'
 import Logo from '../Logo'
 import { useWindowScroll } from '@uidotdev/usehooks'
 import { cn } from '@/lib/utils'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'motion/react'
 import ButtonMenu from './action-menu/ButtonMenu'
 import DarkModeToogle from '../DarkModeToogle'
 

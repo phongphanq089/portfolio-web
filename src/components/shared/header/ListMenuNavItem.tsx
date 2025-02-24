@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import { perspective } from '@/lib/motion-setting'
 

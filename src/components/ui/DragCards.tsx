@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 interface PropsType {
   containerRef: React.RefObject<HTMLDivElement>

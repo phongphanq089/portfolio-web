@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, Variants } from 'framer-motion'
+import { AnimatePresence, motion, Variants } from 'motion/react'
 
 import { cn } from '@/lib/utils'
 
@@ -40,31 +40,28 @@ export default function HyperText({
   }
 
   useEffect(() => {
-    const interval = setInterval(
-      () => {
-        if (!animateOnLoad && isFirstRender.current) {
-          clearInterval(interval)
-          isFirstRender.current = false
-          return
-        }
-        if (interations.current < text.length) {
-          setDisplayText((t) =>
-            t.map((l, i) =>
-              l === ' '
-                ? l
-                : i <= interations.current
-                  ? text[i]
-                  : alphabets[getRandomInt(26)]
-            )
+    const interval = setInterval(() => {
+      if (!animateOnLoad && isFirstRender.current) {
+        clearInterval(interval)
+        isFirstRender.current = false
+        return
+      }
+      if (interations.current < text.length) {
+        setDisplayText((t) =>
+          t.map((l, i) =>
+            l === ' '
+              ? l
+              : i <= interations.current
+              ? text[i]
+              : alphabets[getRandomInt(26)]
           )
-          interations.current = interations.current + 0.1
-        } else {
-          setTrigger(false)
-          clearInterval(interval)
-        }
-      },
-      duration / (text.length * 10)
-    )
+        )
+        interations.current = interations.current + 0.1
+      } else {
+        setTrigger(false)
+        clearInterval(interval)
+      }
+    }, duration / (text.length * 10))
     return () => clearInterval(interval)
   }, [text, duration, trigger, animateOnLoad])
 
