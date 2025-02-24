@@ -4,11 +4,10 @@ import { SanityDocument } from 'next-sanity'
 import { PortableText } from '@portabletext/react'
 import React from 'react'
 import ArticePortableText from '../components/ArticePortableText'
-import { extractHeadings } from '@/lib/utils'
-import TableOfContent from '../components/TableOfContent'
 import BlogBannerMain from '../components/BlogBannerMain'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import ExtractHeadings from '../components/ExtractHeadings'
+
+import MaybeLikeBlock from '../components/MaybeLikeBlock'
 
 interface PropsType {
   params: {
@@ -22,20 +21,22 @@ const PageBlogDetail = async ({ params }: PropsType) => {
     param: { ...params },
   })
 
-  console.log(postDetail.body, 'post detail')
-
+  // console.log(postDetail.relatedPosts)
   return (
-    <div className='container-2xl py-10'>
+    <div className='container-3xl py-10'>
       <BlogBannerMain postDetail={postDetail} />
       <div className='xl:grid grid-cols-12 gap-12'>
         <div className='col-span-3'>
           <ExtractHeadings />
         </div>
-        <div className='col-span-9' id='parent-content'>
+        <div className='col-span-6' id='parent-content'>
           <PortableText
             value={postDetail.body}
             components={ArticePortableText as {}}
           />
+        </div>
+        <div className='col-span-3'>
+          <MaybeLikeBlock postDetail={postDetail} />
         </div>
       </div>
     </div>

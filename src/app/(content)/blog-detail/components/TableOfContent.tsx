@@ -1,6 +1,6 @@
 'use client'
 
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import { type HTMLProps, useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -233,12 +233,56 @@ const TableOfContent = ({
   return (
     <nav
       className={cn(
-        'card-gradient dark:bg-neutral-800 border border-gray-500 shadow-xl p-2',
+        'card-gradient dark:bg-neutral-800  shadow-xl p-2 max-xl:!border-none',
         className
       )}
       {...props}
     >
-      <h3 className='font-bold text-sm pl-4 mb-3'>Table of contents</h3>
+      <div className='flex items-center justify-between pl-4 mb-3 border-b border-gray-400 pb-3'>
+        <h3 className='font-bold text-sm '>Table of contents</h3>
+        <svg
+          width='25'
+          height='25'
+          viewBox='0 0 112 117'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          strokeWidth='2px'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        >
+          <path
+            d='M71.21 8.59961V82.8196L57.54 90.6096L51.21 94.2196V18.5996L60.39 14.0096L71.21 8.59961Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+          <path
+            d='M40.39 43.4697V87.9697L10.08 35.6897L30.08 25.6897L40.39 43.4697Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+          <path
+            d='M89.1 90.1696L65.19 103.8L45.8 114.85L2.5 40.1696L10.08 35.6896L40.39 87.9696V12.3496L51.21 18.5996V94.2196L57.54 90.6096L71.21 82.8196L81.52 76.9396L82.13 77.9996L89.1 90.1696Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+          <path
+            d='M109.1 80.1697L89.1 90.1697L82.13 77.9997L81.52 76.9397L101.52 66.9397L109.1 80.1697Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+          <path
+            d='M109.1 80.1697L65.8 104.85L45.8 114.85L65.19 103.8L89.1 90.1697L109.1 80.1697Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+          <path
+            d='M71.21 8.59961L60.39 14.0096L51.21 18.5996L40.39 12.3496L60.39 2.34961L71.21 8.59961Z'
+            stroke='#0c0303'
+            strokeLinejoin='round'
+          />
+        </svg>
+      </div>
+
       <ol className='relative overflow-hidden ' ref={refTableOfContentList}>
         {headings.map((heading, _index) => {
           return (
@@ -276,8 +320,9 @@ const TableOfContent = ({
               className='pointer-events-none absolute z-10 w-2 select-none bg-primary-color'
               exit={{ opacity: 0, y: -100 }}
               initial={{ opacity: 0, y: -100 }}
-              layout={true}
-              layoutId='active-bar'
+              layout
+              // layout={true}
+              layoutId='underline'
               style={{
                 top: topCoordinate,
                 bottom: `calc(100% - ${bottomCoordinate}px)`,
@@ -289,7 +334,7 @@ const TableOfContent = ({
 
         <div
           className={cn(
-            'bg-gray-300 p-3',
+            'bg-gray-300 dark:bg-color-3 p-3',
             activeIds.includes(headings[headings.length - 1]?.id)
               ? 'bg-primary-color text-white'
               : ''
@@ -298,7 +343,7 @@ const TableOfContent = ({
           <div className='flex items-center gap-3'>
             <div
               className={cn(
-                'p-2 flex items-center justify-center border border-gray-800 rounded-full flex-1',
+                'p-2 flex items-center justify-center border border-gray-800 dark:border-gray-100 rounded-full flex-1',
                 activeIds.includes(headings[headings.length - 1]?.id)
                   ? 'border-gray-100'
                   : ''

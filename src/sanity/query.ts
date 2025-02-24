@@ -63,7 +63,21 @@ publishedAt,
   "estimatedWordCount": round(length(pt::text(body)) / 5),
   "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
   "mainImageWidth": mainImage.asset->metadata.dimensions.width,
-    "mainImageHeight": mainImage.asset->metadata.dimensions.height
+    "mainImageHeight": mainImage.asset->metadata.dimensions.height,
+      "relatedPosts": *[
+    _type == "post" &&
+    slug.current != $slug &&
+    (
+      count(categories[]->slug.current[ @ in ^.^.category[].slug.current ]) > 0 ||
+      count(tags[]->slug.current[ @ in ^.^.tags[].slug.current ]) > 0
+    )
+  ] | order(_createdAt desc) [0..7] {
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    "category": categories[]-> {title, slug}
+  }
 }`
 
 /**
@@ -80,7 +94,7 @@ export const categoriesDeveloper = groq`*[_type == "categoryDeveloper"] {
   }`
 
 export const developerQueryCategory = groq`
-  *[_type == "developer" && $slug in categoryDeveloper[]->slug.current] 
+  *[_type == "developer" && $slug in categoryDeveloper[]->slug.current]
   | order(_createdAt desc) [$start..$start + $limit - 1] {
     _id,
     _createdAt,
@@ -145,6 +159,7 @@ export const portfolioHome = groq`*[_type == "portfolio"]  {
   _id,
   title,
   mainImage,
+  backgroundImage,
   tags,
   urlPage
 }`

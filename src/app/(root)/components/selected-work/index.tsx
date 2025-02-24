@@ -7,6 +7,7 @@ import { useSpring } from 'motion/react'
 import Image from 'next/image'
 import { SanityDocument } from 'next-sanity'
 import CardItem from './components/CardItem'
+import { urlFor } from '@/sanity/config'
 
 const SelectWork = ({ lisProject }: { lisProject: SanityDocument }) => {
   const spring = {
@@ -49,7 +50,7 @@ const SelectWork = ({ lisProject }: { lisProject: SanityDocument }) => {
             <div className={'gallery-work relative'} key={`p_${i}`}>
               <div className={'imageContainer'}>
                 <Image
-                  src={`/images/landon_speers/background.jpg`}
+                  src={urlFor(project.backgroundImage).url()}
                   alt='image'
                   fill
                 />

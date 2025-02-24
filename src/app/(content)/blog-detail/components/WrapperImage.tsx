@@ -12,7 +12,7 @@ const WrapperImage = ({ value }: { value: any }) => {
         alt={value.alt || 'Image'}
         loading='lazy'
         src={`${urlFor(value)}`}
-        className='max-w-full h-auto mx-auto object-cover '
+        className='max-w-full h-auto mx-auto object-cover rounded-xl '
       />
     </div>
   )

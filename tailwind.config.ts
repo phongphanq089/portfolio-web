@@ -10,6 +10,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './src/sanity/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   prefix: '',
   theme: {
