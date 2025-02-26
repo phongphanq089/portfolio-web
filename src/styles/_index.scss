@@ -1,25 +1,31 @@
-@import './breakpoints';
+@import './components/breakpoints';
 
-@import './button-style';
+@import './components/page_404';
 
-@import './text-3d';
+@import './components/resize-image';
 
-@import './card-profile';
+@import './components/app';
 
-@import './page_404';
+@import './components/button-style';
 
-@import './sroll-top';
+@import './components/social-style';
 
-@import './btn-learn-more';
+@import './components/image-paralax-scroll';
 
-@import './gallery-smooth-scroll';
+@import './components/badge-style-gradient';
 
-@import './resize-image';
+@import './components/btn-play';
 
-@import './btn-play-video';
+@import './components/nav-menu';
 
-@import './app';
+@import './components/selected-work';
 
 .rfm-marquee-container {
   overflow: hidden !important;
+}
+
+.text-stroke {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }

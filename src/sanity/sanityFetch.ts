@@ -5,14 +5,14 @@ const DEFAULT_PARAMS = {} as QueryParams
 
 export async function sanityFetch<QueryResponse>({
   query,
-  params = DEFAULT_PARAMS,
+  param = DEFAULT_PARAMS,
 }: {
   query: string
-  params?: QueryParams
+  param?: QueryParams
 }): Promise<QueryResponse> {
   return config
     .withConfig({ useCdn: true })
-    .fetch<QueryResponse>(query, params, {
+    .fetch<QueryResponse>(query, param, {
       next: { revalidate: 0 },
     })
 }

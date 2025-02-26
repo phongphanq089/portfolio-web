@@ -1,0 +1,60 @@
+.social-style {
+  font-size: 1.5rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 5px;
+  border: 2px solid #fafafa;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-style:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.socialLink {
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  position: relative;
+  z-index: 9999;
+
+  svg {
+    color: #ffffff;
+    stroke: #ffffff;
+    fill: white;
+  }
+}
+
+.socialLink {
+  &:hover {
+    color: #ffffff;
+    background: #a3e635;
+    border: 1px solid #a3e635;
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ffffff,
+      0 0 20px #ffffff;
+    box-shadow:
+      0 0 5px #a3e635,
+      0 0 20px #a3e635,
+      0 0 50px #a3e635,
+      0 0 100px #a3e635;
+  }
+}

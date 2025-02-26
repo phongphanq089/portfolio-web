@@ -1,0 +1,23 @@
+# *
+User-agent: *
+Allow: /
+
+# test-bot
+User-agent: test-bot
+Allow: /path
+Allow: /path-2
+
+# black-listed-bot
+User-agent: black-listed-bot
+Disallow: /sub-path-1
+Disallow: /path-2
+
+# Host
+Host: https://phongphan.xyz
+
+# Sitemaps
+Sitemap: https://phongphan.xyz/sitemap.xml
+Sitemap: https://phongphan.xyz
+Sitemap: https://phongphan.xyz/resoures/all
+Sitemap: https://phongphan.xyz/blogs/all
+Sitemap: https://phongphan.xyz/life-advice

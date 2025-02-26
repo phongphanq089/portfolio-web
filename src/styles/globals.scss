@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../styles/index';
+
+@layer base {
+  :root {
+    --dark: rgb(8 8 7 / 1);
+    // --dark: #27221e;
+    // --primary-color: #a3e635;
+    --primary-color: #a2e636;
+    --light: rgb(232 232 227 / 1);
+    --white: #ffff;
+    --color-1: #7808d0;
+    --color-2: #f3d8ba;
+    --color-3: rgb(57 54 50 / 1);
+    --color-4: rgb(191 191 177 / 1);
+    --color-5: #cdd0c3;
+    --color-6: rgb(8 8 7 / 1);
+    --color-7: rgb(107 100 92/1);
+    --bg-linear: linear-gradient(
+      135deg,
+      var(--color-1) 0%,
+      var(--color-rgba-1) 100%
+    );
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-full {
+    @apply max-w-full mx-auto px-1 md:px-3 xl:px-5;
+  }
+
+  .container-xl {
+    @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+
+  .container-2xl {
+    @apply max-w-screen-2xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+  .container-3xl {
+    @apply max-w-screen-3xl mx-auto px-2 md:px-3 lg:px-5 2xl:px-3;
+  }
+  .container-4xl {
+    @apply max-w-screen-4xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+
+  .container-lg {
+    @apply max-w-screen-lg mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+  }
+
+  .title-block {
+    @apply font-bold leading-none;
+  }
+
+  .heading-section {
+    @apply text-md sm:text-lg md:text-3xl 2xl:text-5xl font-bold text-white uppercase whitespace-nowrap;
+  }
+
+  .typography-h1 {
+    @apply text-2xl font-bold;
+  }
+
+  .typography-h2 {
+    @apply text-xl font-bold;
+  }
+
+  .typography-h3 {
+    @apply text-md font-bold;
+  }
+
+  .typography-h4 {
+    @apply text-sm font-bold;
+  }
+
+  .typography-p {
+    @apply text-[18px] font-medium;
+  }
+}
+
+@layer utilities {
+  // body:before {
+  //   background-image: url(../../public/image/bg-image-body.jpg);
+  // }
+
+  body:before {
+    position: fixed;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 3023023023020;
+    pointer-events: none;
+    opacity: 15%;
+    color: #aeae9d;
+  }
+
+  .bg-rgba-1 {
+    background-color: rgba($color: #f3d8ba, $alpha: 0.7);
+  }
+  .link-hover {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      background-color: var(--color-3);
+      transition: 0.5s;
+      @include downSm {
+        height: 2px;
+      }
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  $color-track: #dddddd;
+  $color-thumb: #a3a3a3;
+  $color-thumb-hover: #64748b;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $color-track;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-thumb;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $color-thumb-hover;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 0;
+    }
+  }
+
+  .bg-linear-gradient-1 {
+    background: linear-gradient(
+        160deg,
+        rgba(103, 103, 103, 0.25) 14%,
+        rgba(14, 14, 14, 0.2) 97.3%
+      ),
+      rgb(12, 12, 12);
+    box-shadow: rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
+      rgba(0, 0, 0, 0.2) 0px 4.8px 4.8px inset,
+      rgba(0, 0, 0, 0.45) 2px 3px 1.2px inset;
+    border-radius: 12px;
+  }
+
+  .pagination-item {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .pagination-item.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  #parent-content p {
+    margin-bottom: 14px;
+  }
+  #parent-content br {
+    display: none;
+  }
+
+  .tilted-card-demo-text {
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: -0.5px;
+    background: #0006;
+    border-radius: 6px;
+    padding: 0.5rem 1em;
+    font-weight: 900;
+    box-shadow: 0 5px 30px #06060659;
+  }
+  html.dark {
+    .card-gradient {
+      background: linear-gradient(black, black) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
+      border: 2px solid transparent;
+    }
+  }
+  html.light {
+    .card-gradient {
+      background: linear-gradient(rgb(232 232 227 / 1), rgb(232 232 227 / 1))
+          padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
+      border: 2px solid transparent;
+    }
+  }
+
+  .text-rotate {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    z-index: 0;
+    display: flex;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  }
+  .bg-rgba-2 {
+    background-color: rgba(163, 230, 53, 0.8);
+  }
+}

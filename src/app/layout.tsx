@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
-import './globals.scss'
-import { cn } from '@/utils/cn'
-import { seoData } from '../components/contants/seo-data'
+import '../styles/globals.scss'
+import { Nunito } from 'next/font/google'
+import { ThemeProvider } from '@/providers/ThemeProvider'
+import { cn } from '@/lib/utils'
+import { generateSeoMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://phongphan.xyz'),
-  ...seoData,
-}
+const font = Nunito({
+  weight: ['300', '400', '500', '700', '800', '900'],
+  subsets: ['latin'],
+  variable: '--font-heading2',
+})
+
+export const metadata = generateSeoMetadata()
 
 export default function RootLayout({
   children,
@@ -16,10 +21,15 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={cn('bg-light font-overusedgrotesk')}
-        suppressHydrationWarning
+        className={cn(
+          'bg-light dark:bg-dark overflow-x-hidden',
+          font.variable,
+          font.className
+        )}
       >
-        {children}
+        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

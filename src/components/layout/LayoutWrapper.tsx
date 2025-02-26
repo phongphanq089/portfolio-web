@@ -1,57 +1,27 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client'
-import React, { useEffect, useState } from 'react'
-import Header from '../shared/header'
-import { AnimatePresence } from 'framer-motion'
-import LoadingPage from '../shared/LoadingPage'
-import Footer from '../shared/footer'
 import Lenis from 'lenis'
-import { SanityDocument } from 'next-sanity'
+import React, { useEffect } from 'react'
+import useFluidCursor from '../ui/usefluidCursor'
 
-const LayoutWrapper = ({
-  children,
-  footer,
-}: {
-  children: React.ReactNode
-  footer: SanityDocument
-}) => {
-  const [isLoading, setIsLoading] = useState(true)
-
+const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
+    useFluidCursor()
     const lenis = new Lenis()
-
     function raf(time: any) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-
-    if (isLoading) {
-      document.body.classList.add('overflow-hidden')
-    } else {
-      document.body.classList.remove('overflow-hidden')
-    }
-    setTimeout(() => {
-      setIsLoading(false)
-      document.body.style.cursor = 'default'
-      window.scrollTo(0, 0)
-    }, 2000)
-
-    return () => {
-      document.body.classList.remove('overflow-hidden')
-    }
-  }, [isLoading])
+  }, [])
 
   return (
-    <>
-      <AnimatePresence mode='wait'>
-        {isLoading && <LoadingPage />}
-      </AnimatePresence>
-      <Header />
-      <main className=' flex flex-col min-h-screen relative'>
-        <div className='flex-grow flex-1'>{children}</div>
-      </main>
-      <Footer footer={footer as SanityDocument} />
-    </>
+    <React.Fragment>
+      <div className='fixed top-0 left-0 z-10 pointer-events-none'>
+        <canvas id='fluid' className='w-screen h-screen' />
+      </div>
+      {children}
+    </React.Fragment>
   )
 }
 
