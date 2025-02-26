@@ -3,6 +3,16 @@ import CardVideo from './components/CardVideo'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
 import { videoQuery } from '@/sanity/query'
+import { generateSeoMetadata } from '@/lib/seo'
+
+export const metadata = generateSeoMetadata({
+  title: 'Life-advice',
+  description: 'Where I save lessons and motivation to try in life',
+  openGraph: {
+    title: 'Life-advice',
+    description: 'Where I save lessons and motivation to try in life',
+  },
+})
 
 const PageLifeAdvice = async () => {
   const listVideo = await sanityFetch<SanityDocument>({

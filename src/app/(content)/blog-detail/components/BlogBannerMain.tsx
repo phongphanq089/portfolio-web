@@ -3,12 +3,19 @@
 import Blocks from '@/components/ui/Blocks'
 import { formatDate } from '@/lib/utils'
 import { urlFor } from '@/sanity/config'
+// import { client } from '@/sanity/lib/sanityClient'
+
 import { SanityDocument } from 'next-sanity'
 import Link from 'next/link'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const BlogBannerMain = ({ postDetail }: { postDetail: SanityDocument }) => {
   const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') console.log('903457609456870945')
+  }, [])
+
   return (
     <div className='mb-6 md:mb-20 relative px-3 md:px-10 py-8 md:py-16 rounded-xl overflow-hidden'>
       <div

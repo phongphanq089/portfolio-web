@@ -11,15 +11,11 @@ import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
 import { notFound } from 'next/navigation'
 import React from 'react'
+import { generateSeoMetadata } from '@/lib/seo'
 
 interface Props {
-  params: {
-    slug: string
-  }
-  searchParams?: {
-    page?: string
-    pageSize?: string
-  }
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 interface CartResouresType {
@@ -37,11 +33,24 @@ interface CartResouresType {
 
 type ExtendedCartResources = SanityDocument<CartResouresType>
 
+export const metadata = generateSeoMetadata({
+  title: 'Components - resoures',
+  description:
+    'Explore a collection of the best free Components resources/assets for your next project.',
+  openGraph: {
+    title: 'Components - resoures',
+    description:
+      'Explore a collection of the best free Components resources/assets for your next project.',
+  },
+})
+
 const PageResoures = async ({ params, searchParams }: Props) => {
   let listDeveloper
   let totalQueryCategory
 
-  const page = parseInt(searchParams?.page || '1', 10)
+  const resolvedSearchParams = await searchParams
+
+  const page = parseInt((resolvedSearchParams?.page as string) || '1', 10)
   const pageSize = 12
 
   const start = (page - 1) * pageSize
@@ -53,12 +62,12 @@ const PageResoures = async ({ params, searchParams }: Props) => {
   try {
     listDeveloper = await sanityFetch<ExtendedCartResources[]>({
       query: developerQueryCategory,
-      param: { ...params, start, limit: pageSize },
+      param: { ...(await params), start, limit: pageSize },
     })
 
     totalQueryCategory = await sanityFetch<number>({
       query: countQueryCategory,
-      param: { ...params },
+      param: { ...(await params) },
     })
   } catch (error) {
     return notFound()

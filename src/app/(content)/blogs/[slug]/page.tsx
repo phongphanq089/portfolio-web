@@ -12,24 +12,28 @@ import { notFound } from 'next/navigation'
 import React from 'react'
 import CardBlog from '../components/CardBlog'
 import { BLogList } from '@/types'
+import { generateSeoMetadata } from '@/lib/seo'
 
+export const metadata = generateSeoMetadata({
+  title: 'Blog',
+  description: 'Articles about programming, technology, life, ...',
+  openGraph: {
+    title: 'Blog',
+    description: 'Articles about programming, technology, life, ...',
+  },
+})
 interface Props {
-  params: {
-    slug: string
-  }
-  searchParams?: {
-    page?: string
-    pageSize?: string
-  }
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
-
 const PageBlog = async ({ params, searchParams }: Props) => {
+  const resolvedSearchParams = await searchParams
   const isPageBlog = true
   const listCategoryPost = await sanityFetch<SanityDocument>({
     query: categoryPostList,
   })
 
-  const page = parseInt(searchParams?.page || '1', 10)
+  const page = parseInt((resolvedSearchParams?.page as string) || '1', 10)
   const pageSize = 12
 
   const start = (page - 1) * pageSize
@@ -39,11 +43,11 @@ const PageBlog = async ({ params, searchParams }: Props) => {
   try {
     listBlog = await sanityFetch<SanityDocument>({
       query: getCategoryRelatedPostQuery,
-      param: { ...params, start, limit: pageSize },
+      param: { ...(await params), start, limit: pageSize },
     })
     totalBlog = await sanityFetch<number>({
       query: totalBlogList,
-      param: { ...params },
+      param: { ...(await params) },
     })
   } catch (error) {
     return notFound()
