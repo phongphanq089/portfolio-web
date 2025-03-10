@@ -2,11 +2,11 @@
 'use client'
 import Lenis from 'lenis'
 import React, { useEffect } from 'react'
-import useFluidCursor from '../ui/usefluidCursor'
+// import useFluidCursor from '../ui/usefluidCursor'
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
-    useFluidCursor()
+    // useFluidCursor()
     const lenis = new Lenis()
     function raf(time: any) {
       lenis.raf(time)
@@ -17,9 +17,9 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <React.Fragment>
-      <div className='fixed top-0 left-0 z-10 pointer-events-none'>
+      {/* <div className='fixed top-0 left-0 z-10 pointer-events-none'>
         <canvas id='fluid' className='w-screen h-screen' />
-      </div>
+      </div> */}
       {children}
     </React.Fragment>
   )

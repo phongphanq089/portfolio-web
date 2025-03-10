@@ -70,6 +70,8 @@ const BlogBannerMain = ({ postDetail }: { postDetail: SanityDocument }) => {
             </Link>
             <div className='flex items-center gap-1 text-xs sm:text-[18px]'>
               <div className='font-bold'>PHONG PHAN</div>
+
+              <nav className='relative z-10'></nav>
               <div className='h-[3px] w-4 bg-color-3 relative top-1 left-[2px]'></div>
               <div className='font-bold'>
                 {formatDate(postDetail?._createdAt)}

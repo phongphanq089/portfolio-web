@@ -47,7 +47,7 @@ const useFluidCursor = () => {
   }
 
   function getWebGLContext(canvas) {
-    const params = {
+    const parameters = {
       alpha: true,
       depth: false,
       stencil: false,
@@ -55,12 +55,12 @@ const useFluidCursor = () => {
       preserveDrawingBuffer: false,
     }
 
-    let gl = canvas.getContext('webgl2', params)
+    let gl = canvas.getContext('webgl2', parameters)
     const isWebGL2 = !!gl
     if (!isWebGL2)
       gl =
-        canvas.getContext('webgl', params) ||
-        canvas.getContext('experimental-webgl', params)
+        canvas.getContext('webgl', parameters) ||
+        canvas.getContext('experimental-webgl', parameters)
 
     let halfFloat
     let supportLinearFiltering
@@ -153,7 +153,7 @@ const useFluidCursor = () => {
 
     setKeywords(keywords) {
       let hash = 0
-      for (let i = 0; i < keywords.length; i++) hash += hashCode(keywords[i])
+      for (let index = 0; index < keywords.length; index++) hash += hashCode(keywords[index])
 
       let program = this.programs[hash]
       if (program == null) {
@@ -204,8 +204,8 @@ const useFluidCursor = () => {
   function getUniforms(program) {
     let uniforms = []
     let uniformCount = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)
-    for (let i = 0; i < uniformCount; i++) {
-      let uniformName = gl.getActiveUniform(program, i).name
+    for (let index = 0; index < uniformCount; index++) {
+      let uniformName = gl.getActiveUniform(program, index).name
       uniforms[uniformName] = gl.getUniformLocation(program, uniformName)
     }
     return uniforms
@@ -726,12 +726,12 @@ const useFluidCursor = () => {
     )
   }
 
-  function createFBO(w, h, internalFormat, format, type, param) {
+  function createFBO(w, h, internalFormat, format, type, parameter) {
     gl.activeTexture(gl.TEXTURE0)
     let texture = gl.createTexture()
     gl.bindTexture(gl.TEXTURE_2D, texture)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, param)
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, param)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, parameter)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, parameter)
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
     gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, w, h, 0, format, type, null)
@@ -766,9 +766,9 @@ const useFluidCursor = () => {
     }
   }
 
-  function createDoubleFBO(w, h, internalFormat, format, type, param) {
-    let fbo1 = createFBO(w, h, internalFormat, format, type, param)
-    let fbo2 = createFBO(w, h, internalFormat, format, type, param)
+  function createDoubleFBO(w, h, internalFormat, format, type, parameter) {
+    let fbo1 = createFBO(w, h, internalFormat, format, type, parameter)
+    let fbo2 = createFBO(w, h, internalFormat, format, type, parameter)
 
     return {
       width: w,
@@ -788,22 +788,22 @@ const useFluidCursor = () => {
         fbo2 = value
       },
       swap() {
-        let temp = fbo1
+        let temporary = fbo1
         fbo1 = fbo2
-        fbo2 = temp
+        fbo2 = temporary
       },
     }
   }
 
-  function resizeFBO(target, w, h, internalFormat, format, type, param) {
-    let newFBO = createFBO(w, h, internalFormat, format, type, param)
+  function resizeFBO(target, w, h, internalFormat, format, type, parameter) {
+    let newFBO = createFBO(w, h, internalFormat, format, type, parameter)
     copyProgram.bind()
     gl.uniform1i(copyProgram.uniforms.uTexture, target.attach(0))
     blit(newFBO)
     return newFBO
   }
 
-  function resizeDoubleFBO(target, w, h, internalFormat, format, type, param) {
+  function resizeDoubleFBO(target, w, h, internalFormat, format, type, parameter) {
     if (target.width == w && target.height == h) return target
     target.read = resizeFBO(
       target.read,
@@ -812,9 +812,9 @@ const useFluidCursor = () => {
       internalFormat,
       format,
       type,
-      param
+      parameter
     )
-    target.write = createFBO(w, h, internalFormat, format, type, param)
+    target.write = createFBO(w, h, internalFormat, format, type, parameter)
     target.width = w
     target.height = h
     target.texelSizeX = 1.0 / w
@@ -841,7 +841,7 @@ const useFluidCursor = () => {
       new Uint8Array([255, 255, 255])
     )
 
-    let obj = {
+    let object = {
       texture,
       width: 1,
       height: 1,
@@ -854,14 +854,14 @@ const useFluidCursor = () => {
 
     let image = new Image()
     image.onload = () => {
-      obj.width = image.width
-      obj.height = image.height
+      object.width = image.width
+      object.height = image.height
       gl.bindTexture(gl.TEXTURE_2D, texture)
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image)
     }
     image.src = url
 
-    return obj
+    return object
   }
 
   function updateKeywords() {
@@ -972,7 +972,7 @@ const useFluidCursor = () => {
       velocity.texelSizeY
     )
     gl.uniform1i(pressureProgram.uniforms.uDivergence, divergence.attach(0))
-    for (let i = 0; i < config.PRESSURE_ITERATIONS; i++) {
+    for (let index = 0; index < config.PRESSURE_ITERATIONS; index++) {
       gl.uniform1i(pressureProgram.uniforms.uPressure, pressure.read.attach(1))
       blit(pressure.write)
       pressure.swap()
@@ -1135,12 +1135,12 @@ const useFluidCursor = () => {
       const touches = e.targetTouches
       let pointer = pointers[0]
 
-      for (let i = 0; i < touches.length; i++) {
-        let posX = scaleByPixelRatio(touches[i].clientX)
-        let posY = scaleByPixelRatio(touches[i].clientY)
+      for (let index = 0; index < touches.length; index++) {
+        let posX = scaleByPixelRatio(touches[index].clientX)
+        let posY = scaleByPixelRatio(touches[index].clientY)
 
         update()
-        updatePointerDownData(pointer, touches[i].identifier, posX, posY)
+        updatePointerDownData(pointer, touches[index].identifier, posX, posY)
       }
 
       // Remove this event listener after the first touchstart event
@@ -1151,10 +1151,10 @@ const useFluidCursor = () => {
   window.addEventListener('touchstart', (e) => {
     const touches = e.targetTouches
     let pointer = pointers[0]
-    for (let i = 0; i < touches.length; i++) {
-      let posX = scaleByPixelRatio(touches[i].clientX)
-      let posY = scaleByPixelRatio(touches[i].clientY)
-      updatePointerDownData(pointer, touches[i].identifier, posX, posY)
+    for (let index = 0; index < touches.length; index++) {
+      let posX = scaleByPixelRatio(touches[index].clientX)
+      let posY = scaleByPixelRatio(touches[index].clientY)
+      updatePointerDownData(pointer, touches[index].identifier, posX, posY)
     }
   })
 
@@ -1163,9 +1163,9 @@ const useFluidCursor = () => {
     (e) => {
       const touches = e.targetTouches
       let pointer = pointers[0]
-      for (let i = 0; i < touches.length; i++) {
-        let posX = scaleByPixelRatio(touches[i].clientX)
-        let posY = scaleByPixelRatio(touches[i].clientY)
+      for (let index = 0; index < touches.length; index++) {
+        let posX = scaleByPixelRatio(touches[index].clientX)
+        let posY = scaleByPixelRatio(touches[index].clientY)
         updatePointerMoveData(pointer, posX, posY, pointer.color)
       }
     },
@@ -1176,7 +1176,7 @@ const useFluidCursor = () => {
     const touches = e.changedTouches
     let pointer = pointers[0]
 
-    for (let i = 0; i < touches.length; i++) {
+    for (let index = 0; index < touches.length; index++) {
       updatePointerUpData(pointer)
     }
   })
@@ -1231,14 +1231,14 @@ const useFluidCursor = () => {
   }
 
   function HSVtoRGB(h, s, v) {
-    let r, g, b, i, f, p, q, t
-    i = Math.floor(h * 6)
-    f = h * 6 - i
+    let r, g, b, index, f, p, q, t
+    index = Math.floor(h * 6)
+    f = h * 6 - index
     p = v * (1 - s)
     q = v * (1 - f * s)
     t = v * (1 - (1 - f) * s)
 
-    switch (i % 6) {
+    switch (index % 6) {
       case 0:
         ;(r = v), (g = t), (b = p)
         break
@@ -1292,8 +1292,8 @@ const useFluidCursor = () => {
   function hashCode(s) {
     if (s.length == 0) return 0
     let hash = 0
-    for (let i = 0; i < s.length; i++) {
-      hash = (hash << 5) - hash + s.charCodeAt(i)
+    for (let index = 0; index < s.length; index++) {
+      hash = (hash << 5) - hash + s.charCodeAt(index)
       hash |= 0 // Convert to 32bit integer
     }
     return hash

@@ -1,25 +1,33 @@
 import type { Metadata } from 'next'
 import '../styles/globals.scss'
-import { Nunito } from 'next/font/google'
+import { Nunito, Inder, Roboto } from 'next/font/google'
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import { NextIntlClientProvider } from 'next-intl'
 import { cn } from '@/lib/utils'
 import { generateSeoMetadata } from '@/lib/seo'
+import { routing } from '@/i18n/routing'
+import { notFound } from 'next/navigation'
+import { getMessages } from 'next-intl/server'
 
-const font = Nunito({
-  weight: ['300', '400', '500', '700', '800', '900'],
+const font = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
   variable: '--font-heading2',
 })
 
 export const metadata = generateSeoMetadata()
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode
-}>) {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           'bg-light dark:bg-dark overflow-x-hidden',

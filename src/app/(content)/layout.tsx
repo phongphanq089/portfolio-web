@@ -1,6 +1,6 @@
 import Footer from '@/components/shared/Footer/Index'
 
-import Header from '@/components/shared/header/Header'
+import Header from '@/components/layout/header/Header'
 import { footerQuery } from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'

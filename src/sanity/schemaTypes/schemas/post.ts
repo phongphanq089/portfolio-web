@@ -8,7 +8,19 @@ export default defineType({
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'en',
+          title: 'English',
+          type: 'string',
+        }),
+        defineField({
+          name: 'vi',
+          title: 'Vietnamese',
+          type: 'string',
+        }),
+      ],
     }),
     defineField({
       name: 'slug',
@@ -22,7 +34,19 @@ export default defineType({
     defineField({
       name: 'meta_description',
       title: 'Meta Description',
-      type: 'text',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'en',
+          title: 'English',
+          type: 'text',
+        }),
+        defineField({
+          name: 'vi',
+          title: 'Vietnamese',
+          type: 'text',
+        }),
+      ],
     }),
     defineField({
       name: 'author',

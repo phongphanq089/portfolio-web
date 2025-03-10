@@ -63,7 +63,6 @@ const PageBlogDetail = async ({ params }: PropsType) => {
     param: { ...(await params) },
   })
 
-  // console.log(postDetail.relatedPosts)
   return (
     <div className='container-3xl py-10'>
       <BlogBannerMain postDetail={postDetail} />

@@ -8,7 +8,7 @@
     --dark: rgb(8 8 7 / 1);
     // --dark: #27221e;
     // --primary-color: #a3e635;
-    --primary-color: #a2e636;
+    --primary-color: #ff3c00;
     --light: rgb(232 232 227 / 1);
     --white: #ffff;
     --color-1: #7808d0;
@@ -223,13 +223,15 @@
   }
 
   .bg-linear-gradient-1 {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         160deg,
         rgba(103, 103, 103, 0.25) 14%,
         rgba(14, 14, 14, 0.2) 97.3%
       ),
       rgb(12, 12, 12);
-    box-shadow: rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
+    box-shadow:
+      rgba(255, 255, 255, 0.298) 0.6px 0.6px 0px,
       rgba(0, 0, 0, 0.2) 0px 4.8px 4.8px inset,
       rgba(0, 0, 0, 0.45) 2px 3px 1.2px inset;
     border-radius: 12px;
@@ -266,15 +268,16 @@
   }
   html.dark {
     .card-gradient {
-      background: linear-gradient(black, black) padding-box,
+      background:
+        linear-gradient(black, black) padding-box,
         linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
       border: 2px solid transparent;
     }
   }
   html.light {
     .card-gradient {
-      background: linear-gradient(rgb(232 232 227 / 1), rgb(232 232 227 / 1))
-          padding-box,
+      background:
+        linear-gradient(rgb(232 232 227 / 1), rgb(232 232 227 / 1)) padding-box,
         linear-gradient(145deg, transparent 35%, #e81cff, #a3e635) border-box;
       border: 2px solid transparent;
     }
@@ -293,4 +296,54 @@
   .bg-rgba-2 {
     background-color: rgba(163, 230, 53, 0.8);
   }
+}
+
+.container {
+  margin: auto;
+  color: black;
+  font-weight: 800;
+  font-size: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.toggle {
+  width: 40px;
+  height: 80px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 1.7rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: background-color 300ms 300ms;
+}
+
+.toggle__circle {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 50%;
+  margin-top: calc(80px - (0.25rem * 2) - 30px);
+  transition: margin 500ms ease-in-out;
+}
+
+.toggle-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
+}
+
+#check:checked + .toggle > .toggle__circle {
+  margin-top: 0;
+}
+
+#check:checked + .toggle {
+  background-color: #41a63c;
+}
+
+:not(#check:checked) + .toggle {
+  background-color: #f44336;
 }

@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import ListSocialLink from '@/components/shared/ListSocialLink'
+
 import React from 'react'
 import { SkeletonOne } from './Skeleton'
+import { useTranslations } from 'next-intl'
 
 const BlockAbout = () => {
+  const t = useTranslations()
   return (
     <div>
       <div className='max-w-[150px] sm:max-w-[250px] max-h-[150px] sm:max-h-[250px]  overflow-hidden'>
@@ -19,16 +21,13 @@ const BlockAbout = () => {
         />
       </div>
       <div className='text-white text-md 3xl:text-xl font-bold leading-none mt-10'>
-        <h2>Hello !</h2>
+        <h2>Hi!</h2>
         <h2>{`I'm Phong Phan`}</h2>
       </div>
-      <p className='text-xs 3xl:text-sm mt-5 3xl:mt-10 text-white'>
-        Web Developer with over 2+ years of experience in crafting dynamic and
-        responsive websites.
-      </p>
-      <ListSocialLink />
+      <p className='text-[16px]  mt-5 my-10 text-white'>{t('service.info')}</p>
 
-      <SkeletonOne />
+      <SkeletonOne text1={t('service.skeleton-1')} text2={t('service.sub1')} />
+      <SkeletonOne text1={t('service.skeleton-2')} text2={t('service.sub2')} />
     </div>
   )
 }

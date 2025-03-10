@@ -27,7 +27,7 @@ const ScrollTop = () => {
     <>
       <motion.span
         onClick={scrollToTop}
-        className='scroll-top fixed bottom-11 right-11'
+        className='scroll-top !bg-primary-color !border-none'
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: isBottom ? 1 : 0, scale: isBottom ? 1 : 0.5 }}
         transition={{ duration: 0.3 }}

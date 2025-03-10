@@ -45,10 +45,13 @@ import banner6 from '../../public/image/banner/banner-6.jpg'
 import banner7 from '../../public/image/banner/banner-7.jpg'
 import banner8 from '../../public/image/banner/banner-8.jpg'
 import banner9 from '../../public/image/banner/banner-9.jpg'
+import banner10 from '../../public/image/banner/banner-10.png'
 import bgBanner1 from '../../public/image/svg-icon/bg-banner-1.svg'
 import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
 import bgCardResoure from '../../public/image/bg-card.png'
 import cutHover from '../../public/image/cut-hover.png'
+import vn from '../../public/image/svg-icon/vn.svg'
+import usUk from '../../public/image/svg-icon/us-uk.svg'
 
 // ============ ICON DEV || ===================== //
 import beanhead from '../../public/image/svg-icon/beanhead.svg'
@@ -64,12 +67,15 @@ export {
   banner7,
   banner8,
   banner9,
+  banner10,
   bgBanner1,
   bgBanner2,
   bgCardResoure,
   cutHover,
   // ===== slill developer =========//
   developer1,
+  vn,
+  usUk,
 }
 
 export const listSKill = [

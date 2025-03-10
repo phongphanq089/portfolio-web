@@ -3,10 +3,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { beanhead } from '@/assets'
 import { motion } from 'motion/react'
+import { useTranslations } from 'next-intl'
 
 const Avatar = () => {
   return (
-    <div className='w-[85px] h-auto'>
+    <div className='w-[40px] h-auto'>
       <img
         src={beanhead.src}
         alt='phong phan'
@@ -16,7 +17,13 @@ const Avatar = () => {
   )
 }
 
-export const SkeletonOne = () => {
+export const SkeletonOne = ({
+  text1,
+  text2,
+}: {
+  text1: string
+  text2: string
+}) => {
   const variants = {
     initial: {
       x: 0,
@@ -46,23 +53,22 @@ export const SkeletonOne = () => {
     <motion.div
       initial='initial'
       whileHover='animate'
-      className='flex  w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2'
+      className='flex  w-full  min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2'
     >
       <motion.div
         variants={variants}
-        className='flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-black dark:bg-black'
+        className='grid grid-cols-12 gap-2 rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-black dark:bg-black'
       >
-        <Avatar />
-        <p className='text-xs text-white'>
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
+        <div className='col-span-1'>
+          <Avatar />
+        </div>
+        <p className='text-xs text-white col-span-11 pl-3'>{text1}</p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className='flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black dark:bg-black'
       >
-        <p className='text-xs text-white px-2'>I LOVE JAVASCRIPT</p>
+        <p className='text-xs text-white px-2 uppercase'> {text2}</p>
         <div className='h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0' />
       </motion.div>
     </motion.div>

@@ -3,6 +3,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { developer1 } from '@/assets'
+import { useTranslations } from 'next-intl'
 
 const AnimationLottie = dynamic(
   () => import('../../../../../components/ui/AnimationLottie'),
@@ -12,9 +13,10 @@ const AnimationLottie = dynamic(
 )
 
 export function GlobeDemo() {
+  const t = useTranslations()
   return (
-    <div className='flex flex-row items-center justify-center py-20 h-auto bg-dark relative w-full'>
-      <div className='max-w-7xl mx-auto w-full relative overflow-hidden h-[30rem] 3xl:h-[42rem] px-4'>
+    <div className='flex flex-row items-center justify-center pt-10 h-auto bg-dark relative w-full'>
+      <div className='max-w-7xl mx-auto w-full relative overflow-hidden h-[30rem]  px-4'>
         <Link
           href={'mailto:phongphanq089@gmail.com'}
           className='border rounded-xl border-primary-color flex items-center justify-center gap-4 p-4 fill-white'
@@ -46,12 +48,8 @@ export function GlobeDemo() {
           </div>
         </div>
 
-        <div className='absolute bottom-0 left-0 z-50 p-5'>
-          {` A website is essential in today's digital landscape because it serves
-          as the primary online presence for businesses, organizations, and
-          individuals. It provides a platform to showcase products, services,
-          and information to a global audience, enhancing visibility and
-          credibility.`}
+        <div className='absolute bottom-0 left-0 z-50 p-5 w-full'>
+          {t('service.global')}
         </div>
       </div>
     </div>

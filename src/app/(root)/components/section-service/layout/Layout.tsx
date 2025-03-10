@@ -4,9 +4,11 @@ import BlockAbout from './BlockAbout'
 import InfomationMe from './InfomationMe'
 import DailyTech from './DailyTech'
 import { GlobeDemo } from './GlobalBlock'
-import { SkeletonTwo } from './Skeleton'
+import { SkeletonOne, SkeletonTwo } from './Skeleton'
+import { useTranslations } from 'next-intl'
 
 const Layout = () => {
+  const t = useTranslations()
   return (
     <>
       <div className='grid grid-cols-1 xl:grid-cols-12 gap-2 py-10 text-white'>
@@ -21,7 +23,17 @@ const Layout = () => {
         </div>
         <div className='col-span-4 xl:pb-[200px]'>
           <SkeletonTwo />
+
           <GlobeDemo />
+
+          <SkeletonOne
+            text1={t('service.skeleton-3')}
+            text2={t('service.sub3')}
+          />
+          <SkeletonOne
+            text1={t('service.skeleton-4')}
+            text2={t('service.sub4')}
+          />
         </div>
       </div>
 

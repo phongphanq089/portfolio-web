@@ -1,0 +1,44 @@
+{
+  "bannerHero": {
+    "title": "Welcome to My Portfolio",
+    "subtitle": "Just an ordinary developer, crafting code with passion. From Vietnam with love.",
+    "button": "Creative",
+    "sub": "Perisonal portfolio 2024 "
+  },
+  "service": {
+    "info": "Web Developer passionate about animations, breaking the mold, and chasing the new. Code isn’t just functional—it should feel alive! 🚀",
+    "skeleton-1": "There are tons of awesome frameworks like React, Angular, Vue, and Svelte that can make your life... easier (or a complete mess, depending on your code)! 😆",
+    "sub1": "I LOVE JAVASCRIPT",
+    "skeleton-2": "Keep things simple with JavaScript",
+    "sub2": "Delusional 😵‍💫",
+    "skeleton-3": "Tailwind CSS is cool, you know",
+    "sub3": " Sensible ✅",
+    "skeleton-4": "I love React, Next.js, Tanstack Query, and Zustand.",
+    "sub4": "Headache 🤯",
+    "about": {
+      "title": "About me",
+      "text-1": "Hi there! I'm Phong Phan (aka NexGenDev). My daily life revolves around coding, debugging, and tackling tech challenges. I'm a fast learner, always eager to explore new technologies, and I have a strong passion for problem-solving.",
+      "text-2": "I'm all about JavaScript, from frontend to backend—if it's web-related, I'm in! I love turning ideas into real products and making the web more accessible to everyone.",
+      "text-3": "Beyond coding, I enjoy hitting the gym, playing football, mountain climbing, read book and traveling. Staying active keeps me balanced between work and life while fueling my creativity.",
+      "text-4": "I'm always open to job opportunities that align with my skills and passions. Whether it's joining an innovative startup, working on groundbreaking projects, or collaborating with a top-notch team, I'm excited for new challenges. Let's build something amazing together! 🚀"
+    },
+    "technology": {
+      "title": "Technology Use",
+      "description1": "🚀 Optimize UI for a better user experience – Smooth, fast, and visually appealing—because good design matters!",
+      "description2": "🎨 Custom websites from idea to launch – Using React, Next.js, and Tailwind CSS to build fast, responsive, and high-performance websites.",
+      "description3": "🔥 Always up to date with new tech – Self-learning, experimenting, and applying fast to keep solutions modern and effective.",
+      "description4": "💻 React, Next.js, Node.js – Self-taught and ready to build full-stack web applications.",
+      "description5": "🎬 Framer Motion – Bringing animations to life with smooth scroll-based effects.",
+      "description6": "⚡ Tailwind CSS – Utility-first styling for fast, clean, and intuitive UI building."
+    },
+    "global": "A website is essential in today's digital landscape because it serves as the primary online presence for businesses, organizations, and individuals. It provides a platform to showcase products, services, and information to a global audience, enhancing visibility and credibility. 🚀"
+  },
+  "description": "This is a multilingual app built with Next.js 15 and next-intl.",
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "component": "acent ui",
+    "resoures": "Resoures",
+    "video": "video"
+  }
+}
