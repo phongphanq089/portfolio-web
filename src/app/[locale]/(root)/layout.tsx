@@ -1,6 +1,5 @@
-import LayoutWrapper from '@/components/layout/LayoutWrapper'
-
 import Header from '@/components/layout/header/Header'
+import WrapperProvider from '@/providers/WrapperProvider'
 import { footerQuery } from '@/sanity/query'
 import { sanityFetch } from '@/sanity/sanityFetch'
 import { SanityDocument } from 'next-sanity'
@@ -15,13 +14,13 @@ const LayoutRoot = async ({
     query: footerQuery,
   })
   return (
-    <LayoutWrapper>
+    <WrapperProvider>
       <Header />
       <div className='min-h-screen flex flex-col '>
         <main className='flex-1'> {children}</main>
       </div>
       {/* <Footer footer={footeNav as SanityDocument} /> */}
-    </LayoutWrapper>
+    </WrapperProvider>
   )
 }
 

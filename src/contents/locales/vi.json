@@ -40,5 +40,6 @@
     "component": "acent ui",
     "resoures": "Tài nguyên",
     "video": "video"
-  }
+  },
+  "genMoiton": "GENMOTION UI – Thư viện UI tui tạo ra để lưu trữ những component animation xịn xò, giúp bạn build giao diện đẹp, mượt mà với React, Framer Motion và TypeScript. Hay ho lắm nè!"
 }

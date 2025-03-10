@@ -40,5 +40,6 @@
     "component": "acent ui",
     "resoures": "Resoures",
     "video": "video"
-  }
+  },
+  "genMoiton": "GENMOTION UI – A UI library I built to store awesome animation components, helping you create smooth and beautiful interfaces with React, Framer Motion, and TypeScript. Super cool!"
 }
