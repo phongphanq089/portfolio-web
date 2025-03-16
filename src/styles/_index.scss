@@ -4,28 +4,8 @@
 
 @import './components/resize-image';
 
-@import './components/app';
-
-@import './components/button-style';
-
 @import './components/social-style';
-
-@import './components/image-paralax-scroll';
 
 @import './components/badge-style-gradient';
 
 @import './components/btn-play';
-
-@import './components/nav-menu';
-
-@import './components/selected-work';
-
-.rfm-marquee-container {
-  overflow: hidden !important;
-}
-
-.text-stroke {
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-}

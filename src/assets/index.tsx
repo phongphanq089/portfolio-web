@@ -38,7 +38,6 @@ import skill31 from '../../public/skills-icon/zod.svg'
 /*======================= || BANNER HERO|| =================  */
 import banner1 from '../../public/image/banner/banner-1.jpg'
 import banner2 from '../../public/image/banner/banner-2.jpg'
-import banner3 from '../../public/image/banner/banner-3.jpg'
 import banner4 from '../../public/image/banner/banner-4.jpg'
 import banner5 from '../../public/image/banner/banner-5.jpg'
 import banner6 from '../../public/image/banner/banner-6.jpg'
@@ -48,8 +47,8 @@ import banner9 from '../../public/image/banner/banner-9.jpg'
 import banner10 from '../../public/image/banner/banner-10.png'
 import bgBanner1 from '../../public/image/svg-icon/bg-banner-1.svg'
 import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
-import bgCardResoure from '../../public/image/bg-card.png'
-import cutHover from '../../public/image/cut-hover.png'
+import bgCardResoure from '../../public/image/banner/bg-card.png'
+import cutHover from '../../public/image//banner/cut-hover.png'
 import vn from '../../public/image/svg-icon/vn.svg'
 import usUk from '../../public/image/svg-icon/us-uk.svg'
 
@@ -60,7 +59,6 @@ export {
   // BANNER HERO
   banner1,
   banner2,
-  banner3,
   banner4,
   banner5,
   banner6,

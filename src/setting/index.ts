@@ -15,7 +15,7 @@ export const pathArr = [
 
 export const MENU_SETTINGS = [
   { name: 'home', link: '/' },
-  { name: 'blog', link: '/blog' },
+  { name: 'blog', link: '/blogs' },
   { name: 'component', link: '/component-ui' },
   { name: 'resoures', link: '/resoures' },
   { name: 'video', link: '/video', x: '80%' },

@@ -1,11 +1,12 @@
 // import ButtonStyle from '@/components/shared/ButtonStyle'
-import ButtonGradient from '@/components/ui/ButtonGradient'
+
+import { InteractiveHoverButton } from '@/components/ui/button/InteractiveHoverButton'
 import Link from 'next/link'
 import React from 'react'
 
 const NotFoundPage = () => {
   return (
-    <div className='main-wrapper_404'>
+    <div className='main-wrapper_404 relative z-10'>
       <div className='main'>
         <div className='antenna'>
           <div className='antenna_shadow'></div>
@@ -66,14 +67,14 @@ const NotFoundPage = () => {
         </div>
 
         <div className='mt-10'>
-          <ButtonGradient link='/'>
-            <span className='text-xs flex items-center justify-center'>
-              Go back home
-            </span>
-          </ButtonGradient>
+          <Link href={'/'}>
+            <InteractiveHoverButton> Go back home</InteractiveHoverButton>
+          </Link>
         </div>
+
+        <div className='mt-10'></div>
       </div>
-      <div className='text_404'>
+      <div className='text_404 text-white'>
         <div className='text_4041'>4</div>
         <div className='text_4042'>0</div>
         <div className='text_4043'>4</div>

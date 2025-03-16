@@ -1,9 +1,14 @@
 {
+  "languege": "Ngôn ngữ",
   "bannerHero": {
     "title": "Chào mừng đến với Portfolio của tôi",
     "subtitle": "Chỉ là một lập trình viên bình thường, viết code với đam mê. Gửi yêu thương từ Việt Nam. ",
     "button": "Sáng tạo",
-    "sub": "Hồ sơ cá nhân 2024"
+    "sub": "Hồ sơ cá nhân 2024",
+    "heading1": "CHÀO 👋, BẠN!",
+    "heading2": "🌤️ THẬT TUYỆT ⇗ KHI",
+    "heading3": "GẶP 😊 BẠN.",
+    "description": "Xin chào, tui là Phong! 👋. Tui là một Web Developer yêu thích sáng tạo và không ngừng khám phá những công nghệ mới. Trang web này là không gian lưu trữ những dự án, ý tưởng và trải nghiệm mà tui đã tích lũy trên hành trình phát triển. Nếu bạn cũng đam mê công nghệ, thích tìm tòi những điều mới mẻ, thì có lẽ bạn sẽ tìm thấy điều gì đó thú vị ở đây. Chào mừng các bạn ghé thăm hen! 🚀"
   },
   "service": {
     "info": "Lập trình viên Web đam mê animation, thích phá vỡ khuôn khổ và luôn chạy theo những điều mới mẻ. Code không chỉ chạy tốt mà còn phải sống động! 🚀",
@@ -18,18 +23,22 @@
     "about": {
       "title": "Giới thiệu",
       "text-1": "Xin chào! Mình là Phong Phan (hay còn gọi là NexGenDev). Mỗi ngày của mình gắn liền với code, debug và những thử thách công nghệ. Mình thích tự học, khám phá công nghệ mới và đặc biệt có niềm đam mê với việc giải quyết vấn đề.",
-      "text-2": "Mình chơi hệ JavaScript, mê từ frontend đến backend, miễn là liên quan đến web là 'cân' hết! Mình thích biến những ý tưởng thành sản phẩm thực tế và làm cho web trở nên dễ tiếp cận hơn với mọi người.",
+      "text-2": "🚀 Mình luôn cố gắng học hỏi và phát triển bản thân mỗi ngày. Việc không ngừng học hỏi và thử thách bản thân sẽ giúp mình trở thành một lập trình viên giỏi hơn. Bên cạnh đó, mình cũng rất hứng thú với việc chia sẻ kiến thức và kinh nghiệm. Mình tin rằng việc chia sẻ sẽ giúp mình học hỏi nhiều hơn và cũng giúp người khác học hỏi được nhiều điều. ",
       "text-3": "Ngoài thời gian code, mình còn có sở thích tập gym, đá bóng, leo núi,  đọc sách và đi du lịch. Vừa rèn luyện sức khỏe, vừa khám phá thế giới, cân bằng giữa công việc và cuộc sống!",
       "text-4": "Hiện tại, mình luôn sẵn sàng cho mọi cơ hội công việc phù hợp với kỹ năng và sở thích của mình. Dù là tham gia vào một startup sáng tạo, làm những dự án đột phá hay hợp tác với một team chất lượng, mình đều háo hức được thử sức. Cùng nhau xây dựng điều gì đó tuyệt vời nhé! 🚀"
     },
     "technology": {
-      "title": "Công nghệ hay dùng",
+      "title": "Công nghệ",
       "description1": "🚀 Tối ưu giao diện, tăng trải nghiệm người dùng – Giao diện đẹp, mượt mà, hiệu suất cao, ai mà không thích chứ?",
       "description2": "🎨 Web theo yêu cầu, từ ý tưởng đến thực tế – Dùng React, Next.js, Tailwind CSS để tạo web nhanh, mượt, chuẩn responsive.",
       "description3": "🔥 Luôn cập nhật công nghệ mới – Tự học, thử nghiệm, áp dụng nhanh vào thực tế để sản phẩm lúc nào cũng hiện đại và hiệu quả.",
       "description4": "💻 React, Next.js, Node.js – Tự học từ A đến Z, tự tin làm web full-stack.",
       "description5": "🎬 Framer Motion – Tạo animation siêu mượt, hiệu ứng theo từng cú cuộn.",
       "description6": "⚡ Tailwind CSS – Quất utility classes gọn lẹ, giao diện lên nhanh mà vẫn xịn."
+    },
+    "experience": {
+      "title": "Kinh Nghiệm",
+      "description": "👨‍💻 Với một vài năm kinh nghiệm phát triển web, mình đã tham gia vào một số dự án xây dựng ứng dụng web và giao diện người dùng, từ những dự án nhỏ đến các dự án phức tạp. Nắm được kiến thức và kinh nghiệm thực tế với một loạt các công nghệ web như HTML, CSS, JavaScript, React, Next.js, Magento, Headless CMS, và các công cụ quản lý mã nguồn như Git và GitHub. "
     },
     "global": "Một website là cực kỳ quan trọng trong thế giới số ngày nay, vì nó là bộ mặt chính trên internet của doanh nghiệp, tổ chức hay cá nhân. Đây là nơi để trưng bày sản phẩm, dịch vụ và chia sẻ thông tin đến toàn cầu, giúp tăng độ nhận diện và uy tín. 🚀"
   },

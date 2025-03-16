@@ -5,17 +5,14 @@ import Link from 'next/link'
 import { MENU_SETTINGS } from '@/setting'
 import { useTranslations } from 'next-intl'
 import SocialLink from './components/SocialLink'
-import ClockDateTime from '@/components/shared/ClockDateTime'
+
 import ScrollTop from './components/ScrollTop'
 import TextContainer from './components/TextContainer'
 
 const Footer = () => {
   const t = useTranslations('Navbar')
   return (
-    <div
-      className='w-full h-dvh sticky z-0 bottom-0 left-0 md:p-7 md:pb-0 overflow-hidden '
-      id='footer'
-    >
+    <div className='w-full h-dvh md:p-7 md:pb-0 overflow-hidden' id='footer'>
       <div className='flex flex-col  justify-between h-full bg-black md:rounded-t-[100px] px-4'>
         <div className='grid grid-cols-1 max-sm:gap-4 max-md:gap-8 md:grid-cols-12 sm:px-8 sm:py-10'>
           <div className='col-span-7'>
@@ -38,7 +35,7 @@ const Footer = () => {
                   )
                 })}
               </div>
-              <ClockDateTime className='text-xs md:text-sm font-bold text-white' />
+              {/* <ClockDateTime className='text-xs md:text-sm font-bold text-white' /> */}
             </div>
           </div>
         </div>

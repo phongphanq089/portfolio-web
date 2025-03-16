@@ -1,6 +1,6 @@
 import { getRequestConfig } from 'next-intl/server'
 import { routing } from './routing'
-import { client } from '@/sanity/lib/sanityClient'
+import { sanityClientFetch } from '@/sanity/lib/sanityClient'
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // This typically corresponds to the `[locale]` segment
@@ -17,7 +17,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     body_en,
     body_vi
   }`
-  const posts = await client.fetch(query)
+  const posts = await sanityClientFetch.fetch(query)
 
   // Biến dữ liệu Sanity thành định dạng messages
   const sanityMessages = posts.reduce((acc: any, post: any) => {

@@ -41,7 +41,7 @@ const TextContainer = () => {
               custom={index}
               variants={variants}
               d={path}
-              className='fill-[#ff3c00] dark:fill-white'
+              className='fill-[#ff3c00]'
             />
           </React.Fragment>
         )

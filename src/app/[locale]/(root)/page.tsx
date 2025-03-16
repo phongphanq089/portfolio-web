@@ -1,13 +1,11 @@
-import SectionWrapperSticky from './components/SectionWrapperSticky'
-
-import StickyFooter from '@/components/layout/footer/StickyFooter'
+import BannerHero from './components/BannerHero'
+import Service from './components/service/layout'
 
 const HomePage = async () => {
   return (
-    <div className='h-full '>
-      <SectionWrapperSticky />
-
-      <StickyFooter />
+    <div className='h-full'>
+      <BannerHero />
+      <Service />
     </div>
   )
 }

@@ -1,9 +1,14 @@
 {
+  "languege": "Langueges",
   "bannerHero": {
     "title": "Welcome to My Portfolio",
     "subtitle": "Just an ordinary developer, crafting code with passion. From Vietnam with love.",
     "button": "Creative",
-    "sub": "Perisonal portfolio 2024 "
+    "sub": "Perisonal portfolio 2024 ",
+    "heading1": "HI 👋, FRIEND!",
+    "heading2": "🌤️ IT IS NICE ⇗ TO",
+    "heading3": "MEET 😊 YOU.",
+    "description": "Hello, I'm Phong! 👋, I'm a Web Developer who loves creativity and constantly explores new technologies. This website is a space where I store projects, ideas, and experiences I've gathered throughout my development journey. If you're also passionate about technology and enjoy discovering new things, you might find something interesting here. Welcome! 🚀"
   },
   "service": {
     "info": "Web Developer passionate about animations, breaking the mold, and chasing the new. Code isn’t just functional—it should feel alive! 🚀",
@@ -18,7 +23,7 @@
     "about": {
       "title": "About me",
       "text-1": "Hi there! I'm Phong Phan (aka NexGenDev). My daily life revolves around coding, debugging, and tackling tech challenges. I'm a fast learner, always eager to explore new technologies, and I have a strong passion for problem-solving.",
-      "text-2": "I'm all about JavaScript, from frontend to backend—if it's web-related, I'm in! I love turning ideas into real products and making the web more accessible to everyone.",
+      "text-2": "🚀 I always try to learn and develop myself every day. Continuously learning and challenging myself will help me become a better programmer. Besides, I am also very interested in sharing knowledge and experience. I believe that sharing will help me learn more and also help others learn many things.",
       "text-3": "Beyond coding, I enjoy hitting the gym, playing football, mountain climbing, read book and traveling. Staying active keeps me balanced between work and life while fueling my creativity.",
       "text-4": "I'm always open to job opportunities that align with my skills and passions. Whether it's joining an innovative startup, working on groundbreaking projects, or collaborating with a top-notch team, I'm excited for new challenges. Let's build something amazing together! 🚀"
     },
@@ -30,6 +35,10 @@
       "description4": "💻 React, Next.js, Node.js – Self-taught and ready to build full-stack web applications.",
       "description5": "🎬 Framer Motion – Bringing animations to life with smooth scroll-based effects.",
       "description6": "⚡ Tailwind CSS – Utility-first styling for fast, clean, and intuitive UI building."
+    },
+    "experience": {
+      "title": "Work experience",
+      "description": "👨‍💻 With several years of experience in web development, I have participated in several projects building web applications and user interfaces, from small projects to complex projects. Gain knowledge and practical experience with a variety of web technologies such as HTML, CSS, JavaScript, React, Next.js, Magento, Headless CMS, and source code management tools such as Git and GitHub."
     },
     "global": "A website is essential in today's digital landscape because it serves as the primary online presence for businesses, organizations, and individuals. It provides a platform to showcase products, services, and information to a global audience, enhancing visibility and credibility. 🚀"
   },

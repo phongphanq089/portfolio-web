@@ -185,7 +185,7 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), addVariablesForColors],
+  plugins: [require('tailwindcss-animated'), addVariablesForColors],
 } satisfies Config
 
 export default config
