@@ -6,6 +6,8 @@ const HomePage = async () => {
     <div className='h-full'>
       <BannerHero />
       <Service />
+      {/* <div className='h-screen'></div>
+      <div className='h-screen'></div> */}
     </div>
   )
 }

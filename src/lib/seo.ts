@@ -2,23 +2,24 @@ import { Metadata } from 'next'
 
 export const defaultSeoData: Metadata = {
   title: {
-    template: '%s | Front-end Developer Phong Phan',
-    default: 'Phong Phan - Front-end Developer',
+    template: '%s | Front-end Developer & Modern Web Architect',
+    default:
+      'Front-end Developer | Building Scalable Web Apps with React & Next.js',
   },
   description:
-    'Phong Phan - Front-end Developer specializing in modern web interfaces with Next.js, React, and UI/UX design. Explore my portfolio and personal blog!',
+    'Building high-performance web applications using React, Next.js, and Headless CMS. Explore advanced techniques in modern front-end development.',
   openGraph: {
-    title: 'Phong Phan - Front-end Developer',
+    title: 'Front-end Developer | Scalable Web Apps with React & Next.js',
     description:
-      'Portfolio and blog of Phong Phan, a Front-end Developer skilled in Next.js, React',
+      'Explore advanced front-end development with React, Next.js, and Headless CMS. Learn best practices, performance optimization, and modern web architecture.',
     url: 'https://phongphan.xyz',
-    siteName: 'Phong Phan Portfolio',
+    siteName: 'Phong Phan - Front-end Development Hub',
     images: [
       {
         url: 'https://res.cloudinary.com/dyp6oqixq/image/upload/v1717921488/project-dev/banner-hero_scrh3z.png',
         width: 1200,
         height: 630,
-        alt: 'Phong Phan - Front-end Developer Portfolio',
+        alt: 'Phong Phan - Front-end Developer & Web Architect',
       },
     ],
     locale: 'en_US',
@@ -26,9 +27,9 @@ export const defaultSeoData: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Phong Phan - Front-end Developer',
+    title: 'Front-end Developer | Building with React & Next.js',
     description:
-      'Discover the portfolio and blog of Phong Phan, a Front-end Developer with expertise in Next.js and React.',
+      'Master modern front-end development with React, Next.js, and Headless CMS. Learn best practices and scalable web architecture.',
     creator: '@phongphanDev',
     images: [
       'https://res.cloudinary.com/dyp6oqixq/image/upload/v1717921488/project-dev/banner-hero_scrh3z.png',
@@ -46,7 +47,7 @@ export const defaultSeoData: Metadata = {
     },
   },
   keywords:
-    'Front-end Developer, Phong Phan, Next.js, React, UI/UX, Web Design, Portfolio',
+    'Front-end Developer, React, Next.js, Headless CMS, Web Development, JavaScript, TypeScript, Modern Web, Performance Optimization',
   alternates: {
     canonical: 'https://phongphan.xyz',
   },

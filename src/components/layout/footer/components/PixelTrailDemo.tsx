@@ -1,8 +1,7 @@
 'use client'
 import { useTranslations } from 'next-intl'
 
-import { InteractiveHoverButton } from '@/components/ui/InteractiveHoverButton'
-import Link from 'next/link'
+// import Link from 'next/link'
 import PixelTrail from './BackgroundCircles'
 
 const PixelTrailDemo: React.FC = () => {
@@ -26,11 +25,11 @@ const PixelTrailDemo: React.FC = () => {
         </p>
       </div>
       <div className='absolute left-1/2 -translate-x-1/2 top-[70%] -translate-y-1/2'>
-        <InteractiveHoverButton className='!cursor-pointer z-50'>
+        {/* <InteractiveHoverButton className='!cursor-pointer z-50'>
           <Link href={'https://www.reactbits.dev/'} target='_blank'>
             Read more
           </Link>
-        </InteractiveHoverButton>
+        </InteractiveHoverButton> */}
       </div>
     </div>
   )

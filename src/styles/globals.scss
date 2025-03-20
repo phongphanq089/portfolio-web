@@ -101,21 +101,21 @@
   }
 
   .container-xl {
-    @apply max-w-screen-xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-xl mx-auto px-3 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .container-2xl {
-    @apply max-w-screen-2xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-2xl mx-auto px-3 md:px-3 lg:px-5 2xl:px-3;
   }
   .container-3xl {
-    @apply max-w-screen-3xl mx-auto px-2 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-3xl mx-auto px-3 md:px-3 lg:px-5 2xl:px-3;
   }
   .container-4xl {
-    @apply max-w-screen-4xl mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-4xl mx-auto px-3 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .container-lg {
-    @apply max-w-screen-lg mx-auto px-1 md:px-3 lg:px-5 2xl:px-3;
+    @apply max-w-screen-lg mx-auto px-3 md:px-3 lg:px-5 2xl:px-3;
   }
 
   .title-block {
@@ -346,4 +346,41 @@
 
 :not(#check:checked) + .toggle {
   background-color: #f44336;
+}
+
+.blur-vignette {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  --r: max(var(--transition-length), calc(var(--radius) - var(--inset)));
+  --corner-size: calc(var(--r) + var(--inset)) calc(var(--r) + var(--inset));
+  --corner-gradient:
+    transparent 0px, transparent calc(var(--r) - var(--transition-length)),
+    black var(--r);
+  --fill-narrow-size: calc(100% - (var(--inset) + var(--r)) * 2);
+  --fill-farther-position: calc(var(--inset) + var(--r));
+  -webkit-mask-image:
+    linear-gradient(to right, var(--fill-gradient)),
+    linear-gradient(to bottom, var(--fill-gradient)),
+    radial-gradient(at bottom right, var(--corner-gradient)),
+    radial-gradient(at bottom left, var(--corner-gradient)),
+    radial-gradient(at top left, var(--corner-gradient)),
+    radial-gradient(at top right, var(--corner-gradient));
+  -webkit-mask-size:
+    100% var(--fill-narrow-size),
+    var(--fill-narrow-size) 100%,
+    var(--corner-size),
+    var(--corner-size),
+    var(--corner-size),
+    var(--corner-size);
+  -webkit-mask-position:
+    0 var(--fill-farther-position),
+    var(--fill-farther-position) 0,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%;
+  -webkit-mask-repeat: no-repeat;
 }

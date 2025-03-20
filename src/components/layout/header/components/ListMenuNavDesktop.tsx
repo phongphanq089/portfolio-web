@@ -14,7 +14,7 @@ const ListMenuNavDesktop = () => {
   const t = useTranslations('Navbar')
 
   const variants = {
-    active: { x: 0, scale: 1, backgroundColor: '#ff5733' },
+    active: { x: 0, scale: 1 },
     inactive: {
       x: 0,
       scale: 1,

@@ -49,3 +49,36 @@ export interface BLogList {
     _type: string
   }
 }
+
+// ===== RESOURE  ==== //
+
+export interface categoryResource {
+  _id: string
+  title: string
+  slug: {
+    current: string
+    _type: 'slug'
+  }
+  icon: {
+    asset: {
+      _ref: string
+    }
+  }
+}
+
+export interface developerResource {
+  _id: string
+  _createdAt: string
+  _updatedAt: string
+  title: string
+  mainImage: {
+    alt: string
+    asset: {
+      _ref: string
+    }
+  }
+  url: string
+  tags?: string[]
+  categoryDeveloper?: { title: string }[]
+  publishedAt: string
+}

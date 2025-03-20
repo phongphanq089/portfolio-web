@@ -73,7 +73,6 @@ const LanguageSwitch = () => {
         <FloatingPanelBody>
           <AnimatePresence>
             {actions.map((action, index) => {
-              console.log(activeTab, action.id)
               return (
                 <motion.div
                   key={index}
