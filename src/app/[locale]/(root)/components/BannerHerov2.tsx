@@ -35,7 +35,7 @@ const BannerHerov2 = () => {
       </div>
 
       <div className='xl:absolute top-0 right-[30px] z-40'>
-        <Terminal className='max-h-[600px]'>
+        <Terminal className='max-h-[700px]'>
           <TypingAnimation>
             &gt; Booting up Phong's Dev Space...
           </TypingAnimation>
