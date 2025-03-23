@@ -114,7 +114,7 @@ const BackgroundGradientCursor = forwardRef<HTMLDivElement, BackgroundProps>(
         setSmoothPosition((prev) => {
           const dx = cursorPosition.x - prev.x
           const dy = cursorPosition.y - prev.y
-          const easingFactor = 0.03
+          const easingFactor = 0.1
           return {
             x: Math.round(prev.x + dx * easingFactor),
             y: Math.round(prev.y + dy * easingFactor),
