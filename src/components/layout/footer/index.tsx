@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className='w-full h-dvh md:p-7 md:pb-0 overflow-hidden' id='footer'>
       <div className='flex flex-col  justify-between h-full bg-black md:rounded-t-[100px] px-4'>
-        <div className='grid grid-cols-1 max-sm:gap-4 max-md:gap-8 md:grid-cols-12 sm:px-8 sm:py-10'>
+        <div className='grid grid-cols-1 max-sm:gap-4 max-md:gap-8 md:grid-cols-12 sm:px-8 sm:py-10 mt-10'>
           <div className='col-span-7'>
             <SocialLink />
           </div>

@@ -13,9 +13,21 @@
     "heading1": "HI 👋, FRIEND!",
     "heading2": "🌤️ IT IS NICE ⇗ TO",
     "heading3": "MEET 😊 YOU.",
-    "description": "Hello, I'm Phong! 👋, I'm a Web Developer who loves creativity and constantly explores new technologies. This website is a space where I store projects, ideas, and experiences I've gathered throughout my development journey. If you're also passionate about technology and enjoy discovering new things, you might find something interesting here. Welcome! 🚀"
+    "description": "Hello, I'm Phong! 👋, I'm a Web Developer who loves creativity and constantly explores new technologies. This website is a space where I store projects, ideas, and experiences I've gathered throughout my development journey. If you're also passionate about technology and enjoy discovering new things, you might find something interesting here. Welcome! 🚀",
+    "terminal": {
+      "hello": "Hello! I'm Phong! 👋",
+      "text1": "✔ A Web Developer who loves creativity & challenges.",
+      "text2": "✔ Passionate about React, Next.js, Tailwind CSS & Framer Motion.",
+      "text3": "✔ Crafting smooth UI animations & seamless experiences.",
+      "text4": "✔ Enthusiastic about gym, football, hiking & exploring the world.",
+      "text5": "✔ Hates boundaries, always seeks something new.",
+      "text6": "If you love tech & creativity, you're in the right place!",
+      "text7": "Welcome aboard! 🚀 Feel free to explore."
+    }
   },
   "service": {
+    "heading_one": "Hello I am",
+    "heading_two": "Hi! It's me again.",
     "info": "Web Developer passionate about animations, breaking the mold, and chasing the new. Code isn’t just functional—it should feel alive! 🚀",
     "skeleton-1": "There are tons of awesome frameworks like React, Angular, Vue, and Svelte that can make your life... easier (or a complete mess, depending on your code)! 😆",
     "sub1": "I LOVE JAVASCRIPT",
@@ -27,7 +39,7 @@
     "sub4": "Headache 🤯",
     "about": {
       "title": "About me",
-      "text-1": "Hi there! I'm Phong Phan (aka NexGenDev). My daily life revolves around coding, debugging, and tackling tech challenges. I'm a fast learner, always eager to explore new technologies, and I have a strong passion for problem-solving.",
+      "text-1": "Hi there! I'm Phong Phan. My daily life revolves around coding, debugging, and tackling tech challenges. I'm a fast learner, always eager to explore new technologies, and I have a strong passion for problem-solving.",
       "text-2": "🚀 I always try to learn and develop myself every day. Continuously learning and challenging myself will help me become a better programmer. Besides, I am also very interested in sharing knowledge and experience. I believe that sharing will help me learn more and also help others learn many things.",
       "text-3": "Beyond coding, I enjoy hitting the gym, playing football, mountain climbing, read book and traveling. Staying active keeps me balanced between work and life while fueling my creativity.",
       "text-4": "I'm always open to job opportunities that align with my skills and passions. Whether it's joining an innovative startup, working on groundbreaking projects, or collaborating with a top-notch team, I'm excited for new challenges. Let's build something amazing together! 🚀"
@@ -43,7 +55,7 @@
     },
     "experience": {
       "title": "Work experience",
-      "description": "👨‍💻 With several years of experience in web development, I have participated in several projects building web applications and user interfaces, from small projects to complex projects. Gain knowledge and practical experience with a variety of web technologies such as HTML, CSS, JavaScript, React, Next.js, Magento, Headless CMS, and source code management tools such as Git and GitHub."
+      "description": "👨‍💻 With several years of experience in web development, I have participated in several projects building web applications and user interfaces, from small projects to complex projects. Gain knowledge and practical experience with a variety of web technologies such as HTML, CSS, JavaScript, React, Next.js, Node js, Headless CMS, and source code management tools such as Git and GitHub."
     },
     "global": "A website is essential in today's digital landscape because it serves as the primary online presence for businesses, organizations, and individuals. It provides a platform to showcase products, services, and information to a global audience, enhancing visibility and credibility. 🚀"
   },

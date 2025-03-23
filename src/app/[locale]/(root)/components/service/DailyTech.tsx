@@ -1,11 +1,12 @@
 import { listSKill } from '@/assets'
 import { BorderBeam } from '@/components/ui/BorderBeam'
-import Gravity, { MatterBody } from '@/components/ui/Gravity'
-import TrueFocus from '@/components/ui/typography-motion/TrueFocus'
 import MorphingText from '@/components/ui/typography-motion/UseMorphingText'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { SkeletonOne } from './Skeleton'
+import { Marquee } from '@/components/ui/Marquee'
+import { LIST_SKILL } from '@/setting'
+import Link from 'next/link'
 
 const DailyTech = () => {
   const t = useTranslations()
@@ -22,14 +23,7 @@ const DailyTech = () => {
   return (
     <div className='px-3'>
       <div className='mt-10 mb-10 text-[24px] '>
-        <TrueFocus
-          sentence={t('service.technology.title')}
-          manualMode={false}
-          blurAmount={5}
-          borderColor='#ff3c00'
-          animationDuration={2}
-          pauseBetweenAnimations={1}
-        />
+        <h3 className='button-style_1'>{t('service.technology.title')}</h3>
       </div>
       <div>
         <MorphingText
@@ -39,34 +33,48 @@ const DailyTech = () => {
           cooldownTime={4}
         />
       </div>
-      <div className='max-w-[400px] ml-auto mb-10'>
-        <SkeletonOne
-          text1={t('service.skeleton-3')}
-          text2={t('service.sub3')}
-        />
-        <SkeletonOne
-          text1={t('service.skeleton-4')}
-          text2={t('service.sub4')}
-        />
-      </div>
-      <div className=' min-h-[500px] lg:min-h-[400px]  bg-transparent  z-10 relative p-8 rounded-xl overflow-hidden'>
-        <Gravity gravity={{ x: 0, y: 1 }} className='w-full h-full'>
-          {listSKill.map((skill, i) => (
-            <MatterBody
-              key={i}
-              matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
-              x={`${Math.random() * 60 + 20}%`}
-              y={`${Math.random() * 20 + 40}%`}
-              angle={Math.random() * 360}
-            >
-              <div
-                className={`flex items-center justify-center text-xl aspect-square w-14 p-1 h-auto border border-white text-white rounded-lg text-center bg-color-3`}
+      <div className='relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-dark py-8'>
+        <Marquee pauseOnHover className='[--duration:50s]'>
+          {LIST_SKILL.map((skill, index) => {
+            return (
+              <Link
+                href={skill.url}
+                title={skill.title}
+                className='p-4 border-gray-50/[.1] bg-gray-50/[.10] overflow-hidden rounded-xl'
+                target='_blank'
+                key={`_skill${index}`}
               >
-                <img src={skill.src} className='w-full object-cover h-auto' />
-              </div>
-            </MatterBody>
-          ))}
-        </Gravity>
+                <img
+                  src={skill.src.src}
+                  alt='phong phan'
+                  className='object-cover h-10 w-10'
+                />
+              </Link>
+            )
+          })}
+        </Marquee>
+        <Marquee reverse pauseOnHover className='[--duration:50s]'>
+          {LIST_SKILL.map((skill, index) => {
+            return (
+              <Link
+                href={skill.url}
+                title={skill.title}
+                className='p-4 border-gray-50/[.1] bg-gray-50/[.10] overflow-hidden rounded-xl'
+                target='_blank'
+                key={`_skill${index}`}
+              >
+                <img
+                  src={skill.src.src}
+                  alt='phong phan'
+                  className='object-cover h-10 w-10'
+                />
+              </Link>
+            )
+          })}
+        </Marquee>
+        <div className='pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-dark'></div>
+        <div className='pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-dark'></div>
+
         <BorderBeam
           duration={6}
           size={400}
@@ -77,6 +85,16 @@ const DailyTech = () => {
           delay={3}
           size={400}
           className='from-transparent via-blue-500 to-transparent'
+        />
+      </div>
+      <div className='max-w-[400px] ml-auto mb-10 mt-10'>
+        <SkeletonOne
+          text1={t('service.skeleton-3')}
+          text2={t('service.sub3')}
+        />
+        <SkeletonOne
+          text1={t('service.skeleton-4')}
+          text2={t('service.sub4')}
         />
       </div>
     </div>

@@ -17,7 +17,7 @@ const Avatar = () => {
 
       <div className='flex items-center gap-2 '>
         <Globe className='text-primary-color ' />
-        <h3 className='text-md text-white'>Hi ! Lại là mình đây.</h3>
+        <h3 className='text-md text-white'>{t('service.heading_two')}</h3>
       </div>
       <div className='max-w-[400px]'>
         <SkeletonOne

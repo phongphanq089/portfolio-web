@@ -105,6 +105,7 @@ const ListResoures = () => {
   if (errorDevelopers || errorCount) {
     return notFound()
   }
+
   return (
     <>
       {isLoadingDevelopers || isLoadingCount ? (
@@ -131,7 +132,9 @@ const ListResoures = () => {
         )}
       >
         <div
-          className={cn('blur-vignette bottom-0 left-0 w-full h-full z-10')}
+          className={cn(
+            'blur-vignette bottom-0 left-0 w-full h-full z-10 bg-white'
+          )}
           style={
             {
               '--radius': '10px',
@@ -151,7 +154,9 @@ const ListResoures = () => {
                 <ArrowLeft />
               </button>
 
-              {startPage > 1 && <span className='px-4 py-2'>...</span>}
+              {startPage > 1 && (
+                <span className='px-4 py-2 text-black'>...</span>
+              )}
               {pageNumbers.map((pageNum) => (
                 <motion.button
                   key={pageNum}
@@ -167,7 +172,9 @@ const ListResoures = () => {
                   {pageNum}
                 </motion.button>
               ))}
-              {endPage < totalPages && <span className='px-4 py-2'>...</span>}
+              {endPage < totalPages && (
+                <span className='px-4 py-2 text-black'>...</span>
+              )}
               <button
                 onClick={() => handlePageChange(pageSize + 1)}
                 disabled={pageSize === totalPages}

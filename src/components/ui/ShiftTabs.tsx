@@ -22,7 +22,7 @@ const Button = ({ title, index, activeIndex, onTabClick }: ButtonProps) => {
     >
       <div
         className={cn(
-          'flex h-10 cursor-pointer items-center justify-center rounded-md border-2 bg-white p-3 transition-all',
+          'flex text-black h-10 cursor-pointer items-center justify-center rounded-md border-2 bg-white p-3 transition-all',
           {
             'border-2 border-primary-color text-primary-color':
               index === activeIndex,
@@ -30,7 +30,7 @@ const Button = ({ title, index, activeIndex, onTabClick }: ButtonProps) => {
           }
         )}
       >
-        <p className='p-2 text-center font-mono max-sm:font-semibold max-sm:text-[12px]'>
+        <p className='p-2 text-center font-mono max-sm:font-semibold max-sm:text-[12px] '>
           {title}
         </p>
       </div>

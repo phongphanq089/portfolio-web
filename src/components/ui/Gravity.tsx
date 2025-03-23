@@ -116,7 +116,7 @@ export const MatterBody = ({
       className={cn(
         'absolute',
         className,
-        isDraggable && 'pointer-events-none'
+        isDraggable && 'pointer-events-none-1'
       )}
     >
       {children}

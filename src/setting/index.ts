@@ -1,3 +1,27 @@
+import {
+  skill1,
+  skill10,
+  skill11,
+  skill12,
+  skill13,
+  skill14,
+  skill17,
+  skill18,
+  skill19,
+  skill20,
+  skill21,
+  skill22,
+  skill24,
+  skill25,
+  skill27,
+  skill28,
+  skill29,
+  skill30,
+  skill31,
+  skill4,
+  skill9,
+} from '@/assets'
+
 export const pathArr = [
   'M312.977 25.9886V15.5057H317.977C318.801 15.5057 319.507 15.6525 320.094 15.946C320.681 16.2396 321.126 16.6515 321.429 17.1818C321.741 17.7121 321.898 18.3371 321.898 19.0568C321.898 19.786 321.737 20.4062 321.415 20.9176C321.093 21.429 320.634 21.822 320.037 22.0966C319.44 22.3617 318.725 22.4943 317.892 22.4943H314.597V20.3352H317.409C317.864 20.3352 318.209 20.2263 318.446 20.0085C318.683 19.7907 318.801 19.4735 318.801 19.0568C318.801 18.6117 318.683 18.2803 318.446 18.0625C318.209 17.8352 317.864 17.7216 317.409 17.7216H315.989V25.9886H312.977ZM319.909 21.2159L322.153 25.9886H318.858L316.841 21.2159H319.909ZM317.182 32.2386C315.61 32.2386 314.137 31.9451 312.764 31.358C311.391 30.7708 310.184 29.9564 309.142 28.9148C308.1 27.8731 307.286 26.6657 306.699 25.2926C306.112 23.9195 305.818 22.447 305.818 20.875C305.818 19.303 306.112 17.8305 306.699 16.4574C307.286 15.0843 308.1 13.8769 309.142 12.8352C310.184 11.7936 311.391 10.9792 312.764 10.392C314.137 9.80492 315.61 9.51136 317.182 9.51136C318.754 9.51136 320.226 9.80492 321.599 10.392C322.973 10.9792 324.18 11.7936 325.222 12.8352C326.263 13.8769 327.078 15.0843 327.665 16.4574C328.252 17.8305 328.545 19.303 328.545 20.875C328.545 22.447 328.252 23.9195 327.665 25.2926C327.078 26.6657 326.263 27.8731 325.222 28.9148C324.18 29.9564 322.973 30.7708 321.599 31.358C320.226 31.9451 318.754 32.2386 317.182 32.2386ZM317.182 29.0568C318.697 29.0568 320.07 28.6922 321.301 27.9631C322.542 27.2244 323.527 26.2348 324.256 24.9943C324.994 23.7538 325.364 22.3807 325.364 20.875C325.364 19.3693 324.994 17.9962 324.256 16.7557C323.527 15.5152 322.542 14.5303 321.301 13.8011C320.061 13.0625 318.688 12.6932 317.182 12.6932C315.676 12.6932 314.303 13.0625 313.062 13.8011C311.822 14.5303 310.832 15.5152 310.094 16.7557C309.365 17.9962 309 19.3693 309 20.875C309 22.3807 309.365 23.7538 310.094 24.9943C310.832 26.2254 311.822 27.2102 313.062 27.9489C314.303 28.6875 315.676 29.0568 317.182 29.0568Z',
   'M301.426 11.2727V44H294.011L282.186 26.8054H281.994V44H273.109V11.2727H280.652L292.286 28.4034H292.541V11.2727H301.426Z',
@@ -38,7 +62,110 @@ export const SOCIALINK = {
 
 export const ALT_TEXT = 'Phong Phan - Frontend Developer'
 
-/**
- * src={urlFor(_ref).url()
- * item?.mainImage?.asset?._ref
- */
+export const LIST_SKILL = [
+  {
+    title: 'auth0',
+    src: skill1,
+    url: 'https://auth0.com',
+  },
+  {
+    title: 'Express js',
+    src: skill4,
+    url: 'https://expressjs.com',
+  },
+  {
+    title: 'jwt',
+    src: skill9,
+    url: 'https://jwt.io',
+  },
+  {
+    title: 'material-ui',
+    src: skill10,
+    url: 'https://mui.com/material-ui',
+  },
+  {
+    title: 'mongodb',
+    src: skill11,
+    url: 'https://www.mongodb.com',
+  },
+  {
+    title: 'mongodb',
+    src: skill12,
+    url: 'https://www.mongodb.com',
+  },
+  {
+    title: 'mongodb',
+    src: skill13,
+    url: 'https://www.mongodb.com',
+  },
+  {
+    title: 'nextjs',
+    src: skill14,
+    url: 'https://nextjs.org',
+  },
+  {
+    title: 'react',
+    src: skill17,
+    url: 'https://react.dev',
+  },
+  {
+    title: 'tanstack',
+    src: skill18,
+    url: 'https://tanstack.com',
+  },
+  {
+    title: 'React router',
+    src: skill19,
+    url: 'https://reactrouter.com',
+  },
+  {
+    title: 'refine',
+    src: skill20,
+    url: 'https://refine.dev',
+  },
+  {
+    title: 'remotion',
+    src: skill21,
+    url: 'https://www.remotion.dev',
+  },
+  {
+    title: 'sanity',
+    src: skill22,
+    url: 'https://www.sanity.io',
+  },
+  {
+    title: 'shadcn ui',
+    src: skill24,
+    url: 'https://ui.shadcn.com',
+  },
+  {
+    title: 'tailwindcss',
+    src: skill25,
+    url: 'https://tailwindcss.com',
+  },
+  {
+    title: 'tailwindcss',
+    src: skill27,
+    url: 'https://tailwindcss.com',
+  },
+  {
+    title: 'typescript',
+    src: skill28,
+    url: 'https://www.typescriptlang.org',
+  },
+  {
+    title: 'vite',
+    src: skill29,
+    url: 'https://vite.dev',
+  },
+  {
+    title: 'vue js',
+    src: skill30,
+    url: 'https://vuejs.org',
+  },
+  {
+    title: 'zod',
+    src: skill31,
+    url: 'https://zod.dev',
+  },
+]

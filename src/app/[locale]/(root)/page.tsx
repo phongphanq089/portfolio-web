@@ -1,13 +1,11 @@
-import BannerHero from './components/BannerHero'
+import BannerHerov2 from './components/BannerHerov2'
 import Service from './components/service/layout'
 
 const HomePage = async () => {
   return (
     <div className='h-full'>
-      <BannerHero />
+      <BannerHerov2 />
       <Service />
-      {/* <div className='h-screen'></div>
-      <div className='h-screen'></div> */}
     </div>
   )
 }

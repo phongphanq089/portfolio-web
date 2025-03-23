@@ -6,7 +6,12 @@ import React from 'react'
 interface NextImageResizeProps {
   classNameContainer?: string
   classNameImage?: string
-  classResize?: string
+  classResize?:
+    | 'img16And9'
+    | 'img3And4'
+    | 'img4And3'
+    | 'img3And2'
+    | 'imgSpecial1'
   src?: string
   alt?: string
 }

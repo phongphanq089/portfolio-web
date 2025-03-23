@@ -3,6 +3,7 @@ import VerticalCutReveal from '@/components/ui/typography-motion/VerticalCutReve
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { SkeletonTwo } from './service/Skeleton'
+import { Keyboard } from '@/components/ui/Keyboard'
 
 const BannerHero = () => {
   const t = useTranslations('bannerHero')
@@ -70,7 +71,7 @@ const BannerHero = () => {
               </VerticalCutReveal>
             </div>
             <div className='max-w-[600px]'>
-              <SkeletonTwo />
+              <Keyboard highlighted={['LeftCommand', 'C', 'S']} />
             </div>
           </div>
 
