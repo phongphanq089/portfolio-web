@@ -26,7 +26,7 @@
     }
   },
   "service": {
-    "heading_one": "Hello ",
+    "heading_one": "xin chào mình là",
     "heading_two": "Hi ! Lại là mình đây.",
     "info": "Lập trình viên Web đam mê animation, thích phá vỡ khuôn khổ và luôn chạy theo những điều mới mẻ. Code không chỉ chạy tốt mà còn phải sống động! 🚀",
     "skeleton-1": "Có cả đống framework xịn như React, Angular, Vue, Svelte giúp cuộc đời bạn... đỡ khổ (hoặc khổ hơn, tùy cách bạn code)! 😆",
