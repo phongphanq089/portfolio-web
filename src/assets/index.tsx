@@ -61,8 +61,6 @@ export {
   bgCardResoure,
   cutHover,
   developer1,
-  vn,
-  usUk,
   // ===== slill developer =========//
   skill1,
   skill4,
@@ -85,4 +83,6 @@ export {
   skill29,
   skill30,
   skill31,
+  vn,
+  // usUk,
 }

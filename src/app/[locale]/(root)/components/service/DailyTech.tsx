@@ -1,4 +1,3 @@
-import { listSKill } from '@/assets'
 import { BorderBeam } from '@/components/ui/BorderBeam'
 import MorphingText from '@/components/ui/typography-motion/UseMorphingText'
 import { useTranslations } from 'next-intl'

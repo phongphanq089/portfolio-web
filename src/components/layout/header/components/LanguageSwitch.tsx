@@ -1,5 +1,5 @@
 'use client'
-import { usUk, vn } from '@/assets'
+import { vn } from '@/assets'
 import {
   FloatingPanelBody,
   FloatingPanelButton,
@@ -27,7 +27,7 @@ const LanguageSwitch = () => {
     },
     {
       id: 2,
-      icon: usUk.src,
+      icon: '',
       label: 'English',
       locale: 'en',
     },
@@ -89,11 +89,13 @@ const LanguageSwitch = () => {
                       activeTab === action.id && '!bg-primary-color text-white'
                     )}
                   >
-                    <img
+                    {/* <img
                       src={action.icon}
                       alt='phong phan'
                       className='w-[20px]  h-auto object-cover'
-                    />
+                    /> */}
+
+                    <Languages />
                     <span>{action.label}</span>
                   </FloatingPanelButton>
                 </motion.div>
