@@ -131,20 +131,20 @@ const ListResoures = () => {
           interView ? 'hidden' : 'block'
         )}
       >
-        <div
-          className={cn(
-            'blur-vignette bottom-0 left-0 w-full h-full z-10 bg-white'
-          )}
-          style={
-            {
-              '--radius': '10px',
-              '--inset': '20px',
-              '--transition-length': '44px',
-              '--blur': '10px',
-            } as React.CSSProperties
-          }
-        >
-          {developers && developers.length > 0 && totalItems && (
+        {developers && developers.length > 0 && totalItems ? (
+          <div
+            className={cn(
+              'blur-vignette bottom-0 left-0 w-full h-full z-10 bg-color-4'
+            )}
+            style={
+              {
+                '--radius': '10px',
+                '--inset': '20px',
+                '--transition-length': '44px',
+                '--blur': '10px',
+              } as React.CSSProperties
+            }
+          >
             <div className='flex justify-center gap-2  py-2 px-2 rounded-xl text-white blur-vignette z-60 relative'>
               <button
                 onClick={() => handlePageChange(pageSize - 1)}
@@ -183,8 +183,10 @@ const ListResoures = () => {
                 <ArrowRight />
               </button>
             </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
     </>
   )
