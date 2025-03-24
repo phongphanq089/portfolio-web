@@ -4,5 +4,9 @@ import { routing } from '@/i18n/routing'
 export default createMiddleware(routing)
 
 export const config = {
-  matcher: ['/', '/(vi|en)/:path*'],
+  matcher: [
+    '/((?!api|_next|sitemap.xml|robots.txt|.*\\..*).*)',
+    '/',
+    '/(vi|en)/:path*',
+  ],
 }
