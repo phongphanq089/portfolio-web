@@ -65,7 +65,8 @@
       "title": "Work experience",
       "description": "👨‍💻 With several years of experience in web development, I have participated in several projects building web applications and user interfaces, from small projects to complex projects. Gain knowledge and practical experience with a variety of web technologies such as HTML, CSS, JavaScript, React, Next.js, Node js, Headless CMS, and source code management tools such as Git and GitHub."
     },
-    "global": "A website is essential in today's digital landscape because it serves as the primary online presence for businesses, organizations, and individuals. It provides a platform to showcase products, services, and information to a global audience, enhancing visibility and credibility. 🚀"
+    "global": "A website is essential in today's digital landscape because it serves as the primary online presence for businesses, organizations, and individuals. It provides a platform to showcase products, services, and information to a global audience, enhancing visibility and credibility. 🚀",
+    "technologyTitle": "Technology is good to use"
   },
   "description": "This is a multilingual app built with Next.js 15 and next-intl.",
   "Navbar": {
@@ -73,7 +74,7 @@
     "blog": "Blog",
     "project": "Projects",
     "resoures": "Resoures",
-    "colection": "My Collection"
+    "colection": "Collection"
   },
   "genMoiton": "GENMOTION UI – A UI library I built to store awesome animation components, helping you create smooth and beautiful interfaces with React, Framer Motion, and TypeScript. Super cool!",
   "blogDetail": {

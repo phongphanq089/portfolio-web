@@ -65,7 +65,8 @@
       "title": "Kinh Nghiệm",
       "description": "👨‍💻 Với một vài năm kinh nghiệm phát triển web, mình đã tham gia vào một số dự án xây dựng ứng dụng web và giao diện người dùng, từ những dự án nhỏ đến các dự án phức tạp. Nắm được kiến thức và kinh nghiệm thực tế với một loạt các công nghệ web như HTML, CSS, JavaScript, React, Next.js, Node js , Headless CMS, và các công cụ quản lý mã nguồn như Git và GitHub. "
     },
-    "global": "Một website là cực kỳ quan trọng trong thế giới số ngày nay, vì nó là bộ mặt chính trên internet của doanh nghiệp, tổ chức hay cá nhân. Đây là nơi để trưng bày sản phẩm, dịch vụ và chia sẻ thông tin đến toàn cầu, giúp tăng độ nhận diện và uy tín. 🚀"
+    "global": "Một website là cực kỳ quan trọng trong thế giới số ngày nay, vì nó là bộ mặt chính trên internet của doanh nghiệp, tổ chức hay cá nhân. Đây là nơi để trưng bày sản phẩm, dịch vụ và chia sẻ thông tin đến toàn cầu, giúp tăng độ nhận diện và uy tín. 🚀",
+    "technologyTitle": "Công nghệ mình hay dùng."
   },
   "description": "Đây là một ứng dụng đa ngôn ngữ được xây dựng bằng Next.js 15 và next-intl.",
   "Navbar": {

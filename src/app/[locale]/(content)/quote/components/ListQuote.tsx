@@ -33,7 +33,7 @@ export default function StackingCardsDemo({
         totalCards={listQuotes.length}
         scrollOptons={{ container: { current: container } }}
       >
-        <div className='relative font-calendas h-screen w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-primary-color whitespace-pre'>
+        <div className='relative font-calendas h-[50vh] md:h-screen w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-primary-color whitespace-pre'>
           Scroll down ↓
         </div>
         {listQuotes.map((quote, index) => {
@@ -54,7 +54,7 @@ export default function StackingCardsDemo({
                 )}
               >
                 <div className='flex-1 flex flex-col mt-3'>
-                  <h3 className='font-bold text-[26px] md:text-[3vw] mb-5 line-clamp-7 leading-none'>
+                  <h3 className='font-bold text-[32px] md:text-[3vw] mb-5 line-clamp-7 leading-none text-black'>
                     {getLocalizedValue(quote.Description, lang)}
                   </h3>
                 </div>
