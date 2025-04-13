@@ -5,12 +5,12 @@ import { cn } from '@/lib/utils'
 import { MENU_SETTINGS } from '@/setting'
 import { AnimatePresence, motion, useMotionValue } from 'motion/react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useRef } from 'react'
 
 interface PropsType {
   isOpen: boolean
+  toggleMenu: () => void
 }
 
 const sidebarVariants = {
@@ -21,7 +21,7 @@ const sidebarVariants = {
   },
   exit: { x: '100%' },
 }
-const ListMenuNavMobile = ({ isOpen }: PropsType) => {
+const ListMenuNavMobile = ({ isOpen, toggleMenu }: PropsType) => {
   const pathname = usePathname()
   const currentLocale = pathname.split('/')[1]
 
@@ -60,6 +60,7 @@ const ListMenuNavMobile = ({ isOpen }: PropsType) => {
                       href={localizedPath}
                       isActive={isActive}
                       key={index}
+                      toggleMenu={toggleMenu}
                     />
                   )
                 })}
@@ -76,20 +77,22 @@ export default ListMenuNavMobile
 
 interface propsType {
   heading: string
-
   href: string
   isActive: boolean
+  toggleMenu: () => void
 }
 const NavLinkAnimated = ({
   heading,
-
   href,
   isActive,
+  toggleMenu,
 }: propsType) => {
   const ref = useRef(null)
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
+
+  const navigation = useRouter()
 
   const handleMouseMove = (e: any) => {
     const refCurrent = ref?.current as any
@@ -108,8 +111,18 @@ const NavLinkAnimated = ({
       y.set(yPct)
     }
   }
+  const handleNavigation = () => {
+    navigation.push(href)
+    setTimeout(() => {
+      toggleMenu()
+    }, 500)
+  }
   return (
-    <Link href={href} title={heading} className='w-full inline-block'>
+    <div
+      onClick={handleNavigation}
+      title={heading}
+      className='w-full inline-block cursor-pointer'
+    >
       <motion.div
         ref={ref}
         onMouseMove={handleMouseMove}
@@ -148,6 +161,6 @@ const NavLinkAnimated = ({
           </motion.span>
         </div>
       </motion.div>
-    </Link>
+    </div>
   )
 }

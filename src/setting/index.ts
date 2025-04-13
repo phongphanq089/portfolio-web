@@ -94,6 +94,21 @@ export const LIST_SKILL = [
     url: 'https://www.mongodb.com',
   },
   {
+    title: 'auth0',
+    src: skill1,
+    url: 'https://auth0.com',
+  },
+  {
+    title: 'Express js',
+    src: skill4,
+    url: 'https://expressjs.com',
+  },
+  {
+    title: 'jwt',
+    src: skill9,
+    url: 'https://jwt.io',
+  },
+  {
     title: 'mongodb',
     src: skill13,
     url: 'https://www.mongodb.com',
@@ -167,5 +182,25 @@ export const LIST_SKILL = [
     title: 'zod',
     src: skill31,
     url: 'https://zod.dev',
+  },
+  {
+    title: 'mongodb',
+    src: skill13,
+    url: 'https://www.mongodb.com',
+  },
+  {
+    title: 'nextjs',
+    src: skill14,
+    url: 'https://nextjs.org',
+  },
+  {
+    title: 'react',
+    src: skill17,
+    url: 'https://react.dev',
+  },
+  {
+    title: 'tanstack',
+    src: skill18,
+    url: 'https://tanstack.com',
   },
 ]

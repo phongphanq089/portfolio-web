@@ -55,7 +55,7 @@ const Header = () => {
 
           <div className=''>
             <ListMenuNavDesktop />
-            <ListMenuNavMobile isOpen={isOpen} />
+            <ListMenuNavMobile isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>
           <div className='flex items-center gap-4'>
             <div

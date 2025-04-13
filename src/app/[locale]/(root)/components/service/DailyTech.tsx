@@ -1,12 +1,15 @@
+'use client'
 import { BorderBeam } from '@/components/ui/BorderBeam'
 import MorphingText from '@/components/ui/typography-motion/UseMorphingText'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { SkeletonOne } from './Skeleton'
-import { Marquee } from '@/components/ui/Marquee'
-import { LIST_SKILL } from '@/setting'
-import Link from 'next/link'
 
+import dynamic from 'next/dynamic'
+
+const TechologyListCusor = dynamic(() => import('./TechologyListCusor'), {
+  ssr: false,
+})
 const DailyTech = () => {
   const t = useTranslations()
 
@@ -32,47 +35,8 @@ const DailyTech = () => {
           cooldownTime={4}
         />
       </div>
-      <div className='relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-dark py-8'>
-        <Marquee pauseOnHover className='[--duration:50s]'>
-          {LIST_SKILL.map((skill, index) => {
-            return (
-              <Link
-                href={skill.url}
-                title={skill.title}
-                className='p-4 border-gray-50/[.1] bg-gray-50/[.10] overflow-hidden rounded-xl'
-                target='_blank'
-                key={`_skill${index}`}
-              >
-                <img
-                  src={skill.src.src}
-                  alt='phong phan'
-                  className='object-cover h-10 w-10'
-                />
-              </Link>
-            )
-          })}
-        </Marquee>
-        <Marquee reverse pauseOnHover className='[--duration:50s]'>
-          {LIST_SKILL.map((skill, index) => {
-            return (
-              <Link
-                href={skill.url}
-                title={skill.title}
-                className='p-4 border-gray-50/[.1] bg-gray-50/[.10] overflow-hidden rounded-xl'
-                target='_blank'
-                key={`_skill${index}`}
-              >
-                <img
-                  src={skill.src.src}
-                  alt='phong phan'
-                  className='object-cover h-10 w-10'
-                />
-              </Link>
-            )
-          })}
-        </Marquee>
-        <div className='pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-dark'></div>
-        <div className='pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-dark'></div>
+      <div className='relative rounded-lg overflow-hidden'>
+        <TechologyListCusor />
 
         <BorderBeam
           duration={6}
