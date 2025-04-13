@@ -29,6 +29,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
     return acc
   }, {})
+  // console.log(posts)
 
   return {
     locale,

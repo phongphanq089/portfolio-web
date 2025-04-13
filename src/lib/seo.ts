@@ -22,6 +22,7 @@ export const defaultSeoData: Metadata = {
         alt: 'Phong Phan - Front-end Developer & Web Architect',
       },
     ],
+
     locale: 'en_US',
     type: 'website',
   },

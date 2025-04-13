@@ -12,12 +12,11 @@ export const categoryPostList = groq`*[_type == "category"] {
     "postCount": count(*[_type == "post" && references(^._id)]),
   }`
 
-export const getCategoryRelatedPostQuery = groq`*[_type == "post" && $slug in categories[]->slug. current] [$start..$start + $limit - 1]{
+export const listBlogs = groq`*[_type == "post" && $slug in categories[]->slug. current] [$start..$start + $limit - 1]{
     _id,
     slug,
     _createdAt,
     title,
-    body,
     meta_description,
     mainImage,
     "category": categories[]-> {title,slug},
@@ -29,19 +28,6 @@ export const totalBlogList = groq`count(*[_type == "post" && $slug in categories
 /**
  * @POST details/posts
  */
-
-export const postsQuery = groq`*[_type == "post"] | order(_createdAt desc) [$start..$start + $limit - 1]{
-    _createdAt,
-    _updatedAt,
-  title,
-  body,
-  meta_description,
-  mainImage,
-  slug,
-  "author": author -> {name,slug,image,designation,profiles,bio,about},
-  "category": categories[]-> {title,slug},
-  publishedAt,
-}`
 
 export const postQueryDetail = groq`*[_type == "post" && slug.current == $slug][0]{
   _createdAt,
@@ -195,4 +181,11 @@ _id,
    "thumbnail": thumbnail.asset->url,
    "videoFileUrl": videoFile.asset->url,
     videoURL
+}`
+
+export const QuotesQuery = groq`*[_type == "Quotes"]{
+_id,
+  Description,
+  Image,
+  bgColor
 }`

@@ -12,13 +12,13 @@ import TextContainer from './components/TextContainer'
 const Footer = () => {
   const t = useTranslations('Navbar')
   return (
-    <div className='w-full h-dvh md:p-7 md:pb-0 overflow-hidden' id='footer'>
-      <div className='flex flex-col  justify-between h-full bg-black md:rounded-t-[100px] px-4'>
-        <div className='grid grid-cols-1 max-sm:gap-4 max-md:gap-8 md:grid-cols-12 sm:px-8 sm:py-10 mt-10'>
+    <div className='w-full h-dvh 3xl:px-7 md:pb-0 overflow-hidden' id='footer'>
+      <div className='flex flex-col justify-between h-full bg-black md:rounded-t-[100px] px-4'>
+        <div className='grid grid-cols-1 max-sm:gap-4 max-md:gap-8 md:grid-cols-12 sm:px-4 3xl:px-8 sm:py-10 mt-10'>
           <div className='col-span-7'>
             <SocialLink />
           </div>
-          <div className='w-full h-full relative px-3 py-3 sm:py-7 z-50 col-span-5'>
+          <div className='w-full h-full relative sm:px-3 py-3 sm:py-7 z-50 col-span-5'>
             <div className='flex flex-col gap-3 justify-between '>
               <div className='mb-5 flex items-center gap-3'>
                 <h3 className='text-white font-bold text-sm sm:text-md whitespace-nowrap '>
@@ -40,15 +40,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col relative z-10'>
           <div className='flex justify-end z-10'>
             <ScrollTop />
           </div>
-          <div className='text-white  text-xs md:text-sm uppercase text-end lg:translate-y-16'>
+          <div className='text-white text-xs md:text-sm uppercase text-end xl:-translate-y-10 2xl:translate-y-16'>
             © 2025 <span className='text-[#ff3c00]'>Phong Phan</span> All
             rights reserved
           </div>
-          <div className='relative z-10 lg:translate-y-10'>
+          <div className='relative z-10 xl:-translate-y-10 2xl:translate-y-10'>
             <TextContainer />
           </div>
         </div>

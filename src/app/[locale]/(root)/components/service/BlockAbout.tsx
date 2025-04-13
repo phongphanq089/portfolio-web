@@ -9,7 +9,7 @@ const BlockAbout = () => {
   const t = useTranslations()
   return (
     <div className='px-3 mb-10'>
-      <h3 className='max-lg:text-[30px] text-[50px] font-bold text-white mb-5'>
+      <h3 className='max-2xl:text-[30px] text-[50px] font-bold text-white 2xl:mb-5'>
         {t('service.heading_one')} <Cover>Phong Phan</Cover>{' '}
       </h3>
       <span className='text-gray-300'>[ WEB DEVLOPER ]</span>

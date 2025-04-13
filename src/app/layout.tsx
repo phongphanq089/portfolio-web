@@ -51,9 +51,6 @@ export default async function RootLayout({
       >
         <ThemeProvider attribute='class' defaultTheme='dark'>
           <WrapperLayout>{children}</WrapperLayout>
-          <div className='flex items-center justify-items-center'>
-            <span className={'-bottom-'}> </span>
-          </div>
         </ThemeProvider>
       </body>
     </html>

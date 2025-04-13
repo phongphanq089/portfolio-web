@@ -5,6 +5,14 @@
     "description": " Xây dựng các ứng dụng web tối ưu hiệu suất với React, Next.js và Headless CMS. Chia sẻ kinh nghiệm và kỹ thuật lập trình web hiện đại.🚀",
     "keywords": "Lập trình viên Front-end, React, Next.js, Headless CMS, Framer Motion, Tailwind CSS ,Blog ,Phong Phan Web Developer, Full-stack Developer ,  Phát triển Web, JavaScript, TypeScript, tối ưu hiệu suất Web, kiến trúc Web hiện đại"
   },
+  "pageBlog": {
+    "title": "phong phan | Chia sẽ kiến thức lập trình",
+    "description": "Đây là nơi mình  viết về bogs công nghệ mới như react , next , node js , ... và nhiều kiến thức khác."
+  },
+  "pageResoure": {
+    "title": "phong phan | Tài nguyên dành cho developer",
+    "description": "Đây là nơi mình chia sẻ các tài nguyên hữu ích, kiến thức mới về công nghệ như React, Next.js, Node.js và nhiều chủ đề khác."
+  },
   "bannerHero": {
     "title": "Chào mừng đến với Portfolio của tôi",
     "subtitle": "Chỉ là một lập trình viên bình thường, viết code với đam mê. Gửi yêu thương từ Việt Nam. ",
@@ -63,9 +71,22 @@
   "Navbar": {
     "home": "Trang chủ",
     "blog": "Tin tức",
-    "component": "acent ui",
+    "project": "Dự án",
     "resoures": "Tài nguyên",
-    "video": "video"
+    "colection": "Bộ sưu tập"
   },
-  "genMoiton": "GENMOTION UI – Thư viện UI tui tạo ra để lưu trữ những component animation xịn xò, giúp bạn build giao diện đẹp, mượt mà với React, Framer Motion và TypeScript. Hay ho lắm nè!"
+  "genMoiton": "GENMOTION UI – Thư viện UI tui tạo ra để lưu trữ những component animation xịn xò, giúp bạn build giao diện đẹp, mượt mà với React, Framer Motion và TypeScript. Hay ho lắm nè!",
+  "blogDetail": {
+    "contentTable": {
+      "title": "Mục lục",
+      "bottom": "🎉Chúc mừng! Bạn đã khám phá kỹ lưỡng chủ đề này!"
+    },
+    "maybeYouLike": {
+      "title": "Có thể bạn thích"
+    }
+  },
+  "oop": {
+    "title": "Oops! Trang này vẫn đang trong quá trình hoàn thiện.",
+    "button": "Quay Về"
+  }
 }

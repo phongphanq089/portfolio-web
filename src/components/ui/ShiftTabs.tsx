@@ -53,7 +53,9 @@ export default function ShiftTabs({ items }: { items: categoryResource[] }) {
   }
 
   useEffect(() => {
-    const firstItemSlug = items[0]?.slug.current.toLowerCase()
+    // const firstItemSlug = items[0]?.slug.current.toLowerCase()
+    const firstItemSlug = 'all'
+
     if (firstItemSlug && !getCategory) {
       router.push(
         `${pathname}?${createQueryString('categoried', firstItemSlug)}`

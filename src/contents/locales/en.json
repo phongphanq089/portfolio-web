@@ -5,6 +5,14 @@
     "description": "Building high-performance web applications using React, Next.js, and Headless CMS. Explore advanced techniques in modern front-end development.🚀",
     "keywords": "Front-end Developer, React, Next.js, Headless CMS, Web Development, JavaScript, TypeScript, Framer Motion, Tailwind CSS, Blog, Phong Phan Web Developer, Full-stack Developer , Modern Web, Performance Optimization"
   },
+  "pageBlog": {
+    "title": "phong phan | Share programming knowledge",
+    "description": "This is where I write about the latest tech blogs, including React, Next.js, Node.js, and much more."
+  },
+  "pageResoure": {
+    "title": "phong phan | Resources for Developers",
+    "description": "This is where I share helpful resources and the latest tech insights on React, Next.js, Node.js, and many other topics."
+  },
   "bannerHero": {
     "title": "Welcome to My Portfolio",
     "subtitle": "Just an ordinary developer, crafting code with passion. From Vietnam with love.",
@@ -63,9 +71,22 @@
   "Navbar": {
     "home": "Home",
     "blog": "Blog",
-    "component": "acent ui",
+    "project": "Projects",
     "resoures": "Resoures",
-    "video": "video"
+    "colection": "My Collection"
   },
-  "genMoiton": "GENMOTION UI – A UI library I built to store awesome animation components, helping you create smooth and beautiful interfaces with React, Framer Motion, and TypeScript. Super cool!"
+  "genMoiton": "GENMOTION UI – A UI library I built to store awesome animation components, helping you create smooth and beautiful interfaces with React, Framer Motion, and TypeScript. Super cool!",
+  "blogDetail": {
+    "contentTable": {
+      "title": "Table of contents",
+      "bottom": "🎉Congratulations! You’ve thoroughly explored this topic!"
+    },
+    "maybeYouLike": {
+      "title": "Maybe you like"
+    }
+  },
+  "oop": {
+    "title": "Oops! We're still working on this page. Stay tuned!",
+    "button": "Go Back"
+  }
 }

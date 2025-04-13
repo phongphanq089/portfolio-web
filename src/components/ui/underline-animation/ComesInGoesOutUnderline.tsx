@@ -99,7 +99,7 @@ const ComesInGoesOutUnderline: React.FC<ComesInGoesOutUnderlineProps> = ({
           'right-0': direction === 'right',
         })}
         style={{
-          height: '3px',
+          height: '2px',
           bottom: 'calc(1 * var(--underline-padding))',
         }}
         animate={controls}

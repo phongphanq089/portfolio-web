@@ -126,3 +126,11 @@ export function calculatePosition(
   // If no value provided, center the element
   return (containerSize - elementSize) / 2
 }
+
+export const getLocalizedValue = <T extends Record<string, string>>(
+  field: T,
+  lang: string,
+  fallbackLang: string = 'en'
+): string => {
+  return field[lang] || field[fallbackLang] || ''
+}

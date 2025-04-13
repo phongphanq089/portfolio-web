@@ -7,6 +7,7 @@ import video from './schemas/video'
 import resource from './schemas/resource'
 import categoriesResource from './schemas/categories-resource'
 import portfolioPage from './schemas/portfolio-page'
+import quote from './schemas/quote'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -18,5 +19,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     video,
     resource,
     categoriesResource,
+    quote,
   ],
 }

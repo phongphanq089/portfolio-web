@@ -38,9 +38,9 @@ export const pathArr = [
 export const MENU_SETTINGS = [
   { name: 'home', link: '/' },
   { name: 'blog', link: '/blogs' },
-  { name: 'component', link: '/component-ui' },
+  { name: 'project', link: '/project' },
   { name: 'resoures', link: '/resoures' },
-  { name: 'video', link: '/video', x: '80%' },
+  { name: 'colection', link: '/colection', x: '80%' },
 ]
 
 export const SOCIALINK = {

@@ -95,7 +95,7 @@ const GoesOutComesInUnderline: React.FC<GoesOutComesInUnderlineProps> = ({
       <span className='sr-only'>{label}</span>
       <span aria-hidden='true'>{label}</span>
       <motion.span
-        className={cn('absolute bg-current h-[1px] md:h-[3px]', {
+        className={cn('absolute bg-current h-[1px] md:h-[2px]', {
           'left-0': direction === 'left',
           'right-0': direction === 'right',
         })}
