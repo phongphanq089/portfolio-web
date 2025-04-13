@@ -9,7 +9,7 @@ import {
   useRouter,
   useSearchParams,
 } from 'next/navigation'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import CardResoure from './CardResoure'
 import { urlFor } from '@/sanity/config'
 import { motion } from 'motion/react'
@@ -125,69 +125,61 @@ const ListResoures = () => {
           })}
         </div>
       )}
-      <div
-        className={cn(
-          'fixed bottom-0 max-md:w-[90%] w-[40%] left-1/2 -translate-x-1/2 h-[60px]',
-          interView ? 'hidden' : 'block'
-        )}
-      >
-        {developers && developers.length > 0 && totalItems ? (
-          <div
-            className={cn(
-              'blur-vignette bottom-0 left-0 w-full h-full z-10 bg-color-4'
-            )}
-            style={
-              {
-                '--radius': '10px',
-                '--inset': '20px',
-                '--transition-length': '44px',
-                '--blur': '10px',
-              } as React.CSSProperties
-            }
-          >
-            <div className='flex justify-center gap-2  py-2 px-2 rounded-xl text-white blur-vignette z-60 relative'>
-              <button
-                onClick={() => handlePageChange(pageSize - 1)}
-                disabled={pageSize === 1}
-                className='px-4 py-2 bg-black rounded-lg disabled:opacity-50'
-              >
-                <ArrowLeft />
-              </button>
-
-              {startPage > 1 && (
-                <span className='px-4 py-2 text-black'>...</span>
-              )}
-              {pageNumbers.map((pageNum) => (
-                <motion.button
-                  key={pageNum}
-                  onClick={() => handlePageChange(pageNum)}
-                  className={`px-4 py-2 rounded ${
-                    pageSize === pageNum
-                      ? 'bg-primary-color text-white'
-                      : 'bg-black'
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+      {pageNumbers.length > 1 ? (
+        <div
+          className={cn(
+            'fixed bottom-0 min-w-[400px]  left-1/2 -translate-x-1/2 h-[60px] border border-orange-700/70 bg-white shadow-2xs rounded-lg',
+            interView ? 'hidden' : 'block'
+          )}
+        >
+          {developers && developers.length > 0 && totalItems ? (
+            <div>
+              <div className='flex justify-center gap-2  py-2 px-2 rounded-xl text-white blur-vignette z-60 relative'>
+                <button
+                  onClick={() => handlePageChange(pageSize - 1)}
+                  disabled={pageSize === 1}
+                  className='px-4 py-2 bg-black rounded-lg disabled:opacity-50'
                 >
-                  {pageNum}
-                </motion.button>
-              ))}
-              {endPage < totalPages && (
-                <span className='px-4 py-2 text-black'>...</span>
-              )}
-              <button
-                onClick={() => handlePageChange(pageSize + 1)}
-                disabled={pageSize === totalPages}
-                className='px-4 py-2 bg-black  rounded-lg disabled:opacity-50'
-              >
-                <ArrowRight />
-              </button>
+                  <ArrowLeft />
+                </button>
+
+                {startPage > 1 && (
+                  <span className='px-4 py-2 text-black'>...</span>
+                )}
+                {pageNumbers.map((pageNum) => (
+                  <motion.button
+                    key={pageNum}
+                    onClick={() => handlePageChange(pageNum)}
+                    className={`px-4 py-2 rounded ${
+                      pageSize === pageNum
+                        ? 'bg-primary-color text-white'
+                        : 'bg-black'
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {pageNum}
+                  </motion.button>
+                ))}
+                {endPage < totalPages && (
+                  <span className='px-4 py-2 text-black'>...</span>
+                )}
+                <button
+                  onClick={() => handlePageChange(pageSize + 1)}
+                  disabled={pageSize === totalPages}
+                  className='px-4 py-2 bg-black  rounded-lg disabled:opacity-50'
+                >
+                  <ArrowRight />
+                </button>
+              </div>
             </div>
-          </div>
-        ) : (
-          ''
-        )}
-      </div>
+          ) : (
+            ''
+          )}
+        </div>
+      ) : (
+        ''
+      )}
     </>
   )
 }

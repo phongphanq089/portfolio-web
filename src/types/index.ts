@@ -27,9 +27,9 @@ export interface FooterMenuType {
 
 // ===== BLOG  ==== //
 export interface BLogList {
-  title: string
+  title: Record<string, string>
   body?: string[]
-  meta_description: string
+  meta_description: Record<string, string>
   mainImage: {
     _type: string
     alt: string
@@ -81,4 +81,16 @@ export interface developerResource {
   tags?: string[]
   categoryDeveloper?: { title: string }[]
   publishedAt: string
+}
+
+export interface QuotesType {
+  _id: string
+  Description: Record<string, string>
+  Image: {
+    alt: string
+    asset: {
+      _ref: string
+    }
+  }
+  bgColor: string
 }

@@ -58,6 +58,8 @@ const LanguageSwitch = () => {
     }
   }
 
+  const [framework, setFramework] = useState('nextjs')
+
   return (
     <FloatingPanelRoot>
       <FloatingPanelTrigger

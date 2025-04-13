@@ -69,7 +69,7 @@ const CenterUnderline = ({
       <motion.div
         className='absolute left-1/2 bg-current -translate-x-1/2'
         style={{
-          height: '3px',
+          height: '2px',
           bottom: 'calc(-1 * var(--underline-padding))',
         }}
         variants={underlineVariants}

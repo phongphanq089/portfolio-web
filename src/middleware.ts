@@ -5,7 +5,7 @@ export default createMiddleware(routing)
 
 export const config = {
   matcher: [
-    '/((?!api|_next|sitemap.xml|robots.txt|.*\\..*).*)',
+    '/((?!api|_next|sitemap.xml|robots.txt|studio|.*\\..*).*)',
     '/',
     '/(vi|en)/:path*',
   ],

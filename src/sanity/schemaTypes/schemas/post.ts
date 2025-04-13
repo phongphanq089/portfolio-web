@@ -88,7 +88,19 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'en',
+          title: 'English',
+          type: 'blockContent',
+        }),
+        defineField({
+          name: 'vi',
+          title: 'Vietnamese',
+          type: 'blockContent',
+        }),
+      ],
     }),
   ],
 })

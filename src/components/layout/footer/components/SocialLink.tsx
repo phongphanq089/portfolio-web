@@ -7,9 +7,9 @@ import React from 'react'
 
 const SocialLink = () => {
   return (
-    <div className=' flex flex-col relative z-50 mt-5 md:mt-10 px-4 '>
+    <div className=' flex flex-col relative z-50 mt-5 md:mt-10 sm:px-4 '>
       <div className='flex max-lg:flex-col flex-row items-start text-white h-full uppercase space-x-8 text-sm sm:text-xl md:text-2xl lg:text-lg'>
-        <div className='font-bold text-md sm:text-xl whitespace-nowrap'>
+        <div className='font-bold text-md xl:text-lg 3xl:text-xl whitespace-nowrap'>
           SAY HI!
         </div>
         <div className='flex flex-col max-md:!ml-0'>
@@ -20,7 +20,7 @@ const SocialLink = () => {
           >
             <CenterUnderline
               label={SOCIALINK.linkedin.name}
-              className='max-lg:font-bold max-sm:text-xs max-lg:text-sm'
+              className='max-lg:font-bold max-sm:text-xs max-xl:text-sm'
             />
           </Link>
           <Link
@@ -31,7 +31,7 @@ const SocialLink = () => {
             <ComesInGoesOutUnderline
               label={SOCIALINK.twiter.name}
               direction='right'
-              className='max-lg:font-bold max-sm:text-xs max-lg:text-sm'
+              className='max-lg:font-bold max-sm:text-xs max-xl:text-sm'
             />
           </Link>
           <Link
@@ -42,11 +42,11 @@ const SocialLink = () => {
             <ComesInGoesOutUnderline
               label={SOCIALINK.github.name}
               direction='left'
-              className='max-lg:font-bold max-sm:text-xs max-lg:text-sm'
+              className='max-lg:font-bold max-sm:text-xs max-xl:text-sm'
             />
           </Link>
 
-          <div className='pt-5 3xl:pt-12'>
+          <div className='3xl:pt-12'>
             <ul className='flex flex-col h-full'>
               <Link
                 className='lowercase max-lg:h-[40px]'
@@ -55,14 +55,14 @@ const SocialLink = () => {
                 <GoesOutComesInUnderline
                   label='phongphanq089@gmail.com'
                   direction='left'
-                  className='max-lg:font-bold max-sm:text-xs max-lg:text-sm'
+                  className='max-lg:font-bold max-sm:text-xs max-xl:text-sm'
                 />
               </Link>
               <Link className='max-lg:h-[40px]' href='tel:0706113210'>
                 <GoesOutComesInUnderline
                   label='+84706113210'
                   direction='right'
-                  className='max-lg:font-bold max-sm:text-xs max-lg:text-sm'
+                  className='max-lg:font-bold max-sm:text-xs max-xl:text-sm'
                 />
               </Link>
             </ul>

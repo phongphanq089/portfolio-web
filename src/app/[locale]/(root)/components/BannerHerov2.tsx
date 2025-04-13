@@ -12,20 +12,18 @@ import React from 'react'
 const BannerHerov2 = () => {
   const t = useTranslations('bannerHero.terminal')
   return (
-    <div className='container-3xl relative z-10 max-md:mb-[50px] max-lg:mb-[100px] mt-[120px] xl:min-h-screen'>
+    <div className='container-3xl relative z-10 max-md:mb-[50px] max-lg:mb-[100px] mt-[100px] xl:mt-[100px] 2xl:mt-[120px] xl:min-h-screen'>
       <div className='flex flex-col mb-10'>
-        <div className='flex items-center gap-[2px] relative z-30 text-[16vw] lg:text-[9vw] font-black text-white h-fit leading-none translate-y-[20px] 2xl:translate-y-[60px]'>
+        <div className='flex items-center gap-[2px] relative text-[16vw] xl:text-[7vw] 2xl:text-[9vw] font-black text-white h-fit leading-none sm:translate-y-[20px] 2xl:translate-y-[60px]'>
           <div className='relative z-30'>FRONT</div>
-          <div className='bg-primary-color relative z-10 px-3 rounded-md'>
-            E
-          </div>
+          <div className='bg-primary-color relative z-0 px-3 rounded-md'>E</div>
           <div className='relative z-30'>ND</div>
         </div>
 
-        <div className='max-sm:w-full w-[500px] relative z-20 2xl:ml-[200px] animate-jump-in animate-once animate-duration-500 animate-ease-linear'>
+        <div className='max-sm:w-full w-[400px] 2xl:w-[500px] relative z-20 2xl:ml-[200px] animate-jump-in animate-once animate-duration-500 animate-ease-linear rounded-md overflow-hidden'>
           <NextImageResize src={banner9.src} classResize='imgSpecial1' />
         </div>
-        <div className='flex items-center gap-[2px] text-[15vw] lg:text-[12vw] font-black text-white h-fit leading-none xl:translate-y-[-60px]'>
+        <div className='flex items-center gap-[2px] text-[15vw] xl:text-[9vw] 2xl:text-[12vw] font-black text-white h-fit leading-none xl:translate-y-[-20px]  2xl:translate-y-[-60px]'>
           <div className='relative z-30'>DEVE</div>
           <div className='bg-primary-color relative z-10 px-3 rounded-md'>
             L

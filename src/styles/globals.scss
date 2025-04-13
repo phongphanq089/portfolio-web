@@ -384,3 +384,13 @@
     0 100%;
   -webkit-mask-repeat: no-repeat;
 }
+
+.outer-grid {
+  display: grid;
+  place-items: center;
+}
+.inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* hoặc 3, tùy bạn */
+  gap: 16px;
+}

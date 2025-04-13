@@ -34,52 +34,56 @@ const Header = () => {
   }
 
   return (
-    <div className='fixed top-0  z-100 w-full  h-[80px]'>
-      <div
-        className={cn(
-          'blur-vignette bottom-0 left-0 w-full h-full z-10 flex justify-between items-center px-5 '
-        )}
-        style={
-          {
-            '--radius': '10px',
-            '--inset': '20px',
-            '--transition-length': '44px',
-            '--blur': '10px',
-          } as React.CSSProperties
-        }
-      >
-        <div className={cn(' flex items-center')}>
-          <Logo />
-        </div>
+    <>
+      <div className='fixed top-0  z-100 w-full  h-[80px]'>
+        <div
+          className={cn(
+            'blur-vignette bottom-0 left-0 w-full h-full z-10 flex justify-between items-center px-5 '
+          )}
+          style={
+            {
+              '--radius': '10px',
+              '--inset': '20px',
+              '--transition-length': '44px',
+              '--blur': '10px',
+            } as React.CSSProperties
+          }
+        >
+          <div className={cn(' flex items-center')}>
+            <Logo />
+          </div>
 
-        <div className=''>
-          <ListMenuNavDesktop />
-          <ListMenuNavMobile isOpen={isOpen} />
-        </div>
-        <div className='flex items-center gap-4'>
-          <LanguageSwitch />
-          <div
-            className='relative z-100 w-[50px] h-[50px] flex justify-center items-center xl:hidden'
-            onClick={toggleMenu}
-          >
-            {[0, 1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                custom={i}
-                initial='closed'
-                animate={isOpen ? 'open' : 'closed'}
-                variants={gridVariants}
-                transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-                className={cn(
-                  'absolute w-[20px] h-[20px] ',
-                  isOpen ? 'bg-white' : 'bg-primary-color'
-                )}
-              />
-            ))}
+          <div className=''>
+            <ListMenuNavDesktop />
+            <ListMenuNavMobile isOpen={isOpen} />
+          </div>
+          <div className='flex items-center gap-4'>
+            <div
+              className='relative z-100 w-[50px] h-[50px] flex justify-center items-center xl:hidden'
+              onClick={toggleMenu}
+            >
+              {[0, 1, 2, 3].map((i) => (
+                <motion.div
+                  key={i}
+                  custom={i}
+                  initial='closed'
+                  animate={isOpen ? 'open' : 'closed'}
+                  variants={gridVariants}
+                  transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+                  className={cn(
+                    'absolute w-[20px] h-[20px] ',
+                    isOpen ? 'bg-white' : 'bg-primary-color'
+                  )}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className='fixed top-4 right-4 z-120 max-sm:right-[80px] max-xl:right-[100px] max-xl:top-[23px]'>
+        <LanguageSwitch />
+      </div>
+    </>
   )
 }
 
