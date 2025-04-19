@@ -33,9 +33,6 @@ export default function StackingCardsDemo({
         totalCards={listQuotes.length}
         scrollOptons={{ container: { current: container } }}
       >
-        <div className='relative font-calendas h-[50vh] md:h-screen w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-primary-color whitespace-pre'>
-          Scroll down ↓
-        </div>
         {listQuotes.map((quote, index) => {
           return (
             <StackingCardItem
@@ -50,7 +47,7 @@ export default function StackingCardsDemo({
                 }}
                 className={cn(
                   `bg-[${quote.bgColor}]`,
-                  'flex-col xl:flex-row px-2 md:px-8 py-10 flex  min-h-[70vh] xl:h-[80vh] mx-auto relative'
+                  'flex-col  px-2 md:px-8 py-10 flex  min-h-[70vh] xl:h-[80vh] mx-auto relative'
                 )}
               >
                 <div className='flex-1 flex flex-col mt-3'>
@@ -59,7 +56,7 @@ export default function StackingCardsDemo({
                   </h3>
                 </div>
 
-                <div className='w-[80%]  xl:w-1/3 rounded-xl aspect-video relative overflow-hidden'>
+                <div className='w-[80%] xl:w-1/2 rounded-xl aspect-video relative overflow-hidden ml-auto'>
                   <Image
                     src={urlFor(quote.Image.asset._ref).url()}
                     alt={getLocalizedValue(quote.Description, lang)}

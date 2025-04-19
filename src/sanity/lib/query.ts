@@ -147,7 +147,8 @@ export const portfolioHome = groq`*[_type == "portfolio"]  {
   mainImage,
   backgroundImage,
   tags,
-  urlPage
+  urlPage,
+  urlGithub
 }`
 
 /**
