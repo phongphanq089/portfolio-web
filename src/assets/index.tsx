@@ -40,8 +40,25 @@ import bgBanner2 from '../../public/image/svg-icon/bg-banner-2.svg'
 import bgCardResoure from '../../public/image/banner/bg-card.png'
 import cutHover from '../../public/image//banner/cut-hover.png'
 import vn from '../../public/image/svg-icon/vn.svg'
-import usUk from '../../public/image/svg-icon/us-uk.svg'
-
+// ============ || ============ //
+import bg1 from '../../public/image/projects/1.jpg'
+import bg2 from '../../public/image/projects/2.jpg'
+import bg3 from '../../public/image/projects/3.jpg'
+import bg4 from '../../public/image/projects/4.jpg'
+import bg5 from '../../public/image/projects/5.jpg'
+import bg6 from '../../public/image/projects/6.jpg'
+import bg7 from '../../public/image/projects/7.jpg'
+import bg8 from '../../public/image/projects/8.jpg'
+import bg9 from '../../public/image/projects/9.jpg'
+import bg10 from '../../public/image/projects/10.jpg'
+// =========== || ============ //
+import Picture1 from '../../public/image/zoom-image/1.jpeg'
+import Picture2 from '../../public/image/zoom-image/2.jpeg'
+import Picture3 from '../../public/image/zoom-image/3.jpg'
+import Picture4 from '../../public/image/zoom-image/4.jpg'
+import Picture5 from '../../public/image/zoom-image/5.jpg'
+import Picture6 from '../../public/image/zoom-image/6.jpg'
+import Picture7 from '../../public/image/zoom-image/7.jpeg'
 // ============ ICON DEV || ===================== //
 import beanhead from '../../public/image/svg-icon/beanhead.svg'
 export {
@@ -84,5 +101,21 @@ export {
   skill30,
   skill31,
   vn,
-  // usUk,
+  bg1,
+  bg2,
+  bg3,
+  bg4,
+  bg5,
+  bg6,
+  bg7,
+  bg8,
+  bg9,
+  bg10,
+  Picture1,
+  Picture2,
+  Picture3,
+  Picture4,
+  Picture5,
+  Picture6,
+  Picture7,
 }

@@ -94,3 +94,17 @@ export interface QuotesType {
   }
   bgColor: string
 }
+
+export interface ListProjectType {
+  _id: string
+  title: string
+  mainImage: {
+    alt: string
+    asset: {
+      _ref: string
+    }
+  }
+  tags: string[]
+  urlPage: string
+  urlGithub: string
+}
