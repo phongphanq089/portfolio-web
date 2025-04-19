@@ -23,6 +23,19 @@ export const listBlogs = groq`*[_type == "post" && $slug in categories[]->slug. 
     publishedAt,
 }`
 
+export const listLatestBlogs = groq`
+  *[_type == "post"] | order(publishedAt desc) [0...4] {
+    _id,
+    slug,
+    _createdAt,
+    title,
+    meta_description,
+    mainImage,
+    "category": categories[]-> {title, slug},
+    publishedAt,
+  }
+`
+
 export const totalBlogList = groq`count(*[_type == "post" && $slug in categories[]->slug.current])`
 
 /**

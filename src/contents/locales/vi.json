@@ -92,5 +92,9 @@
   },
   "project": {
     "description": "Chào mừng đến với “bảo tàng” mini các dự án mình tự tay làm – từ mấy cái UI vui vui cho đến web hoàn chỉnh chạy ngon lành cành đào. Toàn là sản phẩm cá nhân, tự học tự vọc, có cái đẹp long lanh, có cái chỉ tự mình khen. 😅 Mời bạn dạo một vòng, biết đâu thích!"
+  },
+  "blogHome": {
+    "title": "TIN TỨC",
+    "view": "XEM TẤT CẢ"
   }
 }

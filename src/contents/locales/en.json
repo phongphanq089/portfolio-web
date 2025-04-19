@@ -92,5 +92,9 @@
   },
   "project": {
     "description": "Welcome to my little “museum” of personal projects – from fun little UIs to fully functional websites running smooth as butter. Everything here is self-made, self-taught, and self-tested – some look shiny and polished, some only I would dare to compliment. 😅 Feel free to take a stroll around – who knows, you might like something!"
+  },
+  "blogHome": {
+    "title": "MY BLOG",
+    "view": "VIEW ALL"
   }
 }
